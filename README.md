@@ -35,7 +35,7 @@ with some over-engineering.
 
 ### Wants to see the result ?
 
-Go there: [https://me.soluble.io](https://me.soluble.io). No tracking, no cookies.
+Go there: **[https://me.soluble.io](https://me.soluble.io)**. No tracking, no cookies.
 
 ### Why linked.in for contact ?
 
