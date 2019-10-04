@@ -12,5 +12,5 @@ export const appClassName = css`
     margin: 0;
     padding: 0;
     color: #333;
-    background-color: #f2f2f2;        
+    background-color: #f2f2f2;
 `;

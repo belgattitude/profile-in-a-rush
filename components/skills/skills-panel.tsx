@@ -75,7 +75,7 @@ const UnstyledSkillsPanel: React.FC<{
                     const cls = sectionActive([section]) ? 'tab__active' : '';
                     return (
                         <div
-                            role={"tab"}
+                            role={'tab'}
                             key={section}
                             className={`tab ${cls}`}
                             onClick={e => {
