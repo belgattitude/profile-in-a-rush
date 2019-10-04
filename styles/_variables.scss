@@ -1,0 +1,18 @@
+/**
+ * This file is part of profile-in-a-rush, a personal hackaton for getting
+ * my CV online and initiate the a quest of a wonderful job.
+ *
+ * @copyright Copyright (c) 2019-present Sébastien Vanvelthem. (https://github.com/belgattitude)
+ * @license   https://github.com/belgattitude/profile-in-a-rush/blob/master/LICENSE.md MIT
+ */
+
+$primary-font: 'Inter', Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans';
+$cursive-font: 'Mansalva', cursive;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+) !default;
