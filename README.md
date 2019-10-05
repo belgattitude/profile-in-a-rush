@@ -30,8 +30,12 @@ I'm fine with that ;) */Learned so much from mistakes/*
 See the [skills components folder](./components/skills) it was really fun to write. 
 It uses framer motion for animations. Spend almost a day to get what I wanted ;)
  
-For a more traditional example see the [github folder](./components/github), a react hooks api call
+For a more traditional React example see the [github folder](./components/github), a react hooks api call
 with some over-engineering.
+
+Interested in Typescript example, see [error.ts](./components/core/result.ts).
+
+Interested in configing this website, see the [config folder](./config) 
 
 ### Wants to see the result ?
 

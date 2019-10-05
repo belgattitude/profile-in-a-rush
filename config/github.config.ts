@@ -6,11 +6,14 @@
  * @license   https://github.com/belgattitude/profile-in-a-rush/blob/master/LICENSE.md MIT
  */
 
+export const githubQuery =
+    'search/repositories?q=user:belgattitude+org:soluble-io+org:contredanse+is:public+is:fork:false';
+
 export const reposToShow: Array<[string, string[]]> = [
     ['soluble-mediatools', ['php7.1', 'ffmpeg']],
     ['soluble-japha', ['php7.1']],
     ['mfts', ['typescript', 'react', 'pwa']],
     ['bluewind', ['typescript', 'express', 'react', 'lerna']],
-    ['soluble-jasper', ['php7.1', 'reports']],
-    ['php-java-bridge', ['java']],
+    ['soluble-jasper', ['php7.1', 'reports', 'pdf']],
+    ['php-java-bridge', ['java', 'fork!']],
 ];

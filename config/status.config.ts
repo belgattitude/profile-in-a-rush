@@ -6,6 +6,7 @@
  * @license   https://github.com/belgattitude/profile-in-a-rush/blob/master/LICENSE.md MIT
  */
 
-export * from './footer';
-export * from './header';
-export * from './box';
+export const workStatusAvailable = true;
+export const workStatusText = workStatusAvailable
+    ? 'Currently looking for opportunities'
+    : 'Sorry, not available at the moment';

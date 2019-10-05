@@ -11,12 +11,10 @@ import styled from '@emotion/styled';
 export const Box = styled.div`
     display: flex;
     flex-direction: column;
-    //border: 1px solid #e9e9e9;
     background-color: white;
     padding: 1em;
     line-height: 1.65em;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    //box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 `;
 
 export const BoxTitle = styled.div`

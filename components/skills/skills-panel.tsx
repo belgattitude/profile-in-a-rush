@@ -39,15 +39,15 @@ const variants: Variants = {
         transition: {
             staggerChildren: 0.4,
             beforeChildren: false,
-            duration: 1.1,
+            duration: 0.9,
             //ease: [0.48, 0.15, 0.25, 0.96],
         },
     },
     exit: {
         opacity: 0,
         scale: 0,
-        //flexGrow: 0,
-        transition: { duration: 0.5, ease: [0.48, 0.15, 0.25, 0.96] },
+        flexGrow: 0,
+        transition: { duration: 0.3, ease: [0.48, 0.15, 0.25, 0.96] },
     },
 };
 
@@ -175,10 +175,14 @@ export const SkillsPanel = styled(UnstyledSkillsPanel)`
                 .card-picture {
                     text-align: center;
                     img {
-                        filter: grayscale(90%);
-                        max-width: 60%;
-                        height: 70px;
+                        filter: grayscale(70%);
+                        max-width: 120px;
+                        height: 65px;
                         object-fit: scale-down;
+                        transition: filter 0.5s ease-in-out;
+                        :hover {
+                            filter: grayscale(0%);
+                        }
                     }
                 }
                 .card-footer {

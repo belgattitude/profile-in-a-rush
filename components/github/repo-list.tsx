@@ -12,6 +12,7 @@ import styled from '@emotion/styled';
 import { RepoItem } from './repo-item';
 
 const UnstyledRepoList: React.FC<{
+    githubQuery: string;
     filters?: Array<[string, string[]]>;
     className?: string;
     children?: never;
@@ -20,7 +21,7 @@ const UnstyledRepoList: React.FC<{
     const [query, setQuery] = useState<string>('');
     const [isError, setIsError] = useState<boolean>(false);
     const [loading, setLoading] = useState<boolean>(false);
-    const { filters = [], className } = props;
+    const { filters = [], className, githubQuery } = props;
 
     useEffect(() => {
         let mounted = true;
@@ -30,6 +31,7 @@ const UnstyledRepoList: React.FC<{
             setIsError(false);
             setLoading(true);
             const { payload } = await api.getMyRepos({
+                githubQuery,
                 signal: abortController.signal,
                 filterOnly: filters,
             });
@@ -47,7 +49,7 @@ const UnstyledRepoList: React.FC<{
             abortController.abort();
             mounted = false;
         };
-    }, [query, filters]);
+    }, [query, filters, githubQuery]);
 
     if (loading) {
         return <div className={className}>Loading...</div>;

@@ -6,7 +6,7 @@
  * @license   https://github.com/belgattitude/profile-in-a-rush/blob/master/LICENSE.md MIT
  */
 
-import React, { useState } from 'react';
+import React, { SyntheticEvent, useState } from 'react';
 import styled from '@emotion/styled';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
 import { skillSections, skillsRecords, skillType } from '../../config/skills.config';
@@ -20,14 +20,14 @@ const UnstyledSkillLabel: React.FC<{
     const { skill, className } = props;
     const { name, years, type, rating, sections } = skill;
     return (
-        <div className={className}>
+        <div className={`${className}`}>
             {name} {years && years >= 1 && <span className="years"> &gt;{years}y</span>}
         </div>
     );
 };
 
 export const SkillLabel = styled(UnstyledSkillLabel)`
-    padding: 0;
+    padding: 5px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -36,7 +36,9 @@ export const SkillLabel = styled(UnstyledSkillLabel)`
     font-size: 0.9em;
     flex: 1 1 100%;
     span.years {
-        padding-left: 5px;
+        margin-left: 5px;
+        padding: 0px 5px 0px 5px;
         background-color: #eee;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     }
 `;

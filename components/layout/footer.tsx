@@ -31,10 +31,10 @@ export const Footer = styled(UnstyledFooter)`
     right: 0;
     left: 0;
     margin-top: 5em;
-    height: 15em;
+    height: 17em;
     line-height: 1.9em;
     padding: 10px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     a,
     a:visited {

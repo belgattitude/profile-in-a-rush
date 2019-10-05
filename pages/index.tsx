@@ -11,19 +11,18 @@ import '../styles/styles.scss';
 import '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
 import styled from '@emotion/styled';
-import { Avatar } from '../components/avatar';
-import { MDXProvider } from '@mdx-js/react';
-import { Box, BoxContent, BoxTitle } from '../components/box';
 import { mdxProviderConfig } from '../components/mdx-provider.config';
-import { appClassName } from '../config/styles.config';
-import { reposToShow } from '../config/repos.config';
+import Head from 'next/dist/next-server/lib/head';
+import { MDXProvider } from '@mdx-js/react';
+import { Box, BoxContent, BoxTitle, Footer, Header } from '../components/layout';
+import { Avatar } from '../components/avatar';
 import { RepoList } from '../components/github';
 import { SkillsPanel } from '../components/skills';
-import { defaultSection, skillsRecords } from '../config/skills.config';
 import { About } from '../components/about';
 import { Summary } from '../components/summary';
-import { Footer, Header } from '../components/layout';
-import Head from 'next/dist/next-server/lib/head';
+import { appClassName, reposToShow, skillsRecords, defaultSection, linksConfig, githubQuery } from '../config';
+import { WorkStatus } from '../components/work-status';
+import { workStatusAvailable, workStatusText } from '../config/status.config';
 
 // Actually theme system not really implemented ;)
 const theme = {
@@ -103,13 +102,9 @@ const Page: React.FC = () => {
             <ThemeProvider theme={theme}>
                 <MDXProvider components={mdxProviderConfig}>
                     <Header>
-                        C.V. experiment, curious ?{' '}
+                        Opensource CV, curious ?{' '}
                         <b>
-                            <a
-                                href="https://github.com/belgattitude/profile-in-a-rush"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
+                            <a href={linksConfig.github_repo} target="_blank" rel="noreferrer">
                                 <i className="fab fa-github" /> See the code
                             </a>
                         </b>{' '}
@@ -124,9 +119,7 @@ const Page: React.FC = () => {
                                 <div css={{ marginLeft: '15px' }}>
                                     <h3>Sébastien Vanvelthem</h3>
                                     <span>Developer, Brussels</span>
-                                    <p css={{ border: '1px solid green', padding: '15px' }}>
-                                        Currently open for opportunities.
-                                    </p>
+                                    <WorkStatus available={workStatusAvailable} statusText={workStatusText} />
                                 </div>
                             </Box>
                         </GridItem>
@@ -146,7 +139,7 @@ const Page: React.FC = () => {
                                             <i className="fab fa-github" />
                                             <h3>Contributions</h3>
                                         </BoxTitle>
-                                        <RepoList filters={reposToShow} />
+                                        <RepoList githubQuery={githubQuery} filters={reposToShow} />
                                     </Box>
                                 </GridItem>
                             </SidebarContainer>
@@ -201,11 +194,7 @@ const Page: React.FC = () => {
                     </GridContainer>
                     <Footer>
                         Contact me on
-                        <a
-                            href="https://www.linkedin.com/in/s%C3%A9bastien-v-b369565/"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
+                        <a href={linksConfig.linked_in} target="_blank" rel="noreferrer">
                             &nbsp;<i className="fab fa-linkedin"></i> linked.in
                         </a>
                         <div>No recruiters please, I already have the ones.</div>
@@ -214,6 +203,15 @@ const Page: React.FC = () => {
                         </div>
                         <div>
                             <i>Logos belongs to their respective owners.</i>
+                        </div>
+                        <div>
+                            Opensource CV, curious ?{' '}
+                            <b>
+                                <a href={linksConfig.github_repo} target="_blank" rel="noreferrer">
+                                    <i className="fab fa-github" /> See the code
+                                </a>
+                            </b>{' '}
+                            !
                         </div>
                     </Footer>
                 </MDXProvider>

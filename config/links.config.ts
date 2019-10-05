@@ -6,12 +6,9 @@
  * @license   https://github.com/belgattitude/profile-in-a-rush/blob/master/LICENSE.md MIT
  */
 
-.resume-page {
-  background-color: #f2f2f2;
-  .resume-layout {
-    display: grid;
-    background-color: white;
-    max-width: 800px;
-    margin: 0em auto;
-  }
-}
+export const linksConfig = {
+    linked_in: 'https://www.linkedin.com/in/s%C3%A9bastien-v-b369565/',
+    github_repo: 'https://github.com/belgattitude/profile-in-a-rush',
+};
+
+export type LinksConfig = typeof linksConfig;

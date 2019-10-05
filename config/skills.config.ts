@@ -11,7 +11,7 @@ import { SkillRecord } from '../components/skills';
 /**
  * Configure sections and skill types
  */
-export const skillSections = ['Overview', 'Frontend', 'PHP', 'Node', 'DB', 'Emerging', 'Relics'] as const;
+export const skillSections = ['Overview', 'Frontend', 'PHP', 'Node', 'DB', 'Dev', 'Emerging', 'Relics'] as const;
 export const defaultSection: typeof skillSections[number] = 'Overview';
 
 export const skillType = ['language', 'library', 'database', 'design', 'architecture', 'tooling'] as const;
@@ -33,7 +33,7 @@ export const skillsRecords: SkillRecord[] = [
     {
         name: 'Typescript',
         logo: './static/logos/typescript.png',
-        homepage: 'https://typescript-lang.org',
+        homepage: 'https://www.typescriptlang.org',
         years: 3,
         rating: 4,
 
@@ -48,6 +48,15 @@ export const skillsRecords: SkillRecord[] = [
         sections: ['Frontend'],
         type: 'library',
     },
+    {
+        name: 'React Router',
+        logo: './static/logos/react-router.png',
+        homepage: 'https://reacttraining.com/react-router',
+        rating: 4,
+        sections: ['Frontend'],
+        type: 'library',
+    },
+
     {
         name: 'Jest',
         logo: './static/logos/jest.png',
@@ -76,10 +85,18 @@ export const skillsRecords: SkillRecord[] = [
     {
         name: 'Scss',
         logo: './static/logos/sass.png',
-        homepage: 'https://sass-lang.org',
+        homepage: 'https://sass-lang.com',
         years: 6,
         rating: 4,
         sections: ['Frontend', 'Overview'],
+        type: 'design',
+    },
+    {
+        name: 'HTML5 & CSS3',
+        logo: './static/logos/html5-css3.svg',
+        homepage: 'https://www.w3c.org',
+        rating: 4,
+        sections: ['Frontend'],
         type: 'design',
     },
     {
@@ -100,6 +117,14 @@ export const skillsRecords: SkillRecord[] = [
         type: 'library',
     },
     {
+        name: "PSR's & FIG",
+        logo: './static/logos/php-fig.png',
+        homepage: 'https://php-fig.org',
+        rating: 5,
+        sections: ['PHP'],
+        type: 'library',
+    },
+    {
         name: 'Zend 2+',
         logo: './static/logos/zf.jpg',
         homepage: 'https://zend.com',
@@ -110,7 +135,7 @@ export const skillsRecords: SkillRecord[] = [
         type: 'library',
     },
     {
-        name: 'SF componens',
+        name: 'SF components',
         logo: './static/logos/symfony.png',
         homepage: 'https://symfony.com',
         years: 4,
@@ -123,6 +148,22 @@ export const skillsRecords: SkillRecord[] = [
         logo: './static/logos/phpunit.png',
         homepage: 'https://phpunit.de',
         years: 8,
+        rating: 4,
+        sections: ['PHP'],
+        type: 'library',
+    },
+    {
+        name: 'PHPStan',
+        logo: './static/logos/phpstan.png',
+        homepage: 'https://github.com/phpstan',
+        rating: 4,
+        sections: ['PHP'],
+        type: 'library',
+    },
+    {
+        name: 'Psalm',
+        logo: './static/logos/psalm.png',
+        homepage: 'https://github.com/vimeo/psalm',
         rating: 4,
         sections: ['PHP'],
         type: 'library',
@@ -190,6 +231,24 @@ export const skillsRecords: SkillRecord[] = [
         type: 'library',
     },
     {
+        name: 'Lerna',
+        logo: './static/logos/lerna.png',
+        homepage: 'https://github.com/lerna',
+        years: 0.1,
+        rating: 1,
+        sections: ['Emerging'],
+        type: 'library',
+    },
+    {
+        name: 'Docker',
+        logo: './static/logos/docker.png',
+        homepage: 'https://docker.com',
+        years: 0.1,
+        rating: 1,
+        sections: ['Emerging'],
+        type: 'tooling',
+    },
+    {
         name: 'MySQL',
         logo: './static/logos/mysql.png',
         homepage: 'https://mysql.com',
@@ -207,6 +266,83 @@ export const skillsRecords: SkillRecord[] = [
         sections: ['DB'],
         type: 'database',
     },
+    {
+        name: 'PHPStorm...',
+        logo: './static/logos/phpstorm.png',
+        homepage: 'https://jetbrains.com',
+        rating: 4,
+        sections: ['Dev'],
+        type: 'tooling',
+    },
+    {
+        name: 'Github',
+        logo: './static/logos/github.png',
+        homepage: 'https://github.com',
+        rating: 4,
+        sections: ['Dev'],
+        type: 'tooling',
+    },
+    {
+        name: 'Travis CI',
+        logo: './static/logos/travis.png',
+        homepage: 'https://travis-ci.org',
+        rating: 4,
+        sections: ['Dev'],
+        type: 'tooling',
+    },
+
+    {
+        name: 'Gitlab',
+        logo: './static/logos/gitlab.png',
+        homepage: 'https://gitlab.com',
+        rating: 4,
+        sections: ['Dev'],
+        type: 'tooling',
+    },
+
+    {
+        name: 'Apache',
+        logo: './static/logos/apache.png',
+        homepage: 'https://httpd.apache.org',
+        rating: 4,
+        sections: ['Dev'],
+        type: 'tooling',
+    },
+    {
+        name: 'Nginx',
+        logo: './static/logos/nginx.png',
+        homepage: 'https://nginx.org',
+        rating: 4,
+        sections: ['Dev'],
+        type: 'tooling',
+    },
+
+    {
+        name: 'Linux',
+        logo: './static/logos/linux.png',
+        homepage: 'https://linux.org',
+        years: 20,
+        rating: 4,
+        sections: ['Dev'],
+        type: 'tooling',
+    },
+    {
+        name: 'Ubuntu',
+        logo: './static/logos/ubuntu.png',
+        homepage: 'https://ubuntu.org',
+        rating: 4,
+        sections: ['Dev'],
+        type: 'tooling',
+    },
+    {
+        name: 'Bind9',
+        logo: './static/logos/bind9.jpg',
+        homepage: 'https://www.isc.org/bind/',
+        rating: 4,
+        sections: ['Dev'],
+        type: 'tooling',
+    },
+
     {
         name: 'Zend v1',
         logo: './static/logos/zf.jpg',
@@ -230,6 +366,22 @@ export const skillsRecords: SkillRecord[] = [
         logo: './static/logos/extjs.png',
         homepage: 'https://sencha.com',
         years: 4,
+        rating: 4,
+        sections: ['Relics'],
+        type: 'library',
+    },
+    {
+        name: 'Boostrap',
+        logo: './static/logos/bootstrap.png',
+        homepage: 'https://getbootstrap.com',
+        rating: 4,
+        sections: ['Relics'],
+        type: 'library',
+    },
+    {
+        name: 'JQuery',
+        logo: './static/logos/jquery.png',
+        homepage: 'https://jquery.com',
         rating: 4,
         sections: ['Relics'],
         type: 'library',

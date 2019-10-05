@@ -6,6 +6,7 @@
  * @license   https://github.com/belgattitude/profile-in-a-rush/blob/master/LICENSE.md MIT
  */
 
-export * from './footer';
-export * from './header';
-export * from './box';
+export * from './github.config';
+export * from './skills.config';
+export * from './styles.config';
+export * from './links.config';

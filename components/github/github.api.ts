@@ -43,18 +43,17 @@ export default class GithubApi {
         });
     }
 
-    async getMyRepos(
-        props: {
-            signal?: AbortSignal;
-            filterOnly?: Array<[string, string[]]>;
-        } = {}
-    ): Promise<Result<RepoItems>> {
-        const { filterOnly = [] } = props;
+    async getMyRepos(props: {
+        githubQuery: string;
+        signal?: AbortSignal;
+        filterOnly?: Array<[string, string[]]>;
+    }): Promise<Result<RepoItems>> {
+        const { filterOnly = [], githubQuery } = props;
 
         return (
             this.ky
                 // Specific github syntax, using URLParams encoding won't work ;)
-                .get(`search/repositories?q=user:belgattitude+org:soluble-io+org:contredanse+is:public+is:fork:false`, {
+                .get(githubQuery, {
                     signal: props.signal,
                 })
                 .json()
