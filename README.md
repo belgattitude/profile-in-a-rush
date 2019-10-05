@@ -30,6 +30,8 @@ I'm fine with that ;) */Learned so much from mistakes/*
 See the [skills components folder](./components/skills) it was really fun to write. 
 It uses framer motion for animations. Spend almost a day to get what I wanted ;)
  
+![](./static/images/example-sections.png) 
+ 
 For a more traditional React example see the [github folder](./components/github), a react hooks api call
 with some over-engineering.
 
