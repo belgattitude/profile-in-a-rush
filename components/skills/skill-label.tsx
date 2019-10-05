@@ -38,7 +38,7 @@ export const SkillLabel = styled(UnstyledSkillLabel)`
     span.years {
         margin-left: 5px;
         padding: 0px 5px 0px 5px;
-        background-color: #eee;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        background-color: #fefefe;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.12);
     }
 `;

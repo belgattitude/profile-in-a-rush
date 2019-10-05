@@ -40,7 +40,6 @@ const variants: Variants = {
             staggerChildren: 0.4,
             beforeChildren: false,
             duration: 0.9,
-            //ease: [0.48, 0.15, 0.25, 0.96],
         },
     },
     exit: {
@@ -175,8 +174,8 @@ export const SkillsPanel = styled(UnstyledSkillsPanel)`
                 .card-picture {
                     text-align: center;
                     img {
-                        filter: grayscale(70%);
-                        max-width: 120px;
+                        filter: grayscale(75%);
+                        max-width: 80px;
                         height: 65px;
                         object-fit: scale-down;
                         transition: filter 0.5s ease-in-out;
