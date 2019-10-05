@@ -17,6 +17,19 @@ const UnstyledRepoList: React.FC<{
     className?: string;
     children?: never;
 }> = props => {
+
+    /**
+     * Example with hooks and an abortcontoller
+     *
+     * BTW, got a love/hate relationship with hooks regarding async mode...
+     * (stale closure problem, memo, callbacks...) It's probably gonna be better
+     * in future versions of react.
+     * I wrote this example with an AbortController (was not needed), just
+     * to illustrate the flow (imagine an autocomplete...).
+     * For real life, react-async does a very nice job. Otherwise extract
+     * in a custom hook. That's were hooks shines.
+     */
+
     const [repos, setRepos] = useState<RepoItems>([]);
     const [query, setQuery] = useState<string>('');
     const [isError, setIsError] = useState<boolean>(false);
