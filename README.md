@@ -4,7 +4,7 @@
 
 > The code is given "as is" under a permissive MIT License. It's written 
 > in **Typescript** with **NextJs**/**React** and styled through 
-> **emotion.sh** *(which I've never used before)*...
+> **emotion.sh** *(which I've never used before)*... quick hack mode.
 >
 > I'm not really looking to improve it, though I would be happy to see someone take
 > it over, make something configurable and share a more *polished* project. 
@@ -35,7 +35,7 @@ with some over-engineering.
 
 Interested in Typescript example, see [error.ts](./components/core/result.ts).
 
-Interested in configing this website, see the [config folder](./config) 
+Interested in configuring this website, see the [config folder](./config) 
 
 ### Wants to see the result ?
 
@@ -43,7 +43,7 @@ Go there: **[https://me.soluble.io](https://me.soluble.io)**. No tracking, no co
 
 ### Why linked.in for contact ?
 
-Yes I'm not so happy with this... What a pity.   
+Yes I'm not so happy with this...    
 
 ## The techs
 

@@ -17,7 +17,6 @@ const UnstyledRepoList: React.FC<{
     className?: string;
     children?: never;
 }> = props => {
-
     /**
      * Example with hooks and an abortcontoller
      *

@@ -20,7 +20,7 @@ import { RepoList } from '../components/github';
 import { SkillsPanel } from '../components/skills';
 import { About } from '../components/about';
 import { Summary } from '../components/summary';
-import { appClassName, reposToShow, skillsRecords, defaultSection, linksConfig, githubQuery } from '../config';
+import { appClassName, reposToShow, skillsRecords, defaultSection, siteConfig, githubQuery } from '../config';
 import { WorkStatus } from '../components/work-status';
 import { workStatusAvailable, workStatusText } from '../config/status.config';
 
@@ -94,9 +94,20 @@ const Page: React.FC = () => {
     return (
         <div css={appClassName}>
             <Head>
-                <title>Sébastien Vanvelthem - CV</title>
+                <title>{siteConfig.site_title}</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta charSet="utf-8" />
+                <meta name="description" content={siteConfig.site_desc} />
+                <meta property="og:url" content={siteConfig.canonical} />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content={siteConfig.site_title} />
+                <meta property="og:description" content={siteConfig.site_desc} />
+                <meta property="og:image" content={siteConfig.site_img} />
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:title" content={siteConfig.site_title} />
+                <meta name="twitter:description" content={siteConfig.site_desc} />
+                <meta name="twitter:image" content={siteConfig.site_img} />
+                <link rel="apple-touch-icon" href="/static/images/favicon.ico" />
                 <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
             </Head>
             <ThemeProvider theme={theme}>
@@ -104,7 +115,7 @@ const Page: React.FC = () => {
                     <Header>
                         Opensource CV, curious ?{' '}
                         <b>
-                            <a href={linksConfig.github_repo} target="_blank" rel="noreferrer">
+                            <a href={siteConfig.github_repo} target="_blank" rel="noreferrer">
                                 <i className="fab fa-github" /> See the code
                             </a>
                         </b>{' '}
@@ -194,7 +205,7 @@ const Page: React.FC = () => {
                     </GridContainer>
                     <Footer>
                         Contact me on
-                        <a href={linksConfig.linked_in} target="_blank" rel="noreferrer">
+                        <a href={siteConfig.linked_in} target="_blank" rel="noreferrer">
                             &nbsp;<i className="fab fa-linkedin"></i> linked.in
                         </a>
                         <div>No recruiters please, I already have the ones.</div>
@@ -207,7 +218,7 @@ const Page: React.FC = () => {
                         <div>
                             Opensource CV, curious ?{' '}
                             <b>
-                                <a href={linksConfig.github_repo} target="_blank" rel="noreferrer">
+                                <a href={siteConfig.github_repo} target="_blank" rel="noreferrer">
                                     <i className="fab fa-github" /> See the code
                                 </a>
                             </b>{' '}
