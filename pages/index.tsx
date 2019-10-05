@@ -103,7 +103,7 @@ const Page: React.FC = () => {
                 <meta property="og:title" content={siteConfig.site_title} />
                 <meta property="og:description" content={siteConfig.site_desc} />
                 <meta property="og:image" content={siteConfig.site_img} />
-                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={siteConfig.site_title} />
                 <meta name="twitter:description" content={siteConfig.site_desc} />
                 <meta name="twitter:image" content={siteConfig.site_img} />
