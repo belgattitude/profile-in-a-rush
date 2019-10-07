@@ -11,9 +11,9 @@ export const githubQuery = 'search/repositories?q=user:belgattitude+org:soluble-
 export const reposToShow: Array<[string, string[]]> = [
     ['soluble-mediatools', ['php7.1', 'ffmpeg']],
     ['soluble-japha', ['php7.1']],
-    ['mfts', ['typescript', 'react', 'pwa']],
-    ['bluewind', ['typescript', 'express', 'react', 'lerna']],
     ['soluble-jasper', ['php7.1', 'reports', 'pdf']],
-    ['php-java-bridge', ['java', 'fork!']],
+    ['bluewind', ['typescript', 'express', 'react', 'lerna']],
+    ['mfts', ['typescript', 'react', 'pwa']],
+    //['php-java-bridge', ['java', 'fork!']],
     ['dbal', ['doctrine', 'contributor']],
 ];
