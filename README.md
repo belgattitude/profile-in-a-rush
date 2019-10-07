@@ -1,19 +1,16 @@
 # profile-in-a-rush
 
-**profile/in/a/rush** is a personal self-challenge hackaton to finally write a C.V. 
+**profile-in-a-rush** is a personal self-challenge hackaton to finally write a C.V. 
 
-> Written in **Typescript** with **NextJs**/**React** and styled through 
-> **emotion.sh** *(which I've never used before)*...  
->
-> I'm not really looking to improve it, though I would be happy to see someone take
-> it over, make something configurable and share a more *polished* project. 
+> **Disclaimer** I'm not really looking to improve it, though I would be 
+> happy to see someone take it over, make something configurable and 
+> share a more *polished* project. Forks welcome, but please don't use my
+> texts, pictures... In other words clean up a bit. 
 > 
-> But please don't use my texts, my profile picture or the links to my accounts. 
-> In other words clean up a bit ;) 
 
 ### Why opensource ?
 
-First of all it's more an experiment. Also I like opensourc.
+First of all it's more an experiment. I don't really like linked.in & consorts...
   
 ### What is interesting to look for ?
 
@@ -42,7 +39,7 @@ I'm fine with that  ;)
 
 ### Why linked.in for contact ?
 
-Yes I'm not so happy with this...  not fan of it.   
+Yes I'm not so happy with this...  no time to make something really amazing for now.   
 
 ## The techs
 
