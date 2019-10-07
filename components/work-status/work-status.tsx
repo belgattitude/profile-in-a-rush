@@ -16,19 +16,21 @@ export const WorkStatus: React.FC<{
     children?: never;
 }> = props => {
     const { available, statusText } = props;
-    return <div css={[cssBase, available ? cssYes : cssNo]}>{statusText}</div>;
+    return <div css={[cssBase, available ? cssYes : cssNo]}><span>{statusText}</span></div>;
 };
 
 const cssBase = css`
     margin: 1em 0 1em 0;
-    padding: 0.4em;
+    padding: 0.4em;        
 `;
 
 const cssYes = css`
     color: #108030;
-    padding: 0.4em 0;
-    border-bottom: 1px solid #358029;
+    padding: 0em 0;
     font-weight: 300;
+    span {
+      border-bottom: 1px solid #358029; 
+    }
 `;
 
 const cssNo = css`

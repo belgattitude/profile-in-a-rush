@@ -8,5 +8,5 @@
 
 export const workStatusAvailable = true;
 export const workStatusText = workStatusAvailable
-    ? 'Currently looking for opportunities'
-    : 'Sorry, not available at the moment';
+    ? 'Currently looking'
+    : 'Sorry, unavailable.';
