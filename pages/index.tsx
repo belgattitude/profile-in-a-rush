@@ -48,14 +48,16 @@ const GridContainer = styled.div`
         'skills'
         'summary'
         'experience'
-        'education';
+        'education'
+        'soft-skills';
     grid-template-columns: 1fr;
     max-width: 1024px;
     margin: 15px 15px;
     margin-top: 2.4em;
     @media (${breakpoints.large}) {
         margin: 0em auto;
-        margin-top: 2.4em;
+        margin-top: 3em;
+        padding: 5px;
         grid-template-columns: 4fr 9fr;
         grid-row-start: auto;
         grid-template-areas:
@@ -64,7 +66,8 @@ const GridContainer = styled.div`
             'sidebar  skills  skills'
             'sidebar  summary  summary'
             'sidebar  experience  experience'
-            'sidebar  education  education';
+            'sidebar  education  education'
+            'sidebar  soft-skills  soft-skills';
     }
 `;
 
@@ -88,26 +91,24 @@ const GridItem = styled.div<{
     grid-area: ${props => props.area};
 `;
 
-const profileImg = '/static/images/me.png';
-
 const Page: React.FC = () => {
     return (
         <div css={appClassName}>
             <Head>
-                <title>{siteConfig.site_title}</title>
+                <title>{siteConfig.siteTitle}</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta charSet="utf-8" />
-                <meta name="description" content={siteConfig.site_desc} />
+                <meta name="description" content={siteConfig.siteDesc} />
                 <meta property="og:url" content={siteConfig.canonical} />
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content={siteConfig.site_title} />
-                <meta property="og:description" content={siteConfig.site_desc} />
-                <meta property="og:image" content={siteConfig.site_img} />
+                <meta property="og:title" content={siteConfig.siteTitle} />
+                <meta property="og:description" content={siteConfig.siteDesc} />
+                <meta property="og:image" content={siteConfig.siteImg} />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content={siteConfig.site_title} />
-                <meta name="twitter:description" content={siteConfig.site_desc} />
-                <meta name="twitter:image" content={siteConfig.site_img} />
-                <link rel="apple-touch-icon" href="/static/images/favicon.ico" />
+                <meta name="twitter:title" content={siteConfig.siteTitle} />
+                <meta name="twitter:description" content={siteConfig.siteDesc} />
+                <meta name="twitter:image" content={siteConfig.siteImg} />
+                <link rel="apple-touch-icon" href="/static/favicon.ico" />
                 <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
             </Head>
             <ThemeProvider theme={theme}>
@@ -115,7 +116,7 @@ const Page: React.FC = () => {
                     <Header>
                         Opensource CV, curious ?{' '}
                         <b>
-                            <a href={siteConfig.github_repo} target="_blank" rel="noreferrer">
+                            <a href={siteConfig.githubRepo} target="_blank" rel="noreferrer">
                                 <i className="fab fa-github" /> See the code
                             </a>
                         </b>{' '}
@@ -125,7 +126,7 @@ const Page: React.FC = () => {
                         <GridItem area="header" css={{ overflow: 'hidden' }}>
                             <Box css={{ flexDirection: 'row' }}>
                                 <div>
-                                    <Avatar src={profileImg} size={'100px'} />
+                                    <Avatar src={siteConfig.profileImg} size={'100px'} />
                                 </div>
                                 <div css={{ marginLeft: '15px' }}>
                                     <h3>Sébastien Vanvelthem</h3>
@@ -202,10 +203,21 @@ const Page: React.FC = () => {
                                 </BoxContent>
                             </Box>
                         </GridItem>
+                        <GridItem area="soft-skills">
+                            <Box>
+                                <BoxTitle>
+                                    <h2>Soft skills</h2>
+                                </BoxTitle>
+                                <BoxContent>
+                                    Dedicated, creative, eager to learn, solution minded, sense of initiative and
+                                    perspective, leadership abilities, product minded.
+                                </BoxContent>
+                            </Box>
+                        </GridItem>
                     </GridContainer>
                     <Footer>
                         Contact me on
-                        <a href={siteConfig.linked_in} target="_blank" rel="noreferrer">
+                        <a href={siteConfig.linkedIn} target="_blank" rel="noreferrer">
                             &nbsp;<i className="fab fa-linkedin"></i> linked.in
                         </a>
                         <div>No recruiters please, I already have the ones.</div>
@@ -218,7 +230,7 @@ const Page: React.FC = () => {
                         <div>
                             Opensource CV, curious ?{' '}
                             <b>
-                                <a href={siteConfig.github_repo} target="_blank" rel="noreferrer">
+                                <a href={siteConfig.githubRepo} target="_blank" rel="noreferrer">
                                     <i className="fab fa-github" /> See the code
                                 </a>
                             </b>{' '}

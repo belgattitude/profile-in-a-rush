@@ -20,18 +20,20 @@ export const WorkStatus: React.FC<{
 };
 
 const cssBase = css`
-    margin: 1.3em 0 1em 0;
-    padding: 1em;
-    font-weight: 500;
-    border-radius: 5px;
+    margin: 1em 0 1em 0;
+    padding: 0.4em;
 `;
 
 const cssYes = css`
     color: #108030;
-    border: 1px solid #358029;
+    padding: 0.4em 0;
+    border-bottom: 1px solid #358029;
+    font-weight: 300;
 `;
 
 const cssNo = css`
     color: red;
-    border: 2px solid red;
+    font-weight: 400;
+    border: 1px solid red;
+    border-radius: 5px;
 `;

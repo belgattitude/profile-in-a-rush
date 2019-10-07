@@ -56,7 +56,14 @@ export const skillsRecords: SkillRecord[] = [
         sections: ['Frontend'],
         type: 'library',
     },
-
+    {
+        name: 'Formik',
+        logo: './static/logos/formik.png',
+        homepage: 'https://jaredpalmer.com/formik/',
+        rating: 4,
+        sections: ['Frontend'],
+        type: 'library',
+    },
     {
         name: 'Jest',
         logo: './static/logos/jest.png',

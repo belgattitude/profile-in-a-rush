@@ -29,7 +29,7 @@ export type SkillRecord = {
 const variants: Variants = {
     initial: {
         opacity: 0,
-        rotate: 0,
+        rotate: 25,
         scale: 0.2,
     },
     enter: {
@@ -174,9 +174,9 @@ export const SkillsPanel = styled(UnstyledSkillsPanel)`
                 .card-picture {
                     text-align: center;
                     img {
-                        filter: grayscale(75%);
-                        max-width: 80px;
-                        height: 65px;
+                        filter: grayscale(85%);
+                        max-width: 65px;
+                        height: 60px;
                         object-fit: scale-down;
                         transition: filter 0.5s ease-in-out;
                         :hover {

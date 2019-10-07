@@ -7,12 +7,13 @@
  */
 
 export const siteConfig = {
-    linked_in: 'https://www.linkedin.com/in/s%C3%A9bastien-v-b369565/',
-    github_repo: 'https://github.com/belgattitude/profile-in-a-rush',
+    linkedIn: 'https://www.linkedin.com/in/s%C3%A9bastien-v-b369565/',
+    githubRepo: 'https://github.com/belgattitude/profile-in-a-rush',
     canonical: 'https://me.soluble.io',
-    site_title: 'Sébastien Vanvelthem - CV',
-    site_desc: 'Profile in a rush',
-    site_img: 'https://me.soluble.io/static/images/social-image.png',
+    siteTitle: 'Sébastien Vanvelthem - CV',
+    siteDesc: 'Profile in a rush',
+    siteImg: 'https://me.soluble.io/static/images/social-image.png',
+    profileImg: '/static/images/me.png',
 };
 
 export type SiteConfig = typeof siteConfig;

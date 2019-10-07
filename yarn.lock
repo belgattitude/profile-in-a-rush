@@ -863,10 +863,10 @@
     "@emotion/utils" "0.11.2"
     "@emotion/weak-memoize" "0.2.4"
 
-"@emotion/core@^10.0.20":
-  version "10.0.20"
-  resolved "https://registry.yarnpkg.com/@emotion/core/-/core-10.0.20.tgz#d8bc64d8f7d88e3dc470ea233476c683c3965cf0"
-  integrity sha512-Vwzx/fcIHoaUzZSzYs75T1qaMrhpkvZwKfbRKBExu296t0CDUJ4RX3UMSiUB+nbHEF1cftz6bop0DXv1NXQt4Q==
+"@emotion/core@^10.0.21":
+  version "10.0.21"
+  resolved "https://registry.yarnpkg.com/@emotion/core/-/core-10.0.21.tgz#2e8398d2b92fd90d4ed6ac4d0b66214971de3458"
+  integrity sha512-U9zbc7ovZ2ceIwbLXYZPJy6wPgnOdTNT4jENZ31ee6v2lojetV5bTbCVk6ciT8G3wQRyVaTTfUCH9WCrMzpRIw==
   dependencies:
     "@babel/runtime" "^7.5.5"
     "@emotion/cache" "^10.0.17"
@@ -998,10 +998,10 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.5.0.tgz#4915de47ae55ae62bb26eef073b8e022ea506e14"
   integrity sha512-+mJxrZfDoZ1TX/BVxBaDtYfZFS95r6Z6u5CnYNZJYZdcELUaBX0D7FMM9Up/sb9OTq1sfxHkEkud8sohqrIT/Q==
 
-"@next/mdx@^9.0.7":
-  version "9.0.7"
-  resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-9.0.7.tgz#3b2e3afe384bda9fbd7eac8c605befa856cc174c"
-  integrity sha512-Wce6sb8UgOU1hAsY/3rY98GrZ5HIbK8K/kUzocgO+GXIaI4HKyVnus/rqOmFV0UmdpKDokjYEpo2Ap2iLn18xA==
+"@next/mdx@^9.0.8":
+  version "9.0.8"
+  resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-9.0.8.tgz#5bc8d3985832a0baef91d3c17fb90dd4517a027c"
+  integrity sha512-S76T5Fjw2wDfWdFxoUZn0vm77csqEFf2uF+557nu1H//aaqFV7OtEVrPq/c0PajysyAF8Gixb4cZnzz3F7zJgQ==
 
 "@nodelib/fs.scandir@2.1.3":
   version "2.1.3"
@@ -3019,10 +3019,10 @@ escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
 
-eslint-config-prettier@^6.3.0:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.3.0.tgz#e73b48e59dc49d950843f3eb96d519e2248286a3"
-  integrity sha512-EWaGjlDAZRzVFveh2Jsglcere2KK5CJBhkNSa1xs3KfMUGdRiT7lG089eqPdvlzWHpAqaekubOsOMu8W8Yk71A==
+eslint-config-prettier@^6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.4.0.tgz#0a04f147e31d33c6c161b2dd0971418ac52d0477"
+  integrity sha512-YrKucoFdc7SEko5Sxe4r6ixqXPDP1tunGw91POeZTTRKItf/AMFYt/YLEQtZMkR2LVpAVhcAcZgcWpm1oGPW7w==
   dependencies:
     get-stdin "^6.0.0"
 
@@ -5415,10 +5415,10 @@ next-fonts@^0.19.0:
     file-loader "^2.0.0"
     url-loader "^1.1.1"
 
-next@9.0.7:
-  version "9.0.7"
-  resolved "https://registry.yarnpkg.com/next/-/next-9.0.7.tgz#0baf77507dd303bb281c3a354c30767a93cf09c7"
-  integrity sha512-gqxdnGHJuuaKJAPi5cLytR/S88yAaoN0ra7Y3vVLLN+MTkNHQR97tSXlpU2ZE3o3tuHSUZqg7krbYtIS4WMOpw==
+next@9.0.8:
+  version "9.0.8"
+  resolved "https://registry.yarnpkg.com/next/-/next-9.0.8.tgz#ea37d7f64d754ea4608d15d6be3809b4be3f698f"
+  integrity sha512-vG8AasXnZ7sYYAaqKwFYnsgAGDkX8NdKDSHHz0Pzi//HN/9qJf6JnycEB4Jif8dIarDE8JWDjnBKw3Aw/lsFHg==
   dependencies:
     "@ampproject/toolbox-optimizer" "1.0.1"
     "@babel/core" "7.4.5"
