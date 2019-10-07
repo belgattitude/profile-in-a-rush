@@ -101,7 +101,7 @@ export const skillsRecords: SkillRecord[] = [
     {
         name: 'HTML5 & CSS3',
         logo: './static/logos/html5-css3.svg',
-        homepage: 'https://www.w3c.org',
+        homepage: 'http://w3c.org',
         rating: 4,
         sections: ['Frontend'],
         type: 'design',
@@ -185,7 +185,6 @@ export const skillsRecords: SkillRecord[] = [
         sections: ['DB', 'Overview'],
         type: 'language',
     },
-
     {
         name: 'Express',
         logo: './static/logos/express.png',
@@ -390,6 +389,14 @@ export const skillsRecords: SkillRecord[] = [
         logo: './static/logos/jquery.png',
         homepage: 'https://jquery.com',
         rating: 4,
+        sections: ['Relics'],
+        type: 'library',
+    },
+    {
+        name: 'Java',
+        logo: './static/logos/java.png',
+        homepage: 'https://www.oracle.com/java',
+        rating: 3,
         sections: ['Relics'],
         type: 'library',
     },

@@ -23,7 +23,7 @@ const UnstyledRepoItem: React.FC<{
     limitChars?: number;
     children?: never;
 }> = props => {
-    const { repo, className, limitChars = 35 } = props;
+    const { repo, className, limitChars = 30 } = props;
     return (
         <div className={className}>
             <div>
