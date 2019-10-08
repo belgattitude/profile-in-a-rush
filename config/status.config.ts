@@ -6,5 +6,6 @@
  * @license   https://github.com/belgattitude/profile-in-a-rush/blob/master/LICENSE.md MIT
  */
 
+export const enableWorkStatus = false;
 export const workStatusAvailable = true;
 export const workStatusText = workStatusAvailable ? 'Open for opportunities' : 'Sorry, unavailable.';

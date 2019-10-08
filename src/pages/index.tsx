@@ -28,7 +28,7 @@ import {
     siteConfig,
     githubQuery,
     workStatusAvailable,
-    workStatusText,
+    workStatusText, enableWorkStatus,
 } from '../../config';
 import { WorkStatus } from '../components/work-status';
 
@@ -121,26 +121,19 @@ const Page: React.FC = () => {
             </Head>
             <ThemeProvider theme={theme}>
                 <MDXProvider components={mdxProviderConfig}>
-                    <Header>
-                        Opensource CV, curious ?{' '}
-                        <b>
-                            <a href={siteConfig.githubRepo} target="_blank" rel="noreferrer">
-                                <i className="fab fa-github" /> See the code
-                            </a>
-                        </b>{' '}
-                        !
-                    </Header>
                     <Box
-                        css={{ flexDirection: 'row', backgroundColor: 'rgba(255,255,255, 0.9)', position: 'relative' }}
+                        css={{ flexDirection: 'row', backgroundColor: 'rgba(255,255,255, 0.9)', position: 'relative', borderTop: '1px solid deeppink' }}
                     >
                         <div>
                             <Avatar src={siteConfig.profileImg} size={'100px'} />
                         </div>
-                        <div css={{ marginLeft: '15px', display: 'flex', flexDirection: 'column' }}>
-                            <span css={{ fontWeight: 500, fontSize: '1.1em' }}>Sébastien Vanvelthem</span>
-                            <span>Developer, Brussels</span>
-                            <WorkStatus available={workStatusAvailable} statusText={workStatusText} />
-                        </div>
+                            <div css={{marginLeft: '15px', display: 'flex', flexDirection: 'column'}}>
+                                <span css={{fontWeight: 500, fontSize: '1.1em'}}>Sébastien Vanvelthem</span>
+                                <span>Developer, Brussels</span>
+                                {enableWorkStatus &&
+                                    <WorkStatus available={workStatusAvailable} statusText={workStatusText}/>
+                                }
+                            </div>
                     </Box>
                     <GridContainer>
                         <GridItem area="sidebar">
