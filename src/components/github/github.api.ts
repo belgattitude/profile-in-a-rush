@@ -8,6 +8,7 @@
 
 import { Result } from '../../core/result';
 import ky from 'ky/umd';
+import {JsonObject} from "../../core/json.interface";
 
 export type RepoItemDTO = {
     id: number;
@@ -57,8 +58,8 @@ export default class GithubApi {
                     signal: props.signal,
                 })
                 .json()
-                .then((response: any) => {
-                    const { items = false } = response;
+                .then(response => {
+                    const { items = false } = response as JsonObject;
                     if (items && this.isValidRepoResponse(items)) {
                         if (filterOnly.length > 0) {
                             // Filtering by order of filterOnly
@@ -72,8 +73,7 @@ export default class GithubApi {
                             }
                             return Result.ok<RepoItems>(filtered);
                         }
-
-                        //return Result.ok<RepoItems>(items);
+                        return Result.ok<RepoItems>(items);
                     }
                     return Result.fail<RepoItems>(`Returned response shape is not supported`);
                 })
