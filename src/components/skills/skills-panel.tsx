@@ -9,7 +9,7 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
-import { skillSections, skillType } from '../../config/skills.config';
+import { skillSections, skillType } from '../../../config/skills.config';
 import { SkillLabel } from './skill-label';
 
 export type SkillSections = typeof skillSections[number];

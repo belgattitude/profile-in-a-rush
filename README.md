@@ -14,15 +14,15 @@ First of all it's more an experiment. I don't really like linked.in & consorts..
   
 ### What is interesting to look for ?
 
-See the [skills components folder](./components/skills) it was really fun to write. 
+See the [skills components folder](./src/components/skills) it was really fun to write. 
 It uses framer motion for animations. Spend almost a day to get what I wanted ;)
  
 ![](./static/images/example-sections.png) 
  
-For a more traditional React example see the [github folder](./components/github), a react hooks api call
+For a more traditional React example see the [github folder](./src/components/github), a react hooks api call
 with some over-engineering.
 
-Interested in Typescript example, see [error.ts](./components/core/result.ts).
+Interested in Typescript example, see [error.ts](./src/core/result.ts).
 
 Interested in configuring this website, see the [config folder](./config) 
 

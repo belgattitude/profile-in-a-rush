@@ -16,24 +16,19 @@ export const UnstyledWorkStatus: React.FC<{
     children?: never;
 }> = props => {
     const { available, statusText, className } = props;
-    return (
-        <div className={`${className} ${available ? 'open' : 'close'}`}>
-            {statusText}
-        </div>
-    );
+    return <div className={`${className} ${available ? 'open' : 'close'}`}>{statusText}</div>;
 };
 
-export const WorkStatus = styled(UnstyledWorkStatus)`    
+export const WorkStatus = styled(UnstyledWorkStatus)`
     margin: 1em 0 1em 0;
     padding: 0em;
     &.open {
-      color: white;
-      border: 1px solid green;
-      border-radius: 5px;
-      background-color: green;
-      text-align: center;      
+        color: white;
+        border: 1px solid green;
+        border-radius: 5px;
+        background-color: green;
+        text-align: center;
     }
     &.close {
     }
-`
-
+`;

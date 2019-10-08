@@ -9,4 +9,4 @@ DEPLOY_PATH=/var/www/mysite.example.org/public_html
 yarn build
 
 # Rsync the thing
-rsync -azP --exclude robots.txt --delete ./out/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}
+rsync -azP --delete ./out/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}

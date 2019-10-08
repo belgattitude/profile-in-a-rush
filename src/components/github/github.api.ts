@@ -6,7 +6,7 @@
  * @license   https://github.com/belgattitude/profile-in-a-rush/blob/master/LICENSE.md MIT
  */
 
-import { Result } from '../core/result';
+import { Result } from '../../core/result';
 import ky from 'ky/umd';
 
 export type RepoItemDTO = {
@@ -73,7 +73,7 @@ export default class GithubApi {
                             return Result.ok<RepoItems>(filtered);
                         }
 
-                        return Result.ok<RepoItems>(items);
+                        //return Result.ok<RepoItems>(items);
                     }
                     return Result.fail<RepoItems>(`Returned response shape is not supported`);
                 })

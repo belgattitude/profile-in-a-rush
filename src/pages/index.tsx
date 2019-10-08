@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import '../styles/styles.scss';
+import '../assets/styles/styles.scss';
 import '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
 import styled from '@emotion/styled';
@@ -20,9 +20,17 @@ import { RepoList } from '../components/github';
 import { SkillsPanel } from '../components/skills';
 import { About } from '../components/about';
 import { Summary } from '../components/summary';
-import { appClassName, reposToShow, skillsRecords, defaultSection, siteConfig, githubQuery } from '../config';
+import {
+    appClassName,
+    reposToShow,
+    skillsRecords,
+    defaultSection,
+    siteConfig,
+    githubQuery,
+    workStatusAvailable,
+    workStatusText,
+} from '../../config';
 import { WorkStatus } from '../components/work-status';
-import { workStatusAvailable, workStatusText } from '../config/status.config';
 
 // Actually theme system not really implemented ;)
 const theme = {
@@ -122,12 +130,14 @@ const Page: React.FC = () => {
                         </b>{' '}
                         !
                     </Header>
-                    <Box css={{ flexDirection: 'row', backgroundColor: 'rgba(255,255,255, 0.9)', position: 'relative' }}>
+                    <Box
+                        css={{ flexDirection: 'row', backgroundColor: 'rgba(255,255,255, 0.9)', position: 'relative' }}
+                    >
                         <div>
                             <Avatar src={siteConfig.profileImg} size={'100px'} />
                         </div>
                         <div css={{ marginLeft: '15px', display: 'flex', flexDirection: 'column' }}>
-                            <span css={{fontWeight: 500, fontSize: '1.1em'}}>Sébastien Vanvelthem</span>
+                            <span css={{ fontWeight: 500, fontSize: '1.1em' }}>Sébastien Vanvelthem</span>
                             <span>Developer, Brussels</span>
                             <WorkStatus available={workStatusAvailable} statusText={workStatusText} />
                         </div>

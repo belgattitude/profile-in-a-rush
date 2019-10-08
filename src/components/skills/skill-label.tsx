@@ -6,10 +6,8 @@
  * @license   https://github.com/belgattitude/profile-in-a-rush/blob/master/LICENSE.md MIT
  */
 
-import React, { SyntheticEvent, useState } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
-import { AnimatePresence, motion, Variants } from 'framer-motion';
-import { skillSections, skillsRecords, skillType } from '../../config/skills.config';
 import { SkillRecord } from './skills-panel';
 
 const UnstyledSkillLabel: React.FC<{

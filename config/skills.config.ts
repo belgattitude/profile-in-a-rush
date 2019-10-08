@@ -6,7 +6,7 @@
  * @license   https://github.com/belgattitude/profile-in-a-rush/blob/master/LICENSE.md MIT
  */
 
-import { SkillRecord } from '../components/skills';
+import { SkillRecord } from 'src/components/skills';
 
 /**
  * Configure sections and skill types
