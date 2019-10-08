@@ -42,7 +42,7 @@ const GridContainer = styled.div`
     grid-gap: 1em;
 
     grid-template-areas:
-        'header'
+        //'header'
         'sidebar'
         'roles'
         'skills'
@@ -53,15 +53,15 @@ const GridContainer = styled.div`
     grid-template-columns: 1fr;
     max-width: 1024px;
     margin: 15px 15px;
-    margin-top: 2.4em;
+    margin-top: 1.5em;
     @media (${breakpoints.large}) {
         margin: 0em auto;
-        margin-top: 3em;
+        margin-top: 1.5em;
         padding: 5px;
         grid-template-columns: 4fr 9fr;
         grid-row-start: auto;
         grid-template-areas:
-            'header   header   header'
+            //'header   header   header'
             'sidebar  roles    roles'
             'sidebar  skills  skills'
             'sidebar  summary  summary'
@@ -122,19 +122,17 @@ const Page: React.FC = () => {
                         </b>{' '}
                         !
                     </Header>
+                    <Box css={{ flexDirection: 'row', backgroundColor: 'rgba(255,255,255, 0.9)', position: 'relative' }}>
+                        <div>
+                            <Avatar src={siteConfig.profileImg} size={'100px'} />
+                        </div>
+                        <div css={{ marginLeft: '15px', display: 'flex', flexDirection: 'column' }}>
+                            <span css={{fontWeight: 500, fontSize: '1.1em'}}>Sébastien Vanvelthem</span>
+                            <span>Developer, Brussels</span>
+                            <WorkStatus available={workStatusAvailable} statusText={workStatusText} />
+                        </div>
+                    </Box>
                     <GridContainer>
-                        <GridItem area="header" css={{ overflow: 'hidden' }}>
-                            <Box css={{ flexDirection: 'row' }}>
-                                <div>
-                                    <Avatar src={siteConfig.profileImg} size={'100px'} />
-                                </div>
-                                <div css={{ marginLeft: '15px' }}>
-                                    <h3>Sébastien Vanvelthem</h3>
-                                    <span>Developer, Brussels</span>
-                                    <WorkStatus available={workStatusAvailable} statusText={workStatusText} />
-                                </div>
-                            </Box>
-                        </GridItem>
                         <GridItem area="sidebar">
                             <SidebarContainer>
                                 <GridItem area="about">

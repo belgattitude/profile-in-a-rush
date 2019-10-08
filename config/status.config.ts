@@ -7,4 +7,4 @@
  */
 
 export const workStatusAvailable = true;
-export const workStatusText = workStatusAvailable ? 'Currently looking' : 'Sorry, unavailable.';
+export const workStatusText = workStatusAvailable ? 'Open for opportunities' : 'Sorry, unavailable.';

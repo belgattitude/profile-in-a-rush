@@ -8,38 +8,32 @@
 
 import React from 'react';
 import styled from '@emotion/styled';
-import css from '@emotion/css';
 
-export const WorkStatus: React.FC<{
+export const UnstyledWorkStatus: React.FC<{
     available: boolean;
+    className?: string;
     statusText?: string;
     children?: never;
 }> = props => {
-    const { available, statusText } = props;
+    const { available, statusText, className } = props;
     return (
-        <div css={[cssBase, available ? cssYes : cssNo]}>
-            <span>{statusText}</span>
+        <div className={`${className} ${available ? 'open' : 'close'}`}>
+            {statusText}
         </div>
     );
 };
 
-const cssBase = css`
+export const WorkStatus = styled(UnstyledWorkStatus)`    
     margin: 1em 0 1em 0;
-    padding: 0.4em;
-`;
-
-const cssYes = css`
-    color: green;
-    padding: 0em 0;
-    font-weight: 500;
-    span {
-        //border-bottom: 1px solid deeppink;
+    padding: 0em;
+    &.open {
+      color: white;
+      border: 1px solid green;
+      border-radius: 5px;
+      background-color: green;
+      text-align: center;      
     }
-`;
+    &.close {
+    }
+`
 
-const cssNo = css`
-    color: red;
-    font-weight: 400;
-    border: 1px solid red;
-    border-radius: 5px;
-`;
