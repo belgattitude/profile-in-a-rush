@@ -29,17 +29,21 @@ export type SkillRecord = {
 const variants: Variants = {
     initial: {
         opacity: 0,
-        rotate: 25,
-        scale: 0.2,
+        rotate: 90,
+        scale: 0.1,
+        x: 1050,
+        y: -1200,
     },
     enter: {
         opacity: 1,
         rotate: 0,
         scale: 1,
+        x:0,
+        y: 0,
         transition: {
-            staggerChildren: 0.4,
+            staggerChildren: 0.15,
             beforeChildren: false,
-            duration: 0.9,
+            duration: 1.2,
         },
     },
     exit: {
@@ -174,13 +178,13 @@ export const SkillsPanel = styled(UnstyledSkillsPanel)`
                 .card-picture {
                     text-align: center;
                     img {
-                        filter: grayscale(85%);
+                        
                         max-width: 65px;
                         height: 60px;
                         object-fit: scale-down;
                         transition: filter 0.5s ease-in-out;
                         :hover {
-                            filter: grayscale(0%);
+                            filter: drop-shadow(0 0 0.15rem grey);
                         }
                     }
                 }
