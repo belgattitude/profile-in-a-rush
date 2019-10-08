@@ -13,7 +13,7 @@ export const reposToShow: Array<[string, string[]]> = [
     ['soluble-japha', ['php7.1']],
     ['soluble-jasper', ['php7.1', 'reports', 'pdf']],
     ['bluewind', ['typescript', 'express', 'react', 'lerna']],
-    ['mfts', ['typescript', 'react', 'pwa']],
+    ['mfts', ['typescript', 'react', 'pwa', 'spare-time']],
     //['php-java-bridge', ['java', 'fork!']],
     ['dbal', ['doctrine', 'contributor']],
 ];

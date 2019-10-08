@@ -6,6 +6,10 @@
  * @license   https://github.com/belgattitude/profile-in-a-rush/blob/master/LICENSE.md MIT
  */
 
+// DISCLAIMER, IT'S NOT HOW I DO IT IN REAL LIFE ;)
+// IT'S A QUICK AND DIRTY PROFILE PAGE, STILL
+// SOME PARTS ARE COOL
+
 import React from 'react';
 import '../assets/styles/styles.scss';
 import '@emotion/core';
@@ -164,8 +168,7 @@ const Page: React.FC = () => {
                                 </BoxTitle>
 
                                 <BoxContent>
-                                    React Frontend Developer - Backend engineer (PHP or Node) - Project advisor
-                                    (contract)
+                                    React Frontend Developer • Backend engineer (PHP or Node) • Project advisor
                                 </BoxContent>
                             </Box>
                         </GridItem>
@@ -191,7 +194,11 @@ const Page: React.FC = () => {
                                 <BoxTitle>
                                     <h2>Experience</h2>
                                 </BoxTitle>
-                                <BoxContent>Complete C.V. on request only.</BoxContent>
+                                <BoxContent>
+                                    Ecommerce • Logistics & Geo • Analytics & BI • SPA/PWA •
+
+                                    ... complete C.V. on request only.
+                                </BoxContent>
                             </Box>
                         </GridItem>
                         <GridItem area="education">

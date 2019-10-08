@@ -12,8 +12,6 @@ import MDXContent from './summary.mdx';
 import styled from '@emotion/styled';
 
 const StyledSummary = styled(MDXContent)`
-    font-family: 'Andale Mono';
-    zoom: 0.2;
 `;
 
 export const Summary: React.FC = () => {
