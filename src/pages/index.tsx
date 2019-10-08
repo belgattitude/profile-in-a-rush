@@ -166,7 +166,6 @@ const Page: React.FC = () => {
                                 <BoxTitle>
                                     <h2>Ideal roles</h2>
                                 </BoxTitle>
-
                                 <BoxContent>
                                     React Frontend Developer • Backend engineer (PHP or Node) • Project advisor
                                 </BoxContent>
