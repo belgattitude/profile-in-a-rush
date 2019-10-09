@@ -13,6 +13,8 @@
 import React from 'react';
 import '../assets/styles/styles.scss';
 import '@emotion/core';
+import dynamic from 'next/dynamic';
+
 import { ThemeProvider } from 'emotion-theming';
 import styled from '@emotion/styled';
 import { mdxProviderConfig } from '../components/mdx-provider.config';
@@ -21,7 +23,12 @@ import { MDXProvider } from '@mdx-js/react';
 import { Box, BoxContent, BoxTitle, Footer, Header } from '../components/layout';
 import { Avatar } from '../components/avatar';
 import { RepoList } from '../components/github';
-import { SkillsPanel } from '../components/skills';
+//import { SkillsPanel } from '../components/skills';
+
+const SkillsPanelNoSSR = dynamic<SkillsPanelProps>(() => import('../components/skills/skills-panel-no-ssr') as any, {
+    ssr: false,
+});
+
 import { About } from '../components/about';
 import { Summary } from '../components/summary';
 import {
@@ -32,9 +39,11 @@ import {
     siteConfig,
     githubQuery,
     workStatusAvailable,
-    workStatusText, enableWorkStatus,
+    workStatusText,
+    enableWorkStatus,
 } from '../../config';
 import { WorkStatus } from '../components/work-status';
+import { SkillsPanelProps } from '../components/skills';
 
 // Actually theme system not really implemented ;)
 const theme = {
@@ -126,18 +135,23 @@ const Page: React.FC = () => {
             <ThemeProvider theme={theme}>
                 <MDXProvider components={mdxProviderConfig}>
                     <Box
-                        css={{ flexDirection: 'row', backgroundColor: 'rgba(255,255,255, 0.9)', position: 'relative', borderTop: '1px solid deeppink' }}
+                        css={{
+                            flexDirection: 'row',
+                            backgroundColor: 'rgba(255,255,255, 0.9)',
+                            position: 'relative',
+                            borderTop: '1px solid deeppink',
+                        }}
                     >
                         <div>
                             <Avatar src={siteConfig.profileImg} size={'100px'} />
                         </div>
-                            <div css={{marginLeft: '15px', display: 'flex', flexDirection: 'column'}}>
-                                <span css={{fontWeight: 500, fontSize: '1.1em'}}>Sébastien Vanvelthem</span>
-                                <span>Developer, Brussels</span>
-                                {enableWorkStatus &&
-                                    <WorkStatus available={workStatusAvailable} statusText={workStatusText}/>
-                                }
-                            </div>
+                        <div css={{ marginLeft: '15px', display: 'flex', flexDirection: 'column' }}>
+                            <span css={{ fontWeight: 500, fontSize: '1.1em' }}>Sébastien Vanvelthem</span>
+                            <span>Developer, Brussels</span>
+                            {enableWorkStatus && (
+                                <WorkStatus available={workStatusAvailable} statusText={workStatusText} />
+                            )}
+                        </div>
                     </Box>
                     <GridContainer>
                         <GridItem area="sidebar">
@@ -174,7 +188,7 @@ const Page: React.FC = () => {
                         <GridItem area="skills">
                             <Box>
                                 <BoxContent>
-                                    <SkillsPanel skills={skillsRecords} defaultSection={defaultSection} />
+                                    <SkillsPanelNoSSR skills={skillsRecords} defaultSection={defaultSection} />
                                 </BoxContent>
                             </Box>
                         </GridItem>
@@ -194,9 +208,8 @@ const Page: React.FC = () => {
                                     <h2>Experience</h2>
                                 </BoxTitle>
                                 <BoxContent>
-                                    Ecommerce • Logistics & Geo • Analytics & BI • SPA/PWA •
-
-                                    ... complete C.V. on request only.
+                                    Ecommerce • Logistics & Geo • Analytics & BI • SPA/PWA • ... complete C.V. on
+                                    request only.
                                 </BoxContent>
                             </Box>
                         </GridItem>

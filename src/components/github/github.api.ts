@@ -8,7 +8,7 @@
 
 import { Result } from '../../core/result';
 import ky from 'ky/umd';
-import {JsonObject} from "../../core/json.interface";
+import { JsonObject } from '../../core/json.interface';
 
 export type RepoItemDTO = {
     id: number;

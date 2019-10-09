@@ -9,8 +9,9 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
-import { skillSections, skillType } from '../../../config/skills.config';
+import { skillSections, skillType, sectionAnimations } from '../../../config/skills.config';
 import { SkillLabel } from './skill-label';
+import { getAnimationType, getItemVariants, getListVariants } from './skills-animations';
 
 export type SkillSections = typeof skillSections[number];
 export type SkillType = typeof skillType[number];
@@ -25,35 +26,6 @@ export type SkillRecord = {
     type: SkillType;
 };
 
-// For animation
-const variants: Variants = {
-    initial: {
-        opacity: 0,
-        rotate: 90,
-        scale: 0.1,
-        x: 1050,
-        y: -1200,
-    },
-    enter: {
-        opacity: 1,
-        rotate: 0,
-        scale: 1,
-        x:0,
-        y: 0,
-        transition: {
-            staggerChildren: 0.15,
-            beforeChildren: false,
-            duration: 1.2,
-        },
-    },
-    exit: {
-        opacity: 0,
-        scale: 0,
-        flexGrow: 0,
-        transition: { duration: 0.3, ease: [0.48, 0.15, 0.25, 0.96] },
-    },
-};
-
 // Utilitary
 const isSectionsActive = (activeSections: SkillSections[]) => (sections: SkillSections[]): boolean => {
     if (activeSections === null || activeSections.length === 0) {
@@ -62,14 +34,16 @@ const isSectionsActive = (activeSections: SkillSections[]) => (sections: SkillSe
     return sections.some(s => activeSections.includes(s));
 };
 
-const UnstyledSkillsPanel: React.FC<{
+export type SkillsPanelProps = {
     skills: SkillRecord[];
     defaultSection: SkillSections;
     className?: string;
     children?: never;
-}> = props => {
-    const { className, skills } = props;
-    const [activeSections, setActiveSections] = useState<SkillSections[]>(['Overview']);
+};
+
+const UnstyledSkillsPanel: React.FC<SkillsPanelProps> = props => {
+    const { className, skills, defaultSection } = props;
+    const [activeSections, setActiveSections] = useState<SkillSections[]>([defaultSection]);
     const sectionActive = isSectionsActive(activeSections);
     return (
         <div className={className}>
@@ -83,7 +57,7 @@ const UnstyledSkillsPanel: React.FC<{
                             className={`tab ${cls}`}
                             onClick={e => {
                                 if (sectionActive([section])) {
-                                    setActiveSections([]);
+                                    setActiveSections([defaultSection]);
                                 } else {
                                     setActiveSections([section]);
                                 }
@@ -95,11 +69,11 @@ const UnstyledSkillsPanel: React.FC<{
                 })}
             </div>
             <div className="card-container">
-                <AnimatePresence initial={true}>
+                <AnimatePresence initial={true} onExitComplete={() => {}}>
                     <motion.div
                         className="animation-container"
                         key={`${activeSections.join(',')}`}
-                        variants={variants}
+                        variants={getListVariants(getAnimationType(activeSections[0]))}
                         initial="initial"
                         animate="enter"
                         exit="exit"
@@ -109,7 +83,11 @@ const UnstyledSkillsPanel: React.FC<{
                                 return false;
                             }
                             return (
-                                <motion.article className="card" key={`${skill.name}`} variants={variants}>
+                                <motion.article
+                                    className="card"
+                                    key={`${skill.name}`}
+                                    variants={getItemVariants(getAnimationType(activeSections[0]))}
+                                >
                                     <div className={'card-picture'}>
                                         <a href={skill.homepage} target="_blank" rel="noreferrer">
                                             <img src={skill.logo} alt={skill.name} />
@@ -178,7 +156,6 @@ export const SkillsPanel = styled(UnstyledSkillsPanel)`
                 .card-picture {
                     text-align: center;
                     img {
-                        
                         max-width: 65px;
                         height: 60px;
                         object-fit: scale-down;

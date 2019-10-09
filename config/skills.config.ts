@@ -6,13 +6,19 @@
  * @license   https://github.com/belgattitude/profile-in-a-rush/blob/master/LICENSE.md MIT
  */
 
-import { SkillRecord } from 'src/components/skills';
+import { SectionAnimationConfig, SkillRecord } from 'src/components/skills';
 
 /**
  * Configure sections and skill types
  */
 export const skillSections = ['Overview', 'Frontend', 'PHP', 'Node', 'DB', 'Dev', 'Emerging', 'Relics'] as const;
 export const defaultSection: typeof skillSections[number] = 'Overview';
+
+export const sectionAnimations: SectionAnimationConfig = {
+    adrenaline: ['Emerging'],
+    topdown: ['PHP', 'Dev', 'Frontend'],
+    soft: ['PHP', 'Overview', 'Node', 'Relics', 'DB'],
+};
 
 export const skillType = ['language', 'library', 'database', 'design', 'architecture', 'tooling'] as const;
 
@@ -26,7 +32,6 @@ export const skillsRecords: SkillRecord[] = [
         homepage: 'https://reactjs.org',
         years: 3,
         rating: 4,
-
         sections: ['Frontend', 'Overview'],
         type: 'library',
     },
@@ -36,7 +41,6 @@ export const skillsRecords: SkillRecord[] = [
         homepage: 'https://www.typescriptlang.org',
         years: 3,
         rating: 4,
-
         sections: ['Node', 'Frontend', 'Overview'],
         type: 'language',
     },

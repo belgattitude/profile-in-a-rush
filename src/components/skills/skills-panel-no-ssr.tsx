@@ -6,17 +6,5 @@
  * @license   https://github.com/belgattitude/profile-in-a-rush/blob/master/LICENSE.md MIT
  */
 
-import * as React from 'react';
-
-import MDXContent from './summary.mdx';
-import styled from '@emotion/styled';
-
-const StyledSummary = styled(MDXContent)``;
-
-export const Summary: React.FC = () => {
-    return (
-        <div>
-            <StyledSummary />
-        </div>
-    );
-};
+import { SkillsPanel } from './skills-panel';
+export default SkillsPanel;
