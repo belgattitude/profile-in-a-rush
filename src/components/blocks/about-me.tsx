@@ -16,8 +16,7 @@ const UnstyledAboutMe: React.FC<AboutMeProps> = props => {
                 <p>
                     I'm a passionate developer with more than 15 years experience in backend and frontend technologies.
                     Over the years I acquired some acquaintance with best practices, testing, q&a, architecture,... and
-                    hopefully survived the javascript fatigue. I live in Brussels, work freelance and try to understand
-                    how cats thinks ;)
+                    hopefully survived the javascript fatigue. I live in Brussels and work as a freelancer.
                 </p>
             </div>
         </Block>
