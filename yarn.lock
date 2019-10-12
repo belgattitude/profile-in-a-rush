@@ -3580,10 +3580,10 @@ fragment-cache@^0.2.1:
   dependencies:
     map-cache "^0.2.2"
 
-framer-motion@^1.6.9:
-  version "1.6.9"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-1.6.9.tgz#1cada22387cc092de05824f9c1037536f4cea353"
-  integrity sha512-+TLqlpN2pH+1Ax2Y72VTSjxK8wfBxz1VRF1GZFZpkpoTr03UFNv4NpVEeHPp42YB7eLLTTwEGZR8oEnPEKfKJA==
+framer-motion@^1.6.12:
+  version "1.6.12"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-1.6.12.tgz#e1928044594ca1b2ed7515f99dccf98f66c5ccde"
+  integrity sha512-ooF5lnD8rMQxCT7zekzZIOIpAtX439PEYD1hyq8Rc6cx6+a7n9jg47uc54p/oG3w/aV7yANDDoD7uYkMvB9tnA==
   dependencies:
     "@popmotion/easing" "^1.0.2"
     "@popmotion/popcorn" "^0.4.2"
@@ -3591,7 +3591,7 @@ framer-motion@^1.6.9:
     hey-listen "^1.0.8"
     popmotion "9.0.0-beta-8"
     style-value-types "^3.1.6"
-    stylefire "^6.0.10"
+    stylefire "^7.0.0"
     tslib "^1.10.0"
   optionalDependencies:
     "@emotion/is-prop-valid" "^0.8.2"
@@ -7869,10 +7869,10 @@ styled-jsx@3.2.2:
     stylis "3.5.4"
     stylis-rule-sheet "0.0.10"
 
-stylefire@^6.0.10:
-  version "6.0.11"
-  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-6.0.11.tgz#28112a91f880e8dd9844456fbae7630880c2e83a"
-  integrity sha512-KR5BPENxMWo+fgeuCXvME8Xym80w4ztLUizNm5npfi24rf2WQis09Z6jP9RfG72H3shft3AmHKroHrNbsAFfZQ==
+stylefire@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-7.0.0.tgz#2ae16a97f41b8664f2501252ee40c19baba0ea22"
+  integrity sha512-Ea1knZTN5KmbUKSilTsjFEtHcGs+Vl+cQWNnvWQwqRVG+W6J/WgkWjo620hf4II/PTH8uSIF17vGrkpHC41nAA==
   dependencies:
     "@popmotion/popcorn" "^0.4.2"
     framesync "^4.0.0"
@@ -8170,10 +8170,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^3.6.3:
-  version "3.6.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.6.3.tgz#fea942fabb20f7e1ca7164ff626f1a9f3f70b4da"
-  integrity sha512-N7bceJL1CtRQ2RiG0AQME13ksR7DiuQh/QehubYcghzv20tnh+MQnQIuJddTmsbqYj+dztchykemz0zFzlvdQw==
+typescript@^3.6.4:
+  version "3.6.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.6.4.tgz#b18752bb3792bc1a0281335f7f6ebf1bbfc5b91d"
+  integrity sha512-unoCll1+l+YK4i4F8f22TaNVPRHcD9PA3yCuZ8g5e0qGqlVlJ/8FSateOLLSagn+Yg5+ZwuPkL8LFUc0Jcvksg==
 
 unfetch@4.1.0:
   version "4.1.0"

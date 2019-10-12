@@ -15,9 +15,10 @@ export const skillSections = ['Overview', 'Frontend', 'PHP', 'Node', 'DB', 'Dev'
 export const defaultSection: typeof skillSections[number] = 'Overview';
 
 export const sectionAnimations: SectionAnimationConfig = {
+    none: ['Overview', 'PHP', 'Frontend', 'Node', 'DB', 'Relics', 'Dev'],
     adrenaline: ['Emerging'],
-    topdown: ['PHP', 'Dev', 'Frontend'],
-    soft: ['PHP', 'Overview', 'Node', 'Relics', 'DB'],
+    topdown: [],
+    soft: [],
 };
 
 export const skillType = ['language', 'library', 'database', 'design', 'architecture', 'tooling'] as const;
@@ -97,7 +98,6 @@ export const skillsRecords: SkillRecord[] = [
         name: 'Scss',
         logo: './static/logos/sass.png',
         homepage: 'https://sass-lang.com',
-        years: 6,
         rating: 4,
         sections: ['Frontend', 'Overview'],
         type: 'design',
@@ -183,9 +183,7 @@ export const skillsRecords: SkillRecord[] = [
         name: 'SQL',
         logo: './static/logos/sql.png',
         homepage: 'https://en.wikipedia.org/wiki/SQL',
-        years: 15,
         rating: 5,
-
         sections: ['DB', 'Overview'],
         type: 'language',
     },
@@ -262,7 +260,6 @@ export const skillsRecords: SkillRecord[] = [
         name: 'MySQL',
         logo: './static/logos/mysql.png',
         homepage: 'https://mysql.com',
-        years: 8,
         rating: 5,
         sections: ['DB'],
         type: 'database',
@@ -271,7 +268,6 @@ export const skillsRecords: SkillRecord[] = [
         name: 'MariaDB',
         logo: './static/logos/mariadb.png',
         homepage: 'https://mariadb.com',
-        years: 4,
         rating: 5,
         sections: ['DB'],
         type: 'database',

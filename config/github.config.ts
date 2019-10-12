@@ -9,11 +9,14 @@
 export const githubQuery = 'search/repositories?q=user:belgattitude+org:soluble-io+org:contredanse+repo:doctrine/dbal';
 
 export const reposToShow: Array<[string, string[]]> = [
-    ['soluble-mediatools', ['php7.1', 'ffmpeg']],
     ['soluble-japha', ['php7.1']],
-    ['soluble-jasper', ['php7.1', 'reports', 'pdf']],
+    ['soluble-mediatools', ['php7.1', 'ffmpeg']],
+
     ['bluewind', ['typescript', 'express', 'react', 'lerna']],
-    ['mfts', ['typescript', 'react', 'pwa', 'spare-time']],
-    //['php-java-bridge', ['java', 'fork!']],
+
     ['dbal', ['doctrine', 'contributor']],
+    ['mfts', ['typescript', 'react', 'pwa', 'spare-time']],
+    ['soluble-jasper', ['php7.1', 'reports', 'pdf']],
+    //['soluble-metadata', ['php7.1', 'db']],
+    //['php-java-bridge', ['java', 'fork!']],
 ];

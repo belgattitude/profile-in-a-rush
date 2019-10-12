@@ -23,7 +23,7 @@ const UnstyledRepoItem: React.FC<{
     limitChars?: number;
     children?: never;
 }> = props => {
-    const { repo, className, limitChars = 30 } = props;
+    const { repo, className, limitChars = 40 } = props;
     return (
         <div className={className}>
             <div>
@@ -51,6 +51,7 @@ export const RepoItem = styled(UnstyledRepoItem)`
     margin: 0;
     padding: 5px 5px;
     width: 100%;
+    text-align: left;
     div {
         // for ssr &:first-child should be
         :first-of-type {
@@ -58,9 +59,11 @@ export const RepoItem = styled(UnstyledRepoItem)`
         }
         // The stargazers
         :last-child {
+            float: right;
+            right: 0;
             display: flex;
             font-size: 0.8em;
-            color: #999999;
+            color: #777;
             text-align: right;
             i {
                 margin: 2px;
@@ -75,13 +78,13 @@ export const RepoItem = styled(UnstyledRepoItem)`
         text-decoration: none;
         padding: 0;
         font-size: 1em;
-        font-weight: 300;
+        font-weight: 400;
         i {
             font-size: inherit;
-            color: #999999;
+            color: #444;
             text-align: start;
             margin-left: 5px;
-            opacity: 0.5;
+            opacity: 0.3;
             transition: opacity 0.4s ease-in-out;
             &:hover {
                 opacity: 0.8;
@@ -89,13 +92,13 @@ export const RepoItem = styled(UnstyledRepoItem)`
         }
     }
     p {
-        color: #333333;
+        color: #444;
         font-size: 0.8em;
         font-weight: lighter;
         padding: 0;
-        margin: 5px 0px;
+        margin: 5px 0;
     }
     i {
-        color: #333333;
+        color: #444;
     }
 `;

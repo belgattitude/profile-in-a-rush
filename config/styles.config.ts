@@ -12,6 +12,12 @@ export const appClassName = css`
     margin: 0;
     padding: 0;
     color: #333;
-    background-color: #f2f2f2;
+    background-color: white;
+    //background-color: #f2f2f2;
     //background: linear-gradient(45deg, rgb(46, 94, 149),rgb(59, 131, 209),rgb(67, 91, 142));
 `;
+
+export const breakpoints = {
+    small: `min-width: ${576}px`,
+    large: `min-width: ${768}px`,
+};

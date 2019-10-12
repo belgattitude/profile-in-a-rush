@@ -99,6 +99,7 @@ export const RepoList = styled(UnstyledRepoList)`
             margin: 0;
             padding: 5px 5px 5px 0px;
             display: flex;
+            //text-align: left;
             // for ssr :first-child becomes
             :last-of-type {
                 border-bottom: none;

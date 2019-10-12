@@ -53,8 +53,8 @@ export const getListVariants = (type: AnimationType = 'none'): Variants => {
 };
 
 export const getItemVariants = (type: AnimationType = 'none'): Variants => {
-    const vw = window !== undefined ? Math.ceil(window.innerWidth / 1.9) : 800;
-    const vh = window !== undefined ? Math.ceil(window.innerWidth / 1.9) : 800;
+    const vw = window !== undefined ? Math.ceil(window.innerWidth / 4.9) : 800;
+    const vh = window !== undefined ? Math.ceil(window.innerWidth / 4.9) : 800;
 
     const initialX = Math.random() > 0.5 ? vw : -vw;
     const initialY = Math.random() > 0.5 ? vh : -vh;
@@ -63,18 +63,20 @@ export const getItemVariants = (type: AnimationType = 'none'): Variants => {
         case 'soft':
             return {
                 initial: {
-                    opacity: 0,
-                    rotate: 0,
-                    scale: 0.1,
+                    opacity: 0.6,
+                    x: Math.ceil(Math.random() * 100) * (Math.random() > 0.5 ? -1 : 1),
+                    y: Math.ceil(Math.random() * 2) * (Math.random() > 0.5 ? -1 : 1),
+                    scale: 1.01,
                 },
                 enter: {
                     opacity: 1,
-                    rotate: 0,
+                    x: 0,
+                    y: 0,
                     scale: 1,
                     transition: {
-                        staggerChildren: 0.15,
-                        beforeChildren: false,
-                        duration: 1.2,
+                        //staggerChildren: 0.20,
+                        //beforeChildren: false,
+                        duration: 0.9,
                     },
                 },
                 exit: {
@@ -89,21 +91,19 @@ export const getItemVariants = (type: AnimationType = 'none'): Variants => {
             return {
                 initial: {
                     opacity: 0,
-                    rotate: 90,
+
                     scale: 0.1,
                     x: initialX,
                     y: -800,
                 },
                 enter: {
                     opacity: 1,
-                    rotate: 0,
                     scale: 1,
                     x: 0,
                     y: 0,
                     transition: {
-                        staggerChildren: 0.15,
+                        //staggerChildren: 0.12,
                         beforeChildren: false,
-                        duration: 1.2,
                     },
                 },
                 exit: {
@@ -117,24 +117,21 @@ export const getItemVariants = (type: AnimationType = 'none'): Variants => {
             return {
                 initial: {
                     opacity: 0,
-                    rotate: 90,
-                    scale: 30,
+                    scale: 4,
                     x: initialX,
                     y: initialY,
-                    //filter: 'grayscale(100%)'
                 },
                 enter: {
-                    opacity: 0.2,
-                    rotate: 0,
+                    opacity: 0.4,
                     scale: 1,
                     x: 0,
                     y: 0,
                     transitionEnd: {
-                        opacity: 0.9,
+                        opacity: 0.5,
                     },
                     transition: {
-                        duration: 1.2,
-                        ease: 'easeOut',
+                        duration: 0.3,
+                        ease: [0.48, 0.15, 0.25, 0.96],
                     },
                 },
                 exit: {

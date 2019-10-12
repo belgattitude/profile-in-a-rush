@@ -9,9 +9,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-const UnstyledFooter: React.FC<{
+type FooterProps = {
     className?: string;
-}> = props => {
+};
+
+const UnstyledFooter: React.FC<FooterProps> = props => {
     const { children, className } = props;
     return (
         <div className={className}>

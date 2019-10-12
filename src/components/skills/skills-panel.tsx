@@ -18,7 +18,7 @@ export type SkillType = typeof skillType[number];
 
 export type SkillRecord = {
     name: string;
-    logo: string;
+    logo?: string;
     homepage?: string;
     years?: number;
     rating?: number;
@@ -79,23 +79,30 @@ const UnstyledSkillsPanel: React.FC<SkillsPanelProps> = props => {
                         exit="exit"
                     >
                         {skills.map((skill, idx) => {
+                            const { name, logo, homepage } = skill;
                             if (activeSections.length > 0 && !sectionActive(skill.sections)) {
                                 return false;
                             }
                             return (
-                                <motion.article
-                                    className="card"
-                                    key={`${skill.name}`}
-                                    variants={getItemVariants(getAnimationType(activeSections[0]))}
-                                >
+                                <motion.article className="card" key={`${name}`} variants={getItemVariants('soft')}>
                                     <div className={'card-picture'}>
-                                        <a href={skill.homepage} target="_blank" rel="noreferrer">
-                                            <img src={skill.logo} alt={skill.name} />
+                                        <a href={homepage} target="_blank" rel="noreferrer">
+                                            {logo ? (
+                                                <img src={logo} alt={name} />
+                                            ) : (
+                                                <div style={{ fontSize: '2em', padding: '1em', fontWeight: 600 }}>
+                                                    {name}
+                                                </div>
+                                            )}
                                         </a>
                                     </div>
-                                    <div className={'card-footer'}>
+                                    <motion.div
+                                        className="card-footer"
+                                        key={`${name}`}
+                                        variants={getItemVariants(getAnimationType(activeSections[0]))}
+                                    >
                                         <SkillLabel skill={skill} />
-                                    </div>
+                                    </motion.div>
                                 </motion.article>
                             );
                         })}
@@ -114,17 +121,19 @@ export const SkillsPanel = styled(UnstyledSkillsPanel)`
         align-self: flex-start;
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: 30px;
+        margin-bottom: 0;
         div.tab {
-            padding: 5px;
-            background-color: white;
-            border-bottom: 2px solid #eee;
+            color: #333;
+            font-weight: 300;
+            padding: 5px 10px 10px 10px;
+            border-bottom: 1px solid #eee;
             margin: 5px;
             &:hover {
                 cursor: pointer;
             }
             &.tab__active {
-                border-bottom: 2px solid deeppink;
+                background-color: white;
+                border-bottom: 2px solid darkgray;
             }
         }
     }
@@ -134,6 +143,9 @@ export const SkillsPanel = styled(UnstyledSkillsPanel)`
         display: flex;
         flex-direction: column;
         width: 100%;
+        background-color: rgba(255, 255, 255, 1);
+        padding-top: 20px;
+
         // because of animation, need one more div
         .animation-container {
             display: flex;
@@ -153,15 +165,27 @@ export const SkillsPanel = styled(UnstyledSkillsPanel)`
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+
                 .card-picture {
+                    position: relative;
                     text-align: center;
+                    max-width: 70px;
+                    height: 50px;
+                    a,
+                    a:visited {
+                        color: black;
+                        text-decoration: none;
+                    }
+                    a:hover {
+                    }
                     img {
-                        max-width: 65px;
-                        height: 60px;
+                        width: 100%;
+                        height: 100%;
                         object-fit: scale-down;
                         transition: filter 0.5s ease-in-out;
-                        :hover {
-                            filter: drop-shadow(0 0 0.15rem grey);
+                        //filter: saturate(400%) grayscale(100%) ;
+                        &:hover {
+                            filter: grayscale(30%);
                         }
                     }
                 }

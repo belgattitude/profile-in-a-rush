@@ -11,7 +11,7 @@ import styled from '@emotion/styled';
 export const Box = styled.div`
     display: flex;
     flex-direction: column;
-    background-color: white;
+    //background-color: white;
     padding: 1em;
     line-height: 1.65em;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
