@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Avatar } from '../avatar';
 import { breakpoints } from '../../../config';
-import { ProfileHeader } from './profile-header';
 
 type BlockProps = {
     className?: string;
@@ -18,7 +16,6 @@ export const Block = styled(UnstyledBlock)<BlockProps>`
     > div:first-child {
         display: flex;
         flex-direction: column;
-        -webkit-box-align: center;
         align-items: center;
         text-align: center;
         padding: 45px 20px;

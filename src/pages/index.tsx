@@ -29,8 +29,6 @@ const SkillsPanelNoSSR = dynamic<SkillsPanelProps>(() => import('../components/s
     ssr: false,
 });
 
-import { About } from '../components/about';
-import { Summary } from '../components/summary';
 import {
     appClassName,
     reposToShow,
@@ -42,7 +40,7 @@ import {
 } from '../../config';
 
 import { SkillsPanelProps } from '../components/skills';
-import { ProfileHeader } from '../components/blocks/profile-header';
+import { ProfileHero } from '../components/blocks/profile-hero';
 import { AboutMe } from '../components/blocks/about-me';
 import { Features } from '../components/blocks/features';
 import { Technos } from '../components/blocks/technos';
@@ -137,7 +135,7 @@ const Page: React.FC = () => {
             </Head>
             <ThemeProvider theme={theme}>
                 <MDXProvider components={mdxProviderConfig}>
-                    <ProfileHeader />
+                    <ProfileHero />
                     <AboutMe />
                     <Features />
                     <Technos />

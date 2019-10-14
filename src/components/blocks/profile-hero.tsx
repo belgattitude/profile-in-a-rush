@@ -3,13 +3,13 @@ import styled from '@emotion/styled';
 import { Avatar } from '../avatar';
 import { breakpoints } from '../../../config';
 
-type ProfileHeaderProps = {
+type ProfileHeroProps = {
     className?: string;
     children?: never;
     avatarImg?: string;
 };
 
-const UnstyledProfileHeader: React.FC<ProfileHeaderProps> = props => {
+const UnstyledProfileHero: React.FC<ProfileHeroProps> = props => {
     const { avatarImg, className } = props;
     return (
         <div className={className}>
@@ -22,25 +22,13 @@ const UnstyledProfileHeader: React.FC<ProfileHeaderProps> = props => {
     );
 };
 
-export const ProfileHeader = styled(UnstyledProfileHeader)<ProfileHeaderProps>`
+export const ProfileHero = styled(UnstyledProfileHero)<ProfileHeroProps>`
     background: url('/static/images/bg-atomium3.jpg');
-    //background: url('/static/images/keyboard.jpg');
-    //background: url('/static/images/code.jpg');
-    //background: url('/static/images/code.jpg');
-    //background: url('/static/images/flowers.jpg');
     background-attachment: fixed;
     background-position: center;
     position: relative;
     background-size: cover;
-
     height: 33vh;
-    /*
-  min-height: 100vh;
-  // Hack for mobile
-  min-height: -webkit-fill-available;
- 
-   */
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,7 +43,6 @@ export const ProfileHeader = styled(UnstyledProfileHeader)<ProfileHeaderProps>`
         opacity: 0.5;
         content: '';
     }
-
     > * {
         z-index: 1;
     }
@@ -65,24 +52,17 @@ export const ProfileHeader = styled(UnstyledProfileHeader)<ProfileHeaderProps>`
         @media (${breakpoints.large}) {
             font-size: 1.1em;
         }
-        //text-stroke: 1px white;
         h1,
         p {
             padding: 0;
             margin: 0;
             color: white;
-            //text-shadow: 1px -0px 0 #555, -1px 1px 0 #666, 1px 1px 0 #444, -1px -1px 0 #444;
-            font-family: 'Work Sans', sans-serif;
             font-weight: 200;
-
-            //
         }
         h1 {
             font-size: 1.6em;
-            //font-size: 62px;
             letter-spacing: 0;
             font-weight: 300;
-            //letter-spacing: 0.05em;
         }
         p {
             font-size: 1em;
