@@ -9,9 +9,9 @@
     ["module-resolver", {
       "root": ["."],
       "alias": {
-        "@themes": "./themes",
-        "@core": "./core",
-        "@components": "./components"
+        "@themes": "./src/themes",
+        "@core": "./src/core",
+        "@components": "./src/components"
       }
     }]
   ]

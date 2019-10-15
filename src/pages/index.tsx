@@ -6,28 +6,16 @@
  * @license   https://github.com/belgattitude/profile-in-a-rush/blob/master/LICENSE.md MIT
  */
 
-// DISCLAIMER, IT'S NOT HOW I DO IT IN REAL LIFE ;)
-// IT'S A QUICK AND DIRTY PROFILE PAGE, STILL
-// SOME PARTS ARE COOL
-
-import React, { useState } from 'react';
+import React from 'react';
 import '../assets/styles/styles.scss';
 import '@emotion/core';
-import dynamic from 'next/dynamic';
 
 import { ThemeProvider } from 'emotion-theming';
 import styled from '@emotion/styled';
-import { mdxProviderConfig } from '../components/mdx-provider.config';
+import { mdxProviderConfig } from '@components/mdx-provider.config';
 import Head from 'next/dist/next-server/lib/head';
 import { MDXProvider } from '@mdx-js/react';
-import { Box, BoxContent, BoxTitle, Footer, Header } from '../components/layout';
-import { Avatar } from '../components/avatar';
-import { RepoList } from '../components/github';
-//import { SkillsPanel } from '../components/skills';
-
-const SkillsPanelNoSSR = dynamic<SkillsPanelProps>(() => import('../components/skills/skills-panel-no-ssr') as any, {
-    ssr: false,
-});
+import { Footer } from '@components/layout';
 
 import {
     appClassName,
@@ -39,14 +27,13 @@ import {
     breakpoints,
 } from '../../config';
 
-import { SkillsPanelProps } from '../components/skills';
 import { ProfileHero } from '../components/blocks/profile-hero';
 import { AboutMe } from '../components/blocks/about-me';
 import { Features } from '../components/blocks/features';
 import { Technos } from '../components/blocks/technos';
 import { Opensource } from '../components/blocks/opensource';
 import { Interests } from '../components/blocks/interests';
-import { theme } from '../themes/theme';
+import { defaultTheme } from '../themes/theme';
 
 const GridContainer = styled.div`
     display: grid;
@@ -101,8 +88,6 @@ const GridItem = styled.div<{
     grid-area: ${props => props.area};
 `;
 
-const bgImg = '/static/images/keyboard.jpg';
-
 const Page: React.FC = () => {
     return (
         <div css={appClassName}>
@@ -120,10 +105,10 @@ const Page: React.FC = () => {
                 <meta name="twitter:title" content={siteConfig.siteTitle} />
                 <meta name="twitter:description" content={siteConfig.siteDesc} />
                 <meta name="twitter:image" content={siteConfig.siteImg} />
-                <link rel="apple-touch-icon" href="/static/favicon.ico" />
-                <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
+                <link rel="apple-touch-icon" href="/public/favicon.ico" />
+                <link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico" />
             </Head>
-            <ThemeProvider theme={theme}>
+            <ThemeProvider theme={defaultTheme}>
                 <MDXProvider components={mdxProviderConfig}>
                     <ProfileHero />
                     <AboutMe />

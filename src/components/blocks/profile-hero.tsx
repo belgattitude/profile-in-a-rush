@@ -23,7 +23,7 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = props => {
 };
 
 export const ProfileHero = styled(UnstyledProfileHero)<ProfileHeroProps>`
-    background: url('/static/images/bg-atomium3.jpg');
+    background: url('/images/bg-atomium3.jpg');
     background-attachment: fixed;
     background-position: center;
     position: relative;

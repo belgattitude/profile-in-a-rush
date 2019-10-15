@@ -1,15 +1,11 @@
-// Actually theme system not really implemented ;)
-
-//export type Theme = typeof theme;
-
-export interface Theme {
+export type Theme = {
     colors: {
         primary: string;
         link: string;
     };
-}
+};
 
-export const theme: Theme = {
+export const defaultTheme: Theme = {
     colors: {
         primary: '#333',
         link: '#3685D6',
