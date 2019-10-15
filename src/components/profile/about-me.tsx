@@ -10,16 +10,14 @@ type AboutMeProps = {
 const UnstyledAboutMe: React.FC<AboutMeProps> = props => {
     const { className } = props;
     return (
-        <Block css={{ color: 'red' }}>
-            <div className={className}>
-                <h1>About me</h1>
-                <p>
-                    I'm a passionate developer with more than 15 years experience in backend and frontend technologies.
-                    Over the years I acquired some acquaintance with best practices, testing, q&a, architecture,... and
-                    hopefully survived the javascript fatigue. I live in Brussels and work as a freelancer.
-                </p>
-            </div>
-        </Block>
+        <div className={className}>
+            <h1>About me</h1>
+            <p>
+                I'm a passionate developer with more than 15 years experience in backend and frontend technologies. Over
+                the years I acquired some acquaintance with best practices, testing, q&a, architecture,... and really to
+                think 'how do we do this ?'
+            </p>
+        </div>
     );
 };
 

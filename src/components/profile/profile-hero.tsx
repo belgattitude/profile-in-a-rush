@@ -55,7 +55,7 @@ export const ProfileHero = styled(UnstyledProfileHero)<ProfileHeroProps>`
         }
         h1 {
             font-size: 1.6em;
-            letter-spacing: 0;
+            letter-spacing: 0.1em;
             font-weight: 300;
             margin: 5px;
         }

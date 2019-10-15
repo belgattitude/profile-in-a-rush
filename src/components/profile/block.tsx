@@ -2,21 +2,24 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { breakpoints } from '../../../config';
 import { css } from '@emotion/core';
+import { useTheme } from 'emotion-theming';
+import { Theme } from '@themes/theme';
 
 type BlockProps = {
     className?: string;
 };
 
-export const Block: React.FC<BlockProps> = props => {
-    const { children } = props;
-    return <div css={cssStyles}>{children}</div>;
+export const UnstyledBlock: React.FC<BlockProps> = props => {
+    const { children, className } = props;
+    const theme = useTheme<Theme>();
+    return <div className={className}>{children}</div>;
 };
 
-export const cssStyles = css([
-    `
+export const Block = styled(UnstyledBlock)`
     display: flex;
     justify-content: center;
     align-items: center;
+    background: ${props => props.theme.page.background};
     > div {
         display: flex;
         flex-direction: column;
@@ -45,5 +48,4 @@ export const cssStyles = css([
             padding: 0;
         }
     }
-`,
-]);
+`;

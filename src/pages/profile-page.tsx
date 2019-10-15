@@ -6,9 +6,10 @@ import { appClassName, siteConfig, mdxConfig } from '@config/index';
 import { MDXProvider } from '@mdx-js/react';
 import { Footer } from '@components/layouts';
 import { defaultTheme } from '@themes/theme';
-import { AboutMe, Features, Interests, Opensource, ProfileHero, Technos } from '@components/profile';
+import { AboutMe, Features, Opensource, ProfileHero, Technos } from '@components/profile';
 import Head from 'next/head';
 import { css } from '@emotion/core';
+import { Block } from '@components/profile/block';
 
 const ProfilePage: React.FC = () => {
     return (
@@ -27,22 +28,29 @@ const ProfilePage: React.FC = () => {
                 <meta name="twitter:title" content={siteConfig.siteTitle} />
                 <meta name="twitter:description" content={siteConfig.siteDesc} />
                 <meta name="twitter:image" content={siteConfig.siteImg} />
-                <link rel="apple-touch-icon" href="/public/favicon.ico" />
-                <link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico" />
+                <link rel="apple-touch-icon" href="/favicon.ico" />
+                <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
             </Head>
 
             <ThemeProvider theme={defaultTheme}>
                 <MDXProvider components={mdxConfig}>
                     <ProfileHero />
-                    <AboutMe />
-                    <Features
-                        css={css`
-                            background-color: #efefef;
-                        `}
-                    />
-                    <Technos />
-                    <Opensource />
-                    <Interests />
+                    <Block>
+                        <AboutMe />
+                    </Block>
+                    <Block>
+                        <Features
+                            css={css`
+                                background-color: #fafafa;
+                            `}
+                        />
+                    </Block>
+                    <Block>
+                        <Technos />
+                    </Block>
+                    <Block>
+                        <Opensource />
+                    </Block>
                     <Footer>
                         Contact me on
                         <a href={siteConfig.linkedIn} target="_blank" rel="noreferrer">

@@ -13,18 +13,16 @@ type OpensourceProps = {
 const UnstyledOpensource: React.FC<OpensourceProps> = props => {
     const { className } = props;
     return (
-        <Block>
-            <div className={className}>
-                <h1>
-                    <a href={'https://github.com/belgattitude'} target={'_blank'} rel={'noreferrer'}>
-                        <i className="fab fa-github" />
-                    </a>
-                </h1>
-                <h1>Opensource</h1>
-                <h2>Some code I committed once upon a time...</h2>
-                <GithubRepoList githubQuery={githubQuery} filters={filteredRepos} />
-            </div>
-        </Block>
+        <div className={className}>
+            <h1>
+                <a href={'https://github.com/belgattitude'} target={'_blank'} rel={'noreferrer'}>
+                    <i className="fab fa-github" />
+                </a>
+            </h1>
+            <h1>Opensource</h1>
+            <h2>Some code I committed once upon a time...</h2>
+            <GithubRepoList githubQuery={githubQuery} filters={filteredRepos} />
+        </div>
     );
 };
 
