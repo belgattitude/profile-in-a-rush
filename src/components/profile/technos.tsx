@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Block } from './block';
-import { defaultSection, githubQuery, filteredRepos, skillsRecords } from '../../../config';
+import { defaultSection, skillsRecords } from '../../../config';
 import dynamic from 'next/dist/next-server/lib/dynamic';
 import { SkillsPanelProps } from '../skills';
 
@@ -10,7 +10,8 @@ type TechnosProps = {
     children?: never;
 };
 
-const SkillsPanelNoSSR = dynamic<SkillsPanelProps>(() => import('../skills/skills-panel-no-ssr') as any, {
+const SkillsPanel = dynamic<SkillsPanelProps>(() => import('../skills/skills-panel').then(mod => mod.SkillsPanel), {
+    loading: () => <div>Loading...</div>,
     ssr: false,
 });
 
@@ -21,7 +22,7 @@ const UnstyledTechnos: React.FC<TechnosProps> = props => {
             <div className={className}>
                 <h1>Technos</h1>
                 <h2>What do I work with (and relics) ?</h2>
-                <SkillsPanelNoSSR skills={skillsRecords} defaultSection={defaultSection} />
+                <SkillsPanel skills={skillsRecords} defaultSection={defaultSection} />
                 <h3>Frontend</h3>
                 <p>
                     When working on frontend I mainly code with the <strong>react</strong>/<strong>typescript</strong>{' '}
@@ -64,7 +65,6 @@ export const Technos = styled(UnstyledTechnos)<TechnosProps>`
     > div {
         width: 100%;
         max-width: 650px;
-        // text-align: center;
     }
     > p {
         width: 80%;

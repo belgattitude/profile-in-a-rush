@@ -49,26 +49,20 @@ export const ProfileHero = styled(UnstyledProfileHero)<ProfileHeroProps>`
     div {
         text-align: center;
         font-size: 1em;
+        color: white;
         @media (${breakpoints.large}) {
             font-size: 1.1em;
-        }
-        h1,
-        p {
-            padding: 0;
-            margin: 0;
-            color: white;
-            font-weight: 200;
         }
         h1 {
             font-size: 1.6em;
             letter-spacing: 0;
             font-weight: 300;
+            margin: 5px;
         }
         p {
             font-size: 1em;
             font-variant: all-small-caps;
-            padding: 0;
-            margin: 5px;
+            margin: 0;
             letter-spacing: 0.19em;
         }
     }

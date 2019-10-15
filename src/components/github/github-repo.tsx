@@ -45,7 +45,6 @@ export const GithubRepo = styled(UnstyledGithubRepo)`
     width: 100%;
     text-align: left;
     div {
-        // for ssr &:first-child should be
         :first-of-type {
             flex: 1 1 100%;
         }

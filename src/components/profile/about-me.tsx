@@ -10,7 +10,7 @@ type AboutMeProps = {
 const UnstyledAboutMe: React.FC<AboutMeProps> = props => {
     const { className } = props;
     return (
-        <Block>
+        <Block css={{ color: 'red' }}>
             <div className={className}>
                 <h1>About me</h1>
                 <p>

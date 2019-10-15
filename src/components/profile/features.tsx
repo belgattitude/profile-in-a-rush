@@ -2,7 +2,6 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { Block } from './block';
 import { breakpoints } from '../../../config';
-import { BoxContent } from '../layout';
 
 type FeaturesProps = {
     className?: string;
@@ -12,7 +11,7 @@ type FeaturesProps = {
 const UnstyledFeatures: React.FC<FeaturesProps> = props => {
     const { className } = props;
     return (
-        <Block>
+        <Block css={{ backgroundColor: 'red' }}>
             <div className={className}>
                 <h1>What do I do ?</h1>
                 <h2>things acquired with time and persistence</h2>

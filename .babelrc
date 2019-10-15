@@ -2,10 +2,11 @@
   "presets": [
     [
       "next/babel"
-    ]
+    ],
+    ["@emotion/babel-preset-css-prop"]
   ],
   "plugins": [
-    ["emotion", { "sourceMap": true }],
+    //["emotion", { "sourceMap": true }],
     ["module-resolver", {
       "root": ["."],
       "alias": {

@@ -1,17 +1,9 @@
-/**
- * This file is part of profile-in-a-rush, a personal hackaton for getting
- * my CV online and initiate the a quest of a wonderful job.
- *
- * @copyright Copyright (c) 2019-present Sébastien Vanvelthem. (https://github.com/belgattitude)
- * @license   https://github.com/belgattitude/profile-in-a-rush/blob/master/LICENSE.md MIT
- */
-
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
-import { skillSections, skillType, sectionAnimations } from '../../../config/skills.config';
+import { skillSections, skillType, sectionAnimations } from '@config/skills.config';
 import { SkillLabel } from './skill-label';
-import { getAnimationType, getItemVariants, getListVariants } from './skills-animations';
+import { getAnimationType, getItemVariants, getListVariants } from './skills-panel.anims';
 
 export type SkillSections = typeof skillSections[number];
 export type SkillType = typeof skillType[number];

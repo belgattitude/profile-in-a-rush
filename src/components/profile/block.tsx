@@ -1,30 +1,33 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { breakpoints } from '../../../config';
+import { css } from '@emotion/core';
 
 type BlockProps = {
     className?: string;
 };
-const UnstyledBlock: React.FC<BlockProps> = props => {
-    const { className, children } = props;
-    return <div className={className}>{children}</div>;
+
+export const Block: React.FC<BlockProps> = props => {
+    const { children } = props;
+    return <div css={cssStyles}>{children}</div>;
 };
-export const Block = styled(UnstyledBlock)<BlockProps>`
+
+export const cssStyles = css([
+    `
     display: flex;
     justify-content: center;
     align-items: center;
-    > div:first-child {
+    > div {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 45px 20px;
+        padding: 45px 20px 45px 20px;
         @media (${breakpoints.large}) {
             font-size: 1em;
             max-width: 900px;
         }
         font-weight: 400;
-        color: rgb(51, 51, 51);
         letter-spacing: -0.003em;
         line-height: 1.58;
         h1,
@@ -42,4 +45,5 @@ export const Block = styled(UnstyledBlock)<BlockProps>`
             padding: 0;
         }
     }
-`;
+`,
+]);
