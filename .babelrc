@@ -2,14 +2,16 @@
   "presets": [
     [
       "next/babel"
-    ],
-    ["@emotion/babel-preset-css-prop"]
+    ]
   ],
   "plugins": [
+    ["emotion", { "sourceMap": true }],
     ["module-resolver", {
       "root": ["."],
       "alias": {
-        "@content": "./content"
+        "@themes": "./themes",
+        "@core": "./core",
+        "@components": "./components"
       }
     }]
   ]

@@ -19,8 +19,14 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@content/*": [
-        "content/*"
+      "@themes/*": [
+        "src/themes/*"
+      ],
+      "@core/*": [
+        "src/core/*"
+      ],
+      "@components/*": [
+        "src/components/*"
       ]
     }
   },
@@ -28,6 +34,7 @@
     "node_modules"
   ],
   "include": [
+    "types/*.d.ts",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"

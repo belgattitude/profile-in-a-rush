@@ -2,13 +2,7 @@
 
 declare module '@emotion/styled' {
     import { CreateStyled } from '@emotion/styled/types/index';
-
-    interface Theme {
-        colors: {
-            primary: string;
-            link: string;
-        };
-    }
+    import { Theme } from '@themes/theme';
 
     export * from '@emotion/styled/types/index';
     const customStyled: CreateStyled<Theme>;

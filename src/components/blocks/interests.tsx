@@ -1,10 +1,11 @@
-/** @jsx jsx */
+import { css } from '@emotion/core';
+
 import React from 'react';
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
 import { Block } from './block';
 import { breakpoints } from '../../../config';
-import { BoxContent } from '../layout';
+import { ThemeProviderProps, useTheme } from 'emotion-theming';
+import { Theme } from '../../themes/theme';
 
 type InterestsProps = {
     className?: string;
@@ -13,9 +14,15 @@ type InterestsProps = {
 
 const UnstyledInterests: React.FC<InterestsProps> = props => {
     const { className } = props;
+    const theme = useTheme<Theme>();
     return (
         <Block>
-            <div css={{}} className={className}>
+            <div
+                css={css`
+                    background-color: ${theme.colors.primary};
+                `}
+                className={className}
+            >
                 <h1>What do I do ?</h1>
                 <h2>things acquired with time and persistence</h2>
                 <div className={'card-container'}>

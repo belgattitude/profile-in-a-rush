@@ -45,14 +45,8 @@ import { AboutMe } from '../components/blocks/about-me';
 import { Features } from '../components/blocks/features';
 import { Technos } from '../components/blocks/technos';
 import { Opensource } from '../components/blocks/opensource';
-
-// Actually theme system not really implemented ;)
-const theme = {
-    colors: {
-        primary: '#333',
-        link: '#3685D6',
-    },
-};
+import { Interests } from '../components/blocks/interests';
+import { theme } from '../themes/theme';
 
 const GridContainer = styled.div`
     display: grid;
@@ -108,10 +102,6 @@ const GridItem = styled.div<{
 `;
 
 const bgImg = '/static/images/keyboard.jpg';
-//const bgImg = '/static/images/bg-atomium.jpg';
-//const bgImg = '/static/images/doors.jpg';
-//const bgImg = '/static/images/code.jpg';
-//const bgImg = '/static/images/typewriter.jpg';
 
 const Page: React.FC = () => {
     return (
@@ -138,9 +128,9 @@ const Page: React.FC = () => {
                     <ProfileHero />
                     <AboutMe />
                     <Features />
+                    <Interests />
                     <Technos />
                     <Opensource />
-                    <GridContainer></GridContainer>
                     <Footer>
                         Contact me on
                         <a href={siteConfig.linkedIn} target="_blank" rel="noreferrer">
