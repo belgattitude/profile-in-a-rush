@@ -6,5 +6,5 @@
  * @license   https://github.com/belgattitude/profile-in-a-rush/blob/master/LICENSE.md MIT
  */
 
-export * from './repo-list';
-export * from './repo-item';
+export * from './github-repo';
+export * from './github-repo-list';

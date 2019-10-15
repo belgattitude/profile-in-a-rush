@@ -9,6 +9,7 @@
     ["module-resolver", {
       "root": ["."],
       "alias": {
+        "@config": "./config",
         "@themes": "./src/themes",
         "@core": "./src/core",
         "@components": "./src/components"

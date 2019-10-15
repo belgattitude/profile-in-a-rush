@@ -1,23 +1,15 @@
-/**
- * This file is part of profile-in-a-rush, a personal hackaton for getting
- * my CV online and initiate the a quest of a wonderful job.
- *
- * @copyright Copyright (c) 2019-present Sébastien Vanvelthem. (https://github.com/belgattitude)
- * @license   https://github.com/belgattitude/profile-in-a-rush/blob/master/LICENSE.md MIT
- */
-
 import React from 'react';
 import { RepoItemDTO } from './github.api';
 import styled from '@emotion/styled';
 import { truncateText } from '../../utils/utils';
-import { LangBadge } from '../badge';
+import { CustomTag } from '@components/github/custom-tag';
 
 const getRepoHomePage = (repo: RepoItemDTO): string => {
-    const { homepage, html_url, extra_techs = [] } = repo;
-    return !homepage || extra_techs.includes('pwa') ? html_url : homepage;
+    const { homepage, html_url, custom_tags = [] } = repo;
+    return !homepage || custom_tags.includes('pwa') ? html_url : homepage;
 };
 
-const UnstyledRepoItem: React.FC<{
+const UnstyledGithubRepo: React.FC<{
     className?: string;
     repo: RepoItemDTO;
     limitChars?: number;
@@ -32,8 +24,8 @@ const UnstyledRepoItem: React.FC<{
                     {repo.homepage ? <i className="fas fa-home" /> : <i className="fab fa-github" />}
                 </a>
                 <p>{truncateText(repo.description, limitChars, false)}</p>
-                {(repo.extra_techs || []).map(label => (
-                    <LangBadge key={label} title={label} />
+                {(repo.custom_tags || []).map(label => (
+                    <CustomTag key={label} title={label} />
                 ))}
             </div>
             <div>
@@ -46,7 +38,7 @@ const UnstyledRepoItem: React.FC<{
     );
 };
 
-export const RepoItem = styled(UnstyledRepoItem)`
+export const GithubRepo = styled(UnstyledGithubRepo)`
     display: flex;
     margin: 0;
     padding: 5px 5px;

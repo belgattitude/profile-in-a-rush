@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Block } from './block';
-import { defaultSection, githubQuery, reposToShow, skillsRecords } from '../../../config';
+import { defaultSection, githubQuery, filteredRepos, skillsRecords } from '../../../config';
 import dynamic from 'next/dist/next-server/lib/dynamic';
 import { SkillsPanelProps } from '../skills';
 

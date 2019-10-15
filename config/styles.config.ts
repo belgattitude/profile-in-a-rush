@@ -13,8 +13,6 @@ export const appClassName = css`
     padding: 0;
     color: #333;
     background-color: white;
-    //background-color: #f2f2f2;
-    //background: linear-gradient(45deg, rgb(46, 94, 149),rgb(59, 131, 209),rgb(67, 91, 142));
 `;
 
 export const breakpoints = {

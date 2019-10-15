@@ -1,14 +1,6 @@
-/**
- * This file is part of profile-in-a-rush, a personal hackaton for getting
- * my CV online and initiate the a quest of a wonderful job.
- *
- * @copyright Copyright (c) 2019-present Sébastien Vanvelthem. (https://github.com/belgattitude)
- * @license   https://github.com/belgattitude/profile-in-a-rush/blob/master/LICENSE.md MIT
- */
-
-import { Result } from '../../core/result';
+import { Result } from '@core/result';
 import ky from 'ky/umd';
-import { JsonObject } from '../../core/json.interface';
+import is from '@sindresorhus/is';
 
 export type RepoItemDTO = {
     id: number;
@@ -21,8 +13,7 @@ export type RepoItemDTO = {
     stargazers_count: number;
     url: string;
 } & {
-    // added locally, see filters
-    extra_techs: string[];
+    custom_tags?: string[];
 };
 export type RepoItems = RepoItemDTO[];
 
@@ -48,9 +39,8 @@ export default class GithubApi {
         githubQuery: string;
         signal?: AbortSignal;
         filterOnly?: Array<[string, string[]]>;
-    }): Promise<Result<RepoItems>> {
+    }): Promise<Result<RepoItemDTO[]>> {
         const { filterOnly = [], githubQuery } = props;
-
         return (
             this.ky
                 // Specific github syntax, using URLParams encoding won't work ;)
@@ -59,16 +49,16 @@ export default class GithubApi {
                 })
                 .json()
                 .then(response => {
-                    const { items = false } = response as JsonObject;
-                    if (items && this.isValidRepoResponse(items)) {
+                    if (this.isValidRepoResponse(response)) {
+                        const { items } = response;
+
                         if (filterOnly.length > 0) {
                             // Filtering by order of filterOnly
                             const filtered: RepoItems = [];
                             for (const [name, techs] of filterOnly) {
                                 const repo = items.find(item => item.name === name);
                                 if (repo) {
-                                    repo.extra_techs = techs;
-                                    filtered.push(repo);
+                                    filtered.push({ ...repo, custom_tags: techs });
                                 }
                             }
                             return Result.ok<RepoItems>(filtered);
@@ -82,14 +72,13 @@ export default class GithubApi {
     }
 
     static createFromDefaults() {
-        // maybe defaults / env later in the constructor
         return new GithubApi();
     }
 
-    // Utilitary typeguards
-
-    private isValidRepoResponse(response: unknown): response is RepoItems {
-        // Yes it's very basic ;)
-        return response instanceof Array;
+    /**
+     * Very basic typeguard
+     */
+    private isValidRepoResponse(response: unknown): response is { items: RepoItemDTO[] } {
+        return is.plainObject(response) && is.array(response.items);
     }
 }

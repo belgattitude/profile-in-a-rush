@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Block } from './block';
-import { defaultSection, githubQuery, reposToShow, skillsRecords } from '../../../config';
-import dynamic from 'next/dist/next-server/lib/dynamic';
-import { SkillsPanelProps } from '../skills';
-import { RepoList } from '../github';
+import { githubQuery, filteredRepos } from '../../../config';
+
+import { GithubRepoList } from '../github';
 
 type OpensourceProps = {
     className?: string;
@@ -23,7 +22,7 @@ const UnstyledOpensource: React.FC<OpensourceProps> = props => {
                 </h1>
                 <h1>Opensource</h1>
                 <h2>Some code I committed once upon a time...</h2>
-                <RepoList githubQuery={githubQuery} filters={reposToShow} />
+                <GithubRepoList githubQuery={githubQuery} filters={filteredRepos} />
             </div>
         </Block>
     );
@@ -34,7 +33,6 @@ export const Opensource = styled(UnstyledOpensource)<OpensourceProps>`
     > div {
         max-width: 500px;
         margin-top: 30px;
-        //text-align: center;
     }
     > h1 {
         i {
