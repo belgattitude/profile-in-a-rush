@@ -9,9 +9,9 @@ Go there: **[https://me.soluble.io](https://me.soluble.io)**. No tracking, no co
 
 ## The techs
 
-![](./static/logos/nextjs.png)
-![](./static/logos/mdx.png)
-![](./static/logos/emotion-styled.png)
-![](./static/logos/reactjs.png)
-![](./static/logos/sass.png)
-![](./static/logos/typescript.png)
+![](./public/images/logos/technos/nextjs.png)
+![](./public/images/logos/technos/mdx.png)
+![](./public/images/logos/technos/emotion-styled.png)
+![](./public/images/logos/technos/reactjs.png)
+![](./public/images/logos/technos/sass.png)
+![](./public/images/logos/technos/typescript.png)
