@@ -35,13 +35,17 @@ const ProfilePage: React.FC = () => {
             <ThemeProvider theme={defaultTheme}>
                 <MDXProvider components={mdxConfig}>
                     <ProfileHero />
-                    <Block>
+                    <Block
+                        css={css`
+                            margin-top: 3.5em;
+                        `}
+                    >
                         <AboutMe />
                     </Block>
                     <Block>
                         <Features
                             css={css`
-                                background-color: #fbfbfb;
+                                background-color: #fefefe;
                             `}
                         />
                     </Block>

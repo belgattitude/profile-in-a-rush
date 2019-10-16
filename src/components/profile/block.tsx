@@ -16,6 +16,7 @@ export const Block = styled(UnstyledBlock)`
     justify-content: center;
     align-items: center;
     background: ${props => props.theme.page.background};
+    color: ${props => props.theme.colors.primary};
     > div {
         display: flex;
         flex-direction: column;
@@ -30,14 +31,21 @@ export const Block = styled(UnstyledBlock)`
         letter-spacing: -0.003em;
         line-height: 1.58;
         h1,
+        h2,
+        h3,
         p {
+            color: ${props => props.theme.colors.primary};
         }
         h1 {
             padding: 0;
             margin: 0;
+            color: #333;
             font-size: 1.6em;
             letter-spacing: 0;
             font-weight: 300;
+        }
+        h2 {
+            opacity: 0.8;
         }
         p {
             font-size: 1em;

@@ -12,7 +12,7 @@ const UnstyledFeatures: React.FC<FeaturesProps> = props => {
     return (
         <div className={className}>
             <h1>What do I do ?</h1>
-            <h2>and things you might be interested in</h2>
+            <h2>and what you might be interested in</h2>
             <div className={'card-container'}>
                 <div>
                     <h3>Programming</h3>
@@ -55,6 +55,7 @@ export const Features = styled(UnstyledFeatures)<FeaturesProps>`
         justify-content: flex-start;
         align-items: stretch;
         flex-wrap: wrap;
+
         div {
             flex: 1 1 auto;
 

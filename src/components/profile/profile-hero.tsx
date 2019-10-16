@@ -40,7 +40,7 @@ export const ProfileHero = styled(UnstyledProfileHero)<ProfileHeroProps>`
         right: 0;
         display: inline-block;
         background: black;
-        opacity: 0.5;
+        opacity: 0.4;
         content: '';
     }
     > * {

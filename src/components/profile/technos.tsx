@@ -19,7 +19,7 @@ const UnstyledTechnos: React.FC<TechnosProps> = props => {
     return (
         <div className={className}>
             <h1>Technos</h1>
-            <h2>What do I work with (and relics) ?</h2>
+            <h2>what do I work with (and relics) ?</h2>
             <SkillsPanel skills={skillsRecords} defaultSection={defaultSection} />
             <h3>Frontend</h3>
             <p>
