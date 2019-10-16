@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Block } from './block';
 
 type AboutMeProps = {
     className?: string;
@@ -15,10 +14,23 @@ const UnstyledAboutMe: React.FC<AboutMeProps> = props => {
             <p>
                 I'm a passionate developer with more than 15 years experience in backend and frontend technologies. Over
                 the years I acquired some acquaintance with best practices, testing, q&a, architecture,... and really to
-                think 'how do we do this ?'
+                think 'how do we do this ?'. "this" being not exclusively related to tech. I live in Brussels, work as a
+                freelancer and like to think that not every &nbsp;
+                <a href={'https://www.instagram.com/p/2ZBIQwIW19/'} target={'_blank'} rel={'noreferrer'}>
+                    #belgiansolution
+                </a>
+                &nbsp; is an answer to a problem.
             </p>
         </div>
     );
 };
 
-export const AboutMe = styled(UnstyledAboutMe)<AboutMeProps>``;
+export const AboutMe = styled(UnstyledAboutMe)<AboutMeProps>`
+    a,
+    &:link,
+    &:visited {
+        color: ${props => props.theme.colors.link};
+        text-decoration: none;
+        padding: 0;
+    }
+`;

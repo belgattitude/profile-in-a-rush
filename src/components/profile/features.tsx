@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Block } from './block';
 import { breakpoints } from '../../../config';
 
 type FeaturesProps = {
@@ -21,7 +20,10 @@ const UnstyledFeatures: React.FC<FeaturesProps> = props => {
                 </div>
                 <div>
                     <h3>Quality and code review</h3>
-                    <p>Code review and implementation of test practices. Cause I did not in the past and it hurts ;)</p>
+                    <p>
+                        Code review and implementation of test practices. Cause I did not in the distant past and it
+                        hurts ;)
+                    </p>
                 </div>
 
                 <div>
@@ -31,7 +33,7 @@ const UnstyledFeatures: React.FC<FeaturesProps> = props => {
 
                 <div>
                     <h3>Documentation</h3>
-                    <p>Doc and technical writer, markdown addict and learning by doing...</p>
+                    <p>Doc and technical writer, markdown addict and interested in pedagogy.</p>
                 </div>
                 <div>
                     <h3>Experience</h3>

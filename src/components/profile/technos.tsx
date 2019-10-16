@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Block } from './block';
 import { defaultSection, skillsRecords } from '../../../config';
 import dynamic from 'next/dist/next-server/lib/dynamic';
 import { SkillsPanelProps } from '../skills';

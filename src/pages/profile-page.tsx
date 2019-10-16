@@ -41,7 +41,7 @@ const ProfilePage: React.FC = () => {
                     <Block>
                         <Features
                             css={css`
-                                background-color: #fafafa;
+                                background-color: #fbfbfb;
                             `}
                         />
                     </Block>
@@ -56,7 +56,14 @@ const ProfilePage: React.FC = () => {
                         <a href={siteConfig.linkedIn} target="_blank" rel="noreferrer">
                             &nbsp;<i className="fab fa-linkedin"></i> linked.in
                         </a>
-                        <div>No recruiters please, I already have the ones.</div>
+                        <p>No recruiters please !</p>
+                        <p>
+                            Want to see the
+                            <a href={siteConfig.githubRepo} target="_blank" rel="noreferrer">
+                                &nbsp;<i className="fab fa-github"></i>code&nbsp;
+                            </a>
+                            ?
+                        </p>
                     </Footer>
                 </MDXProvider>
             </ThemeProvider>

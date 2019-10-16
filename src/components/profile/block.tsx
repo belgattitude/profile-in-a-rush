@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { breakpoints } from '../../../config';
-import { css } from '@emotion/core';
-import { useTheme } from 'emotion-theming';
-import { Theme } from '@themes/theme';
 
 type BlockProps = {
     className?: string;
@@ -11,7 +8,6 @@ type BlockProps = {
 
 export const UnstyledBlock: React.FC<BlockProps> = props => {
     const { children, className } = props;
-    const theme = useTheme<Theme>();
     return <div className={className}>{children}</div>;
 };
 

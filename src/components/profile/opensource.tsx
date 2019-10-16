@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Block } from './block';
 import { githubQuery, filteredRepos } from '../../../config';
 
 import { GithubRepoList } from '../github';
