@@ -13,13 +13,13 @@ const UnstyledAboutMe: React.FC<AboutMeProps> = props => {
             <h1>About me</h1>
             <p>
                 I'm a passionate developer with more than 15 years experience in backend and frontend technologies. Over
-                the years I acquired some acquaintance with best practices, testing, q&a, architecture,... and really to
-                think 'how do we do this ?'. "this" being not exclusively related to tech. I live in Brussels, work as a
-                freelancer and like to think that not every &nbsp;
+                the years I acquired some acquaintance with best practices, testing, q&a, architecture,... and really
+                like to think 'how do we do this ?'. "this" being not exclusively related to tech. I live in Brussels,
+                work as a freelancer and believe that not every{' '}
                 <a href={'https://www.instagram.com/p/2ZBIQwIW19/'} target={'_blank'} rel={'noreferrer'}>
                     #belgiansolution
-                </a>
-                &nbsp; is an answer to a problem.
+                </a>{' '}
+                is an answer to a problem.
             </p>
         </div>
     );
