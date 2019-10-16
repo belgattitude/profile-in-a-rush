@@ -60,7 +60,7 @@ const ProfilePage: React.FC = () => {
                         <p>
                             Want to see the
                             <a href={siteConfig.githubRepo} target="_blank" rel="noreferrer">
-                                &nbsp;<i className="fab fa-github"></i>code&nbsp;
+                                &nbsp;<i className="fab fa-github"></i>&nbsp;code&nbsp;
                             </a>
                             ?
                         </p>
