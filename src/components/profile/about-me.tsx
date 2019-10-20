@@ -8,6 +8,7 @@ type AboutMeProps = {
 
 const UnstyledAboutMe: React.FC<AboutMeProps> = props => {
     const { className } = props;
+
     return (
         <div className={className}>
             <h1>About me</h1>
@@ -16,10 +17,15 @@ const UnstyledAboutMe: React.FC<AboutMeProps> = props => {
                 the years I acquired some acquaintance with best practices, testing, q&a, architecture,... and really
                 like to think 'how do we do this ?'. "this" being not exclusively related to tech. I live in Brussels,
                 work as a freelancer and believe that not every{' '}
-                <a href={'https://www.instagram.com/p/2ZBIQwIW19/'} target={'_blank'} rel={'noreferrer'}>
-                    #belgiansolution
+                <a
+                    title="Credits #belgiansolutions"
+                    href={'https://www.instagram.com/p/2ZBIQwIW19/'}
+                    target={'_blank'}
+                    rel={'noreferrer'}
+                >
+                    solution
                 </a>{' '}
-                is an answer to a problem.
+                is an answer to a problem ;)
             </p>
         </div>
     );

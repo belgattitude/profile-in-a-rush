@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { RefObject, useCallback, useState } from 'react';
 import styled from '@emotion/styled';
 import { Avatar } from '../avatar';
 import { breakpoints } from '../../../config';
+import { useViewportScroll, useTransform, useSpring, motion } from 'framer-motion';
 
 type ProfileHeroProps = {
     className?: string;
@@ -11,13 +12,39 @@ type ProfileHeroProps = {
 
 const UnstyledProfileHero: React.FC<ProfileHeroProps> = props => {
     const { avatarImg, className } = props;
+    const { scrollY } = useViewportScroll();
+
+    const [elementRect, setElementRect] = useState<ClientRect | null>(null);
+
+    // just because useRef and useLayoutEffect won't do it.
+    const measuredRef = useCallback((node: HTMLDivElement | null) => {
+        if (node !== null) {
+            setElementRect(node.getBoundingClientRect());
+        }
+    }, []);
+
+    const springConfig = {
+        damping: 14,
+        stiffness: 90,
+        mass: 1,
+    };
+
+    const { width } = elementRect || { width: 600 };
+    const { height } = elementRect || { height: 400 };
+    const x = useSpring(useTransform(scrollY, [0, 500], [0, -Math.ceil(width / 1.1)]), springConfig);
+    const y = useTransform(scrollY, [0, 500], [0, Math.ceil(height / 1.05)]);
+    const opacity = useTransform(scrollY, [0, 500], [1, 0]);
+    const zoom = useTransform(scrollY, [0, 500], [1, 0.4]);
+
     return (
-        <div className={className}>
-            <div>
-                {avatarImg && <Avatar src={avatarImg} size={'100px'} />}
-                <h1>Sébastien Vanvelthem</h1>
-                <p>Developer in React, Typescript and PHP.</p>
-            </div>
+        <div ref={measuredRef} className={className}>
+            <motion.div initial={{ y: 0, x: 0, opacity: 0 }} style={{ y, x, opacity, zoom }}>
+                <div>
+                    {avatarImg && <Avatar src={avatarImg} size={'100px'} />}
+                    <h1>Sébastien Vanvelthem</h1>
+                    <p>Developer in React, Typescript and PHP.</p>
+                </div>
+            </motion.div>
         </div>
     );
 };
