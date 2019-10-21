@@ -11,8 +11,8 @@ export type Theme = {
 export const defaultTheme: Theme = {
     colors: {
         primary: '#111',
-        link: '#3685D6',
-        //link: 'deeppink',
+        //link: '#3685D6',
+        link: '#433561',
     },
     page: {
         background: 'white',

@@ -33,13 +33,15 @@ export const Opensource = styled(UnstyledOpensource)<OpensourceProps>`
     }
     > h1 {
         i {
+            
             font-size: 2em;
         }
 
         a,
         a:visited {
-            transition: color 0.2s ease-in-out;
-            color: ${props => props.theme.colors.primary};
+            transition: all 0.2s ease-in-out;
+            //color: ${props => props.theme.colors.primary};
+            color: #999;
             text-decoration: none;
         }
         a:hover {

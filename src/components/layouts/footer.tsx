@@ -20,12 +20,8 @@ export const Footer = styled(UnstyledFooter)`
     display: flex;
     flex-direction: row;
     color: white;
-
-    background-image: url(${img});
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: top;
-
+    background: #0f0c29;
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
     position: static;
     z-index: 1000;
     bottom: 0;
