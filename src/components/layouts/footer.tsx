@@ -14,11 +14,18 @@ const UnstyledFooter: React.FC<FooterProps> = props => {
     );
 };
 
+const img = '/images/leafs-unsplash2.jpg';
+
 export const Footer = styled(UnstyledFooter)`
     display: flex;
     flex-direction: row;
     color: white;
-    background-color: deeppink;
+
+    background-image: url(${img});
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+
     position: static;
     z-index: 1000;
     bottom: 0;

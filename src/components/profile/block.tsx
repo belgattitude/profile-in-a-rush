@@ -39,13 +39,13 @@ export const Block = styled(UnstyledBlock)`
         h1 {
             padding: 0;
             margin: 0;
-            color: #333;
             font-size: 1.6em;
             letter-spacing: 0;
             font-weight: 300;
         }
         h2 {
-            opacity: 0.8;
+            letter-spacing: 0.015em;
+            font-weight: 500;
         }
         p {
             font-size: 1em;

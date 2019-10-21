@@ -3,7 +3,7 @@ import css from '@emotion/css';
 export const appClassName = css`
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #111;
     background-color: white;
 `;
 

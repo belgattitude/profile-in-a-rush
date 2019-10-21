@@ -208,7 +208,7 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = props => {
 
 export const ProfileHero = styled(UnstyledProfileHero)<ProfileHeroProps>`
     position: relative;
-    height: 60vh;
+    height: 50vh;
 
     display: flex;
     flex-direction: column;

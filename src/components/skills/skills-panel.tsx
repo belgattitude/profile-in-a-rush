@@ -115,7 +115,7 @@ export const SkillsPanel = styled(UnstyledSkillsPanel)`
         flex-wrap: wrap;
         margin-bottom: 0;
         div.tab {
-            color: #333;
+            color: ${props => props.theme.colors.primary};
             font-weight: 300;
             padding: 5px 10px 10px 10px;
             border-bottom: 1px solid #eee;

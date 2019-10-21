@@ -61,6 +61,9 @@ export const Technos = styled(UnstyledTechnos)<TechnosProps>`
         width: 100%;
         max-width: 650px;
     }
+    > h3 {
+        font-weight: 300;
+    }
     > p {
         width: 80%;
         margin: 20px 0;

@@ -60,7 +60,8 @@ export const Features = styled(UnstyledFeatures)<FeaturesProps>`
             }
             h3 {
                 font-size: 1em;
-                font-weight: 600;
+                font-weight: 500;
+                letter-spacing: 0.025em;
                 padding: 0;
             }
             > p {

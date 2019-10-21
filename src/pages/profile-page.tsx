@@ -12,6 +12,7 @@ import { css } from '@emotion/core';
 import { Block } from '@components/profile/block';
 
 const ProfilePage: React.FC = () => {
+    const img = '/images/autumn-unsplash.jpg';
     return (
         <div css={appClassName}>
             <Head>
