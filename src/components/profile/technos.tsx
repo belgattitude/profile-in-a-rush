@@ -34,8 +34,8 @@ const UnstyledTechnos: React.FC<TechnosProps> = props => {
                 Occasionally in <strong>node / express</strong>, but most of the time in <strong>PHP</strong>. Been
                 through frameworks like Zend or Symfony after having committed my own in a very past life. Concepts like
                 MVC, DI, IoC, ORM, SOLID... have been slowly integrated along the years. Nowadays and following the api
-                centric trends, I generally work with micro-frameworks such as expressive (psr) and prefer thinking of
-                architecture than style.
+                centric trends, I generally work with micro-frameworks (psr) and prefer thinking of architecture than
+                style.
             </p>
 
             <h3>Database</h3>
@@ -68,5 +68,9 @@ export const Technos = styled(UnstyledTechnos)<TechnosProps>`
         width: 80%;
         margin: 20px 0;
         text-align: left;
+        > strong {
+            color: black;
+            font-weight: 500;
+        }
     }
 `;

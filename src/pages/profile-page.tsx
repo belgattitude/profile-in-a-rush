@@ -1,6 +1,5 @@
 import React from 'react';
 import '../assets/styles/styles.scss';
-
 import { ThemeProvider } from 'emotion-theming';
 import { appClassName, siteConfig, mdxConfig } from '@config/index';
 import { MDXProvider } from '@mdx-js/react';
@@ -12,7 +11,6 @@ import { css } from '@emotion/core';
 import { Block } from '@components/profile/block';
 
 const ProfilePage: React.FC = () => {
-    const img = '/images/autumn-unsplash.jpg';
     return (
         <div css={appClassName}>
             <Head>

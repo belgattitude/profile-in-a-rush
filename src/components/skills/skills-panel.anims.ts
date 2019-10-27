@@ -57,8 +57,8 @@ export const getItemVariants = (type: AnimationType = 'none'): Variants => {
                 initial: {
                     opacity: 0.6,
                     x: Math.ceil(Math.random() * 100) * (Math.random() > 0.5 ? -1 : 1),
-                    y: Math.ceil(Math.random() * 2) * (Math.random() > 0.5 ? -1 : 1),
-                    scale: 1.01,
+                    //y: Math.ceil(Math.random() * 2) * (Math.random() > 0.5 ? -1 : 1),
+                    scale: 0.5,
                 },
                 enter: {
                     opacity: 1,
