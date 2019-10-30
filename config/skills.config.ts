@@ -114,7 +114,7 @@ export const skillsRecords: SkillRecord[] = [
     {
         name: 'Doctrine',
         logo: './images/logos/technos/doctrine.png',
-        homepage: 'https://doctine-project.org',
+        homepage: 'https://doctrine-project.org',
         rating: 4,
         sections: ['PHP'],
         type: 'library',
