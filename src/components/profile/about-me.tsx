@@ -16,7 +16,7 @@ const UnstyledAboutMe: React.FC<AboutMeProps> = props => {
                 I'm a passionate developer with more than 15 years experience in backend and frontend technologies. Over
                 the years I acquired some acquaintance with best practices, testing, q&a, architecture,... and really
                 like to think 'how do we do this ?'. "this" being not exclusively related to tech. I live in Brussels,
-                work as a freelancer and believe that not every{' '}
+                and believe that not every{' '}
                 <a
                     title="Credits #belgiansolutions"
                     href={'https://www.instagram.com/p/2ZBIQwIW19/'}
