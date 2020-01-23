@@ -1,4 +1,3 @@
-const withCss = require('@zeit/next-css');
 const withSass = require('@zeit/next-sass');
 const withMDX = require('@next/mdx')();
 const mdxImagesPlugin = require('remark-images');
@@ -7,41 +6,39 @@ const withBundleAnalyzer = require('@next/bundle-analyzer');
 const withFonts = require('next-fonts');
 const config = withMDX(
     withFonts(
-        withCss(
-            withSass({
-                poweredByHeader: false,
-                enabled: process.env.ANALYZE === 'true',
-                mdPlugins: [mdxImagesPlugin, mdxEmjoiPlugin],
+        withSass({
+            poweredByHeader: false,
+            enabled: process.env.ANALYZE === 'true',
+            mdPlugins: [mdxImagesPlugin, mdxEmjoiPlugin],
 
-                webpack(config, options) {
-                    config.module.rules.push({
-                        test: /\.(png|jpg|gif|svg)$/,
-                        use: {
-                            loader: 'file-loader',
-                            options: {
-                                limit: 100000,
-                                name: '[name].[ext]',
-                            },
-                        },
-                    });
-                    /*
+            webpack(config, options) {
                 config.module.rules.push({
-                    test: /\.(eot|ttf|woff|woff2)$/,
+                    test: /\.(png|jpg|gif|svg)$/,
                     use: {
                         loader: 'file-loader',
                         options: {
                             limit: 100000,
-                            //name: '[name].[ext]',
-                            //publicPath: '/fonts',
-                            //outputPath: 'fonts',
+                            name: '[name].[ext]',
                         },
                     },
                 });
-*/
-                    return config;
+                /*
+            config.module.rules.push({
+                test: /\.(eot|ttf|woff|woff2)$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        limit: 100000,
+                        //name: '[name].[ext]',
+                        //publicPath: '/fonts',
+                        //outputPath: 'fonts',
+                    },
                 },
-            })
-        )
+            });
+*/
+                return config;
+            },
+        })
     )
 );
 
