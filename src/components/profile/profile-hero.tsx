@@ -56,7 +56,8 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = props => {
 
     //const img = '/images/red-unsplash.jpg';
     //const img = '/images/blue-unsplash.jpg';
-    const img = '/images/leafs-unsplash2.jpg';
+    //const img = '/images/leafs-unsplash2.jpg';
+    const img = '/images/unsplash-bigrock.jpg';
     //const img = '/images/picos.jpg';
 
     //const img = '/images/autumn-unsplash.jpg';
@@ -68,6 +69,7 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = props => {
                 className={'background'}
                 css={css`
                     background: white;
+                    background-size: cover;
                     background-image: url(${img});
                     background-attachment: fixed;
                     position: absolute;
@@ -156,7 +158,7 @@ export const ProfileHero = styled(UnstyledProfileHero)<ProfileHeroProps>`
         h1 {
             font-size: 1.6em;
             letter-spacing: 0.1em;
-            font-weight: 300;
+            font-weight: 400;
             margin: 5px;
         }
         p {

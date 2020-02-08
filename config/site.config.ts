@@ -5,7 +5,7 @@ export const siteConfig = {
     siteTitle: 'Sébastien Vanvelthem - CV',
     siteDesc: 'Profile in a rush',
     siteImg: 'https://me.soluble.io/images/social-img.png',
-    profileImg: '/public/images/me.png',
+    profileImg: '/images/me.png',
 };
 
 export type SiteConfig = typeof siteConfig;

@@ -33,7 +33,9 @@ const ProfilePage: React.FC = () => {
 
             <ThemeProvider theme={defaultTheme}>
                 <MDXProvider components={mdxConfig}>
-                    <ProfileHero />
+                    <ProfileHero
+                    /*avatarImg={siteConfig.profileImg}*/
+                    />
                     <Block
                         css={css`
                             margin-top: 3.5em;
