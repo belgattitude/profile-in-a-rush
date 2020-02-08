@@ -27,7 +27,6 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "post-commit": "git diff --name-only HEAD^ | xargs git add",
       "pre-push": "tsc -p . --noEmit"
     }
   },
@@ -36,8 +35,7 @@
       "eslint --fix"
     ],
     "*.{js,jsx,ts,tsx,json,css,scss,md,mdx,yml}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   },
   "dependencies": {
