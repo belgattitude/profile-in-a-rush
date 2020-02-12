@@ -26,9 +26,9 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = props => {
     }, []);
 
     const springConfig = {
-        damping: 14,
-        stiffness: 90,
-        mass: 1,
+        damping: 17,
+        stiffness: 60,
+        mass: 3,
     };
 
     const minWidth = 600;
