@@ -144,7 +144,7 @@ export const SkillsPanel = styled(UnstyledSkillsPanel)`
             flex-wrap: wrap;
             justify-content: center;
             align-items: stretch;
-            padding: 15px 0px 15px 0px;
+            padding: 15px 0 15px 0;
 
             // the actual card
             article.card {

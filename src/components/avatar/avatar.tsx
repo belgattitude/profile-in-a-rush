@@ -6,10 +6,10 @@ type AvatarProps = {
     size?: string | number;
 };
 export const UnstyledAvatar: React.FC<AvatarProps> = props => {
-    return <img src={props.src} {...props} />;
+    return <img alt="profile" src={props.src} {...props} />;
 };
 
-export const Avatar = styled(UnstyledAvatar)(props => {
+export const Avatar = styled(UnstyledAvatar)((props: AvatarProps) => {
     return {
         borderRadius: '50%',
         width: props.size,

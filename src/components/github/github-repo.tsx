@@ -5,7 +5,9 @@ import { truncateText } from '../../utils/utils';
 import { CustomTag } from '@components/github/custom-tag';
 
 const getRepoHomePage = (repo: RepoItemDTO): string => {
+    // eslint-disable-next-line @typescript-eslint/camelcase
     const { homepage, html_url, custom_tags = [] } = repo;
+    // eslint-disable-next-line @typescript-eslint/camelcase
     return !homepage || custom_tags.includes('pwa') ? html_url : homepage;
 };
 
