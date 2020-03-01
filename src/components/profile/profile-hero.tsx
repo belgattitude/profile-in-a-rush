@@ -26,9 +26,9 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = props => {
     }, []);
 
     const springConfig = {
-        damping: 14,
-        stiffness: 90,
-        mass: 1,
+        damping: 17,
+        stiffness: 60,
+        mass: 3,
     };
 
     const minWidth = 600;
@@ -58,13 +58,16 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = props => {
     //const img = '/images/blue-unsplash.jpg';
     //const img = '/images/leafs-unsplash2.jpg';
     const img = '/images/unsplash-bigrock.jpg';
+
+    //const img = '/images/beach.jpg';
+
     //const img = '/images/picos.jpg';
 
     //const img = '/images/autumn-unsplash.jpg';
     //const img = '/images/dancer-dark-unsplash.jpg';
 
     return (
-        <div ref={measuredRef} className={className} css={{ overflowX: 'hidden' }}>
+        <div ref={measuredRef} className={className} css={{ overflow: 'hidden' }}>
             <div
                 className={'background'}
                 css={css`
@@ -72,6 +75,7 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = props => {
                     background-size: cover;
                     background-image: url(${img});
                     background-attachment: fixed;
+                    background-position: center;
                     position: absolute;
                     bottom: 0;
                     top: 0;
@@ -80,8 +84,9 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = props => {
                     @media (${breakpoints.large}) {
                         background-size: cover;
                         background-attachment: fixed;
-                        background-position: bottom;
+                        background-position: top;
                         background-clip: content-box;
+                        transform: skew(10deg) rotate(10deg);
                     }
                 `}
             ></div>

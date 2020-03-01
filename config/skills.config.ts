@@ -7,7 +7,7 @@ export const skillSections = ['Overview', 'Frontend', 'PHP', 'Node', 'DB', 'Dev'
 export const defaultSection: typeof skillSections[number] = 'Overview';
 
 export const sectionAnimations: SectionAnimationConfig = {
-    none: ['Overview', 'PHP', 'Frontend', 'Node', 'DB', 'Relics', 'Dev'],
+    none: ['Overview', 'Frontend', 'PHP', 'Node', 'DB', 'Relics', 'Dev'],
     adrenaline: ['Emerging'],
     topdown: [],
     soft: [],
@@ -46,6 +46,15 @@ export const skillsRecords: SkillRecord[] = [
         type: 'library',
     },
     {
+        name: 'NextJs',
+        logo: './images/logos/technos/nextjs.png',
+        homepage: 'https://nextjs.org',
+        years: 0.6,
+        rating: 4,
+        sections: ['Frontend'],
+        type: 'library',
+    },
+    {
         name: 'React Router',
         logo: './images/logos/technos/react-router.png',
         homepage: 'https://reacttraining.com/react-router',
@@ -73,7 +82,6 @@ export const skillsRecords: SkillRecord[] = [
         name: 'Webpack',
         logo: './images/logos/technos/webpack.png',
         homepage: 'https://webpack.js.org',
-        years: 4,
         rating: 4,
         sections: ['Frontend'],
         type: 'library',
@@ -206,19 +214,10 @@ export const skillsRecords: SkillRecord[] = [
     {
         name: 'MDX',
         logo: './images/logos/technos/mdx.png',
-        homepage: 'https://nextjs.org',
+        homepage: 'https://mdxjs.com/',
         years: 0.1,
         rating: 1,
         sections: ['Emerging'],
-        type: 'library',
-    },
-    {
-        name: 'NextJs',
-        logo: './images/logos/technos/nextjs.png',
-        homepage: 'https://nextjs.org',
-        years: 0.6,
-        rating: 4,
-        sections: ['Frontend'],
         type: 'library',
     },
     {
