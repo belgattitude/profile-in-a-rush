@@ -1,5 +1,4 @@
 import React from 'react';
-import '../assets/styles/styles.scss';
 import { ThemeProvider } from 'emotion-theming';
 import { appClassName, siteConfig, mdxConfig } from '@config/index';
 import { MDXProvider } from '@mdx-js/react';

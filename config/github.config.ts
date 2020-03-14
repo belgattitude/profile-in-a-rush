@@ -12,6 +12,7 @@ export const filteredRepos: GithubRepoListProps['filters'] = [
     ['dbal', ['doctrine', 'contributor']],
     ['mfts', ['typescript', 'react', 'pwa', 'spare-time']],
     ['soluble-jasper', ['php7.1', 'reports', 'pdf']],
+    ['desync', ['typescript', 'react', 'lerna']],
     //['soluble-metadata', ['php7.1', 'db']],
     //['php-java-bridge', ['java', 'fork!']],
 ];
