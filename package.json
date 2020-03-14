@@ -48,7 +48,6 @@
     "@mdx-js/react": "^1.5.7",
     "@next/mdx": "^9.3.1-canary.4",
     "@sindresorhus/is": "^2.1.0",
-    "@zeit/next-sass": "^1.0.1",
     "abort-controller": "^3.0.0",
     "abortcontroller-polyfill": "^1.4.0",
     "babel-plugin-emotion": "^10.0.29",
