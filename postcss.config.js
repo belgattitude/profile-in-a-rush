@@ -2,10 +2,8 @@
  * Want to configure, see https://nextjs.org/docs/advanced-features/customizing-postcss-config
  */
 
-module.exports = ctx => ({
-    parser: ctx.parser ? 'sugarss' : false,
+module.exports = {
     plugins: {
-        autoprefixer: {},
         'postcss-preset-env': {
             autoprefixer: {
                 flexbox: 'no-2009',
@@ -16,11 +14,11 @@ module.exports = ctx => ({
             },
         },
         cssnano:
-            ctx.env === 'production'
+            process.env.NODE_ENV === 'production'
                 ? {
                       preset: 'default',
                       discardComments: { removeAll: true },
                   }
                 : false,
     },
-});
+};

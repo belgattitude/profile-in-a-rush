@@ -14,8 +14,6 @@ const UnstyledFooter: React.FC<FooterProps> = props => {
     );
 };
 
-const img = '/images/leafs-unsplash2.jpg';
-
 export const Footer = styled(UnstyledFooter)`
     display: flex;
     flex-direction: row;

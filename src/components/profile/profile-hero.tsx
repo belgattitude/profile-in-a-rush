@@ -54,17 +54,7 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = props => {
     const xAvatar = useSpring(useTransform(scrollY, [0, height], [0, Math.ceil(width / 2)]), springConfig);
     const opacityAvatar = useTransform(scrollY, [0, height], [0, 1]);
 
-    //const img = '/images/red-unsplash.jpg';
-    //const img = '/images/blue-unsplash.jpg';
-    //const img = '/images/leafs-unsplash2.jpg';
     const img = '/images/unsplash-bigrock.jpg';
-
-    //const img = '/images/beach.jpg';
-
-    //const img = '/images/picos.jpg';
-
-    //const img = '/images/autumn-unsplash.jpg';
-    //const img = '/images/dancer-dark-unsplash.jpg';
 
     return (
         <div ref={measuredRef} className={className} css={{ overflow: 'hidden' }}>

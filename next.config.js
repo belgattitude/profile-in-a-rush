@@ -1,45 +1,42 @@
-const withSass = require('@zeit/next-sass');
 const withMDX = require('@next/mdx')();
 const mdxImagesPlugin = require('remark-images');
 const mdxEmjoiPlugin = require('remark-emoji');
 const withBundleAnalyzer = require('@next/bundle-analyzer');
 const withFonts = require('next-fonts');
 const config = withMDX(
-    withFonts(
-        withSass({
-            poweredByHeader: false,
-            enabled: process.env.ANALYZE === 'true',
-            mdPlugins: [mdxImagesPlugin, mdxEmjoiPlugin],
+    withFonts({
+        poweredByHeader: true,
+        enabled: process.env.ANALYZE === 'true',
+        mdPlugins: [mdxImagesPlugin, mdxEmjoiPlugin],
 
-            webpack(config, options) {
-                config.module.rules.push({
-                    test: /\.(png|jpg|gif|svg)$/,
-                    use: {
-                        loader: 'file-loader',
-                        options: {
-                            limit: 100000,
-                            name: '[name].[ext]',
-                        },
-                    },
-                });
-                /*
+        webpack(config, options) {
             config.module.rules.push({
-                test: /\.(eot|ttf|woff|woff2)$/,
+                test: /\.(png|jpg|gif|svg)$/,
                 use: {
                     loader: 'file-loader',
                     options: {
                         limit: 100000,
-                        //name: '[name].[ext]',
-                        //publicPath: '/fonts',
-                        //outputPath: 'fonts',
+                        name: '[name].[ext]',
                     },
                 },
             });
-*/
-                return config;
+            /*
+        config.module.rules.push({
+            test: /\.(eot|ttf|woff|woff2)$/,
+            use: {
+                loader: 'file-loader',
+                options: {
+                    limit: 100000,
+                    //name: '[name].[ext]',
+                    //publicPath: '/fonts',
+                    //outputPath: 'fonts',
+                },
             },
-        })
-    )
+        });
+*/
+            return config;
+        },
+    })
 );
 
 if (process.env.ANALYZE === 'true') {
