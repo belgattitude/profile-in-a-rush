@@ -13,7 +13,8 @@
         "@config": "./config",
         "@themes": "./src/themes",
         "@core": "./src/core",
-        "@components": "./src/components"
+        "@components": "./src/components",
+        "@public": "./public"
       }
     }]
   ]

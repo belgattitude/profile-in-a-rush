@@ -21,6 +21,9 @@
       "@themes/*": [
         "src/themes/*"
       ],
+      "@public/*": [
+        "public/*"
+      ],
       "@core/*": [
         "src/core/*"
       ],
