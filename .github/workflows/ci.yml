@@ -43,6 +43,5 @@ jobs:
           yarn typecheck
 
       - name: Build apps/public-app
-        working-directory: apps/public-app
         run: |
           yarn build
