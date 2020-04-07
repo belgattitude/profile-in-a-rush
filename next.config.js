@@ -4,23 +4,23 @@ const mdxEmjoiPlugin = require('remark-emoji');
 const withBundleAnalyzer = require('@next/bundle-analyzer');
 const withFonts = require('next-fonts');
 const config = withMDX(
-    withFonts({
-        poweredByHeader: true,
-        enabled: process.env.ANALYZE === 'true',
-        mdPlugins: [mdxImagesPlugin, mdxEmjoiPlugin],
+  withFonts({
+    poweredByHeader: true,
+    enabled: process.env.ANALYZE === 'true',
+    mdPlugins: [mdxImagesPlugin, mdxEmjoiPlugin],
 
-        webpack(config, options) {
-            config.module.rules.push({
-                test: /\.(png|jpg|gif|svg)$/,
-                use: {
-                    loader: 'file-loader',
-                    options: {
-                        limit: 100000,
-                        name: '[name].[ext]',
-                    },
-                },
-            });
-            /*
+    webpack(config, options) {
+      config.module.rules.push({
+        test: /\.(png|jpg|gif|svg)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            limit: 100000,
+            name: '[name].[ext]',
+          },
+        },
+      });
+      /*
         config.module.rules.push({
             test: /\.(eot|ttf|woff|woff2)$/,
             use: {
@@ -34,13 +34,13 @@ const config = withMDX(
             },
         });
 */
-            return config;
-        },
-    })
+      return config;
+    },
+  })
 );
 
 if (process.env.ANALYZE === 'true') {
-    module.exports = withBundleAnalyzer(config, { enabled: true });
+  module.exports = withBundleAnalyzer(config, { enabled: true });
 } else {
-    module.exports = config;
+  module.exports = config;
 }
