@@ -14,9 +14,9 @@ import styled from '@emotion/styled';
 const StyledSummary = styled(MDXContent)``;
 
 export const Summary: React.FC = () => {
-    return (
-        <div>
-            <StyledSummary />
-        </div>
-    );
+  return (
+    <div>
+      <StyledSummary />
+    </div>
+  );
 };
