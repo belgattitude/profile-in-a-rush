@@ -22,7 +22,9 @@
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "deps:check": "npx npm-check-updates",
+    "deps:update": "npx npm-check-updates"
   },
   "husky": {
     "hooks": {
