@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { Avatar } from '../avatar';
 import { breakpoints } from '../../../config';
 import { useViewportScroll, useTransform, useSpring, motion } from 'framer-motion';
-import { css } from '@emotion/core';
+import { css } from '@emotion/css';
 import { circIn, circOut, backOut, easeInOut } from '@popmotion/easing';
 
 type ProfileHeroProps = {
@@ -61,6 +61,7 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = (props) => {
       <div
         className={'background'}
         css={css`
+          height: 100%;
           background: white;
           background-size: cover;
           background-image: url(${img});
@@ -135,7 +136,6 @@ export const ProfileHero = styled(UnstyledProfileHero)<ProfileHeroProps>`
     height: 50vh;
     min-height: unset;
   }
-
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -1,4 +1,4 @@
-export type Theme = {
+export interface IMyTheme {
   colors: {
     primary: string;
     link: string;
@@ -6,9 +6,9 @@ export type Theme = {
   page: {
     background: string;
   };
-};
+}
 
-export const defaultTheme: Theme = {
+export const defaultTheme: IMyTheme = {
   colors: {
     primary: '#111',
     //link: '#3685D6',
