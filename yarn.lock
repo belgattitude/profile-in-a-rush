@@ -1018,14 +1018,7 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@emotion/babel-plugin-jsx-pragmatic@^0.1.4":
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/@emotion/babel-plugin-jsx-pragmatic/-/babel-plugin-jsx-pragmatic-0.1.5.tgz#27debfe9c27c4d83574d509787ae553bf8a34d7e"
-  integrity sha512-y+3AJ0SItMDaAgGPVkQBC/S/BaqaPACkQ6MyCI2CUlrjTxKttTVfD3TMtcs7vLEcLxqzZ1xiG0vzwCXjhopawQ==
-  dependencies:
-    "@babel/plugin-syntax-jsx" "^7.2.0"
-
-"@emotion/babel-plugin@^11.0.0-next.10", "@emotion/babel-plugin@^11.0.0-next.12":
+"@emotion/babel-plugin@^11.0.0-next.12":
   version "11.0.0-next.12"
   resolved "https://registry.yarnpkg.com/@emotion/babel-plugin/-/babel-plugin-11.0.0-next.12.tgz#aaf8e2820490a81cbca372c6ce3d16a8f411edf5"
   integrity sha512-Je1XOoC4pctGkEzMJhUsAPwBxzmaDLOAYsQsx51BYpo09ZQa3bzQb6Aq5CzoamRID49ElTO17K0FdVHMtydv7A==
@@ -1041,16 +1034,6 @@
     escape-string-regexp "^1.0.5"
     find-root "^1.1.0"
     source-map "^0.5.7"
-
-"@emotion/babel-preset-css-prop@^11.0.0-next.10":
-  version "11.0.0-next.10"
-  resolved "https://registry.yarnpkg.com/@emotion/babel-preset-css-prop/-/babel-preset-css-prop-11.0.0-next.10.tgz#7f4e9bf7946fdf27696a7b2ae39007424e804232"
-  integrity sha512-IQzw38r9HA6dD8zep7wsTze1TMSyBjRArx5MErYw4zW6xv0/870z7qBXKlOF7lhncb9J31/yAh+NOGEVvPOvPg==
-  dependencies:
-    "@babel/plugin-transform-react-jsx" "^7.7.0"
-    "@babel/runtime" "^7.7.2"
-    "@emotion/babel-plugin" "^11.0.0-next.10"
-    "@emotion/babel-plugin-jsx-pragmatic" "^0.1.4"
 
 "@emotion/cache@11.0.0-next.12", "@emotion/cache@^11.0.0-next.12":
   version "11.0.0-next.12"
@@ -1072,11 +1055,6 @@
     "@emotion/serialize" "^1.0.0-next.1"
     "@emotion/sheet" "0.10.0-next.1"
     "@emotion/utils" "0.11.3"
-
-"@emotion/hash@0.7.3":
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.7.3.tgz#a166882c81c0c6040975dd30df24fae8549bd96f"
-  integrity sha512-14ZVlsB9akwvydAdaEnVnvqu6J2P6ySv39hYyl/aoB6w/V+bXX0tay8cF6paqbgZsN2n5Xh15uF4pE+GvE+itw==
 
 "@emotion/hash@0.8.0":
   version "0.8.0"
@@ -1119,17 +1097,6 @@
     "@emotion/utils" "0.11.3"
     "@emotion/weak-memoize" "0.2.5"
     hoist-non-react-statics "^3.3.1"
-
-"@emotion/serialize@^0.11.15-next.4":
-  version "0.11.16"
-  resolved "https://registry.yarnpkg.com/@emotion/serialize/-/serialize-0.11.16.tgz#dee05f9e96ad2fb25a5206b6d759b2d1ed3379ad"
-  integrity sha512-G3J4o8by0VRrO+PFeSc3js2myYNOXVJ3Ya+RGVxnshRYgsvErfAOglKAiy1Eo1vhzxqtUvjCyS5gtewzkmvSSg==
-  dependencies:
-    "@emotion/hash" "0.8.0"
-    "@emotion/memoize" "0.7.4"
-    "@emotion/unitless" "0.7.5"
-    "@emotion/utils" "0.11.3"
-    csstype "^2.5.7"
 
 "@emotion/serialize@^1.0.0-next.1":
   version "1.0.0-next.1"
@@ -2458,23 +2425,6 @@ babel-plugin-dynamic-import-node@^2.3.0, babel-plugin-dynamic-import-node@^2.3.3
   integrity sha512-jZVI+s9Zg3IqA/kdi0i6UDCybUI3aSBLnglhYbSSjKlV7yF1F/5LWv8MakQmvYpnbJDS6fcBL2KzHSxNCMtWSQ==
   dependencies:
     object.assign "^4.1.0"
-
-babel-plugin-emotion@^11.0.0-next.11:
-  version "11.0.0-next.11"
-  resolved "https://registry.yarnpkg.com/babel-plugin-emotion/-/babel-plugin-emotion-11.0.0-next.11.tgz#ec96d617de59dfd39e5e8fd2c70cc7f8b6e0b8a6"
-  integrity sha512-Z8FZzr9RFeL8qsh9ThapU1e9O9tWODDePAPGjj79zziKp9bayxft4dT5AEZC1uaHcJkCKWhtPSaO7GRRaORqaA==
-  dependencies:
-    "@babel/helper-module-imports" "^7.7.0"
-    "@babel/plugin-syntax-jsx" "^7.2.0"
-    "@babel/runtime" "^7.7.2"
-    "@emotion/hash" "0.7.3"
-    "@emotion/memoize" "0.7.3"
-    "@emotion/serialize" "^0.11.15-next.4"
-    babel-plugin-macros "^2.6.1"
-    convert-source-map "^1.5.0"
-    escape-string-regexp "^1.0.5"
-    find-root "^1.1.0"
-    source-map "^0.5.7"
 
 babel-plugin-extract-import-names@^1.6.1:
   version "1.6.1"
@@ -4124,7 +4074,7 @@ cssstyle@^2.2.0:
   dependencies:
     cssom "~0.3.6"
 
-csstype@^2.2.0, csstype@^2.5.7, csstype@^2.6.7:
+csstype@^2.2.0, csstype@^2.6.7:
   version "2.6.10"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.10.tgz#e63af50e66d7c266edb6b32909cfd0aabe03928b"
   integrity sha512-D34BqZU4cIlMCY93rZHbrq9pjTAQJ3U8S8rfBqjwHxkGPThWFjzZDQpgMJY0QViLxth6ZKYiwFBo14RdN44U/w==
@@ -4517,11 +4467,6 @@ emoticon@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/emoticon/-/emoticon-3.2.0.tgz#c008ca7d7620fac742fe1bf4af8ff8fed154ae7f"
   integrity sha512-SNujglcLTTg+lDAcApPNgEdudaqQFiAbJCqzjNxJkvN9vAwCGi0uu8IUVvx+f16h+V44KCY6Y2yboroc9pilHg==
-
-emotion-theming@^11.0.0-next.6:
-  version "11.0.0-next.6"
-  resolved "https://registry.yarnpkg.com/emotion-theming/-/emotion-theming-11.0.0-next.6.tgz#323bfe596169111497c9087cfd07d529fe739679"
-  integrity sha512-VpEu6mjBWiWm1JRFrn8WFqOQXqQxFGA6PimplvfzsE2Q1vW1ZvnPkh2Bbq2OIp6dgPHbtl1Cz/DH5Ob3VgtQHQ==
 
 encodeurl@~1.0.2:
   version "1.0.2"

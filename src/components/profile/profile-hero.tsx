@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { Avatar } from '../avatar';
 import { breakpoints } from '../../../config';
 import { useViewportScroll, useTransform, useSpring, motion } from 'framer-motion';
-import { css } from '@emotion/css';
+import { css } from '@emotion/react';
 import { circIn, circOut, backOut, easeInOut } from '@popmotion/easing';
 
 type ProfileHeroProps = {

@@ -6,7 +6,7 @@ import { Footer } from '@components/layouts';
 import { defaultTheme } from '@themes/theme';
 import { AboutMe, Features, Opensource, ProfileHero, Technos } from '@components/profile';
 import Head from 'next/head';
-import { css } from '@emotion/css';
+import { css } from '@emotion/react';
 import { Block } from '@components/profile/block';
 
 const ProfilePage: React.FC = () => {
