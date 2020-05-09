@@ -26,9 +26,9 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = (props) => {
   }, []);
 
   const springConfig = {
-    damping: 17,
-    stiffness: 60,
-    mass: 3,
+    damping: 10,
+    stiffness: 40,
+    mass: 1,
   };
 
   const minWidth = 600;
@@ -44,29 +44,30 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = (props) => {
     springConfig
   );
   const y = useTransform(scrollY, [0, height], [0, Math.ceil(height / 1.1)]);
-  const y2 = useTransform(scrollY, [0, height / 2], [0, Math.ceil(height / 2.75)]);
+  const y2 = useTransform(scrollY, [0, height / 2], [0, Math.ceil(height / 2.4)]);
 
   const opacity = useTransform(scrollY, [0, height], [1, 0.3], {
     ease: backOut,
   });
-  const opacity2 = useTransform(scrollY, [0, height / 2], width < 500 ? [1, 0.1] : [0.1, 1]);
-  const zoom = useTransform(scrollY, [0, height], [1, 0.2]);
+  const opacity2 = useTransform(scrollY, [0, height / 2], width < 500 ? [1, 0.1] : [0.0, 0.5]);
+  const zoom = useTransform(scrollY, [0, height], [1, 0]);
   const xAvatar = useSpring(useTransform(scrollY, [0, height], [0, Math.ceil(width / 2)]), springConfig);
   const opacityAvatar = useTransform(scrollY, [0, height], [0, 1]);
 
-  const img = '/images/unsplash-bigrock.jpg';
+  //const img = '/images/unsplash-bigrock.jpg';
+  //const img = '/images/wolfgang-hasselmann-cow.jpg';
+  const img = '/images/crop-nicolas-i-unsplash.jpg';
 
   return (
     <div ref={measuredRef} className={className} css={{ overflow: 'hidden' }}>
       <div
         className={'background'}
         css={css`
-          height: 100%;
           background: white;
-          background-size: cover;
+          background-size: contain;
           background-image: url(${img});
           background-attachment: fixed;
-          background-position: center;
+          background-position: bottom left;
           position: absolute;
           bottom: 0;
           top: 0;
@@ -75,9 +76,8 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = (props) => {
           @media (${breakpoints.large}) {
             background-size: cover;
             background-attachment: fixed;
-            background-position: top;
-            background-clip: content-box;
-            transform: skew(10deg) rotate(10deg);
+            background-position: bottom left;
+            //background-clip: content-box;
           }
         `}
       ></div>
@@ -89,8 +89,14 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = (props) => {
           bottom: 0;
           left: 0;
           right: 0;
-          background: #0f0c29;
-          background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+          //background: #0f0c29;
+          //background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+          //background-image: url(/images/wolfgang-hasselmann-cow.jpg);
+          //background-image: url(/images/leafs-unsplash2.jpg);
+          background-image: url('https://images.unsplash.com/photo-1563057828-434ef414eff6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=648&q=80');
+          //background-image: url("https://images.unsplash.com/photo-1588359886706-cbbd20ff2b29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+          background-size: cover;
+          background-position: top;
         `}
         initial={{ opacity: 0 }}
         style={{ opacity: opacity2 }}
@@ -130,11 +136,12 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = (props) => {
 
 export const ProfileHero = styled(UnstyledProfileHero)<ProfileHeroProps>`
   position: relative;
-  height: 50vh;
-  // min-height: -webkit-fill-available;
+  height: 100vh;
+  min-height: -webkit-fill-available;
   @media (${breakpoints.large}) {
-    height: 50vh;
-    min-height: unset;
+    height: 100vh;
+    //min-height: unset;
+    min-height: -webkit-fill-available;
   }
   display: flex;
   flex-direction: column;
@@ -151,18 +158,18 @@ export const ProfileHero = styled(UnstyledProfileHero)<ProfileHeroProps>`
     }
 
     h1 {
-      font-size: 1.6em;
+      font-size: 2em;
       letter-spacing: 0.1em;
       font-weight: 400;
-      margin: 5px;
+      margin: 15px;
     }
     p {
-      font-size: 0.9em;
+      font-size: 1.5em;
       font-variant: all-small-caps;
       margin: 0;
       letter-spacing: 0.17em;
       @media (${breakpoints.large}) {
-        font-size: 1em;
+        font-size: 1.5em;
         letter-spacing: 0.19em;
       }
     }
