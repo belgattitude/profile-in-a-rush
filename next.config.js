@@ -6,7 +6,7 @@ const withFonts = require('next-fonts');
 const config = withMDX(
   withFonts({
     poweredByHeader: true,
-    enabled: process.env.ANALYZE === 'true',
+    reactStrictMode: true,
     mdPlugins: [mdxImagesPlugin, mdxEmjoiPlugin],
 
     webpack(config, options) {
@@ -40,7 +40,7 @@ const config = withMDX(
 );
 
 if (process.env.ANALYZE === 'true') {
-  module.exports = withBundleAnalyzer(config, { enabled: true });
+  module.exports = withBundleAnalyzer(config);
 } else {
   module.exports = config;
 }

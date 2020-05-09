@@ -3,10 +3,9 @@
     [
       "next/babel"
     ],
-    ["@emotion/babel-preset-css-prop"]
+    [ "@emotion/babel-preset-css-prop" ]
   ],
   "plugins": [
-    //["emotion", { "sourceMap": true }],
     ["module-resolver", {
       "root": ["."],
       "alias": {
@@ -16,6 +15,7 @@
         "@components": "./src/components",
         "@public": "./public"
       }
-    }]
+    }],
+    [ "@emotion/babel-plugin" ]
   ]
 }

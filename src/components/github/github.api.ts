@@ -25,9 +25,9 @@ export default class GithubApi {
       prefixUrl: 'https://api.github.com',
       hooks: {
         beforeRequest: [
-          (input, options) => {
+          (request): void => {
             if (token) {
-              options.headers.set('Authorization', `Bearer ${token}`);
+              request.headers.set('Authorization', `Bearer ${token}`);
             }
           },
         ],

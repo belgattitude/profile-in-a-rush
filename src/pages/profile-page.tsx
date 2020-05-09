@@ -1,12 +1,12 @@
 import React from 'react';
-import { ThemeProvider } from 'emotion-theming';
+import { ThemeProvider } from '@emotion/react';
 import { appClassName, siteConfig, mdxConfig } from '@config/index';
 import { MDXProvider } from '@mdx-js/react';
 import { Footer } from '@components/layouts';
 import { defaultTheme } from '@themes/theme';
 import { AboutMe, Features, Opensource, ProfileHero, Technos } from '@components/profile';
 import Head from 'next/head';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import { Block } from '@components/profile/block';
 
 const ProfilePage: React.FC = () => {
@@ -58,13 +58,17 @@ const ProfilePage: React.FC = () => {
           <Footer>
             Contact me on
             <a href={siteConfig.linkedIn} target="_blank" rel="noreferrer">
-              &nbsp;<i className="fab fa-linkedin"></i> linked.in
+              &nbsp;
+              <i className="fab fa-linkedin" />
+              &nbsp;linked.in
             </a>
             <p>No recruiters please !</p>
             <p>
               Want to see the
               <a href={siteConfig.githubRepo} target="_blank" rel="noreferrer">
-                &nbsp;<i className="fab fa-github"></i>&nbsp;code&nbsp;
+                &nbsp;
+                <i className="fab fa-github" />
+                &nbsp;code&nbsp;
               </a>
               ?
             </p>
