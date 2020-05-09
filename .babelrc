@@ -2,12 +2,10 @@
   "presets": [
     [
       "next/babel"
-    ]
+    ],
+    [ "@emotion/babel-preset-css-prop" ]
   ],
   "plugins": [
-    [
-      "@emotion/babel-plugin"
-    ],
     ["module-resolver", {
       "root": ["."],
       "alias": {
@@ -17,6 +15,7 @@
         "@components": "./src/components",
         "@public": "./public"
       }
-    }]
+    }],
+    [ "@emotion/babel-plugin" ]
   ]
 }
