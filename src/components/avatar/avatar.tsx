@@ -6,7 +6,8 @@ type AvatarProps = {
   size?: string | number;
 };
 export const UnstyledAvatar: React.FC<AvatarProps> = (props) => {
-  return <img alt="profile" src={props.src} {...props} />;
+  const { src, ...restProps } = props;
+  return <img alt="profile" src={props.src} {...restProps} />;
 };
 
 export const Avatar = styled(UnstyledAvatar)((props: AvatarProps) => {
