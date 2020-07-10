@@ -81,9 +81,7 @@ const UnstyledSkillsPanel: React.FC<SkillsPanelProps> = (props) => {
                   <div className={'card-picture'}>
                     <a href={homepage} target="_blank" rel="noreferrer">
                       {logo ? (
-                        <LazyLoad>
-                          <img src={logo} alt={name} />
-                        </LazyLoad>
+                        <img src={logo} alt={name} />
                       ) : (
                         <div style={{ fontSize: '2em', padding: '1em', fontWeight: 600 }}>{name}</div>
                       )}
