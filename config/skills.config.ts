@@ -55,6 +55,14 @@ export const skillsRecords: SkillRecord[] = [
     type: 'library',
   },
   {
+    name: 'Emotion',
+    logo: './images/logos/technos/emotion-styled.png',
+    homepage: 'https://emotion.sh',
+    rating: 3,
+    sections: ['Frontend'],
+    type: 'library',
+  },
+  {
     name: 'React Router',
     logo: './images/logos/technos/react-router.png',
     homepage: 'https://reacttraining.com/react-router',
@@ -196,19 +204,19 @@ export const skillsRecords: SkillRecord[] = [
     type: 'library',
   },
   {
+    name: 'Prisma 2',
+    logo: './images/logos/technos/prisma2.png',
+    homepage: 'https://prisma.io',
+    rating: 1,
+    sections: ['Node'],
+    type: 'library',
+  },
+  {
     name: 'TypeORM',
     logo: './images/logos/technos/typeorm.png',
     homepage: 'https://typeorm.io',
     rating: 3,
     sections: ['Node'],
-    type: 'library',
-  },
-  {
-    name: 'Emotion',
-    logo: './images/logos/technos/emotion-styled.png',
-    homepage: 'https://emotion.sh',
-    rating: 1,
-    sections: ['Emerging'],
     type: 'library',
   },
   {

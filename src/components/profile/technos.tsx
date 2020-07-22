@@ -24,8 +24,8 @@ const UnstyledTechnos: React.FC<TechnosProps> = (props) => {
       <h3>Frontend</h3>
       <p>
         When working on frontend I mainly code with the <strong>react</strong>/<strong>typescript</strong> combo and its
-        associated ecosystem (redux, jest, webpack, babel...). Initially got my hands on them around 2015 moving away
-        from AngularJs and ExtJs.
+        associated ecosystem (redux, css-in-js, jest, webpack, babel...). Initially got my hands on them around 2015
+        moving away from AngularJs and ExtJs.
       </p>
 
       <h3>Backend</h3>
