@@ -4,7 +4,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { skillSections, skillType } from '@config/skills.config';
 import { SkillLabel } from './skill-label';
 import { getAnimationType, getItemVariants, getListVariants } from './skills-panel.anims';
-import LazyLoad from 'react-lazyload';
 
 export type SkillSections = typeof skillSections[number];
 export type SkillType = typeof skillType[number];
