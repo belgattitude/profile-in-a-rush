@@ -50,7 +50,7 @@
     "@emotion/styled": "11.0.0-next.15",
     "@mdx-js/loader": "^1.6.16",
     "@mdx-js/react": "^1.6.16",
-    "@next/mdx": "^9.5.2",
+    "@next/mdx": "^9.5.3-canary.21",
     "@sindresorhus/is": "^3.1.2",
     "@types/react-lazyload": "^2.6.0",
     "abort-controller": "^3.0.0",
@@ -59,7 +59,7 @@
     "date-fns": "^2.15.0",
     "framer-motion": "^2.6.0",
     "ky": "^0.23.0",
-    "next": "9.5.2",
+    "next": "9.5.3-canary.21",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-lazyload": "^3.0.0",
@@ -67,7 +67,7 @@
     "remark-images": "^2.0.0"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^9.5.2",
+    "@next/bundle-analyzer": "^9.5.3-canary.21",
     "@testing-library/react": "^10.4.9",
     "@types/enzyme": "^3.10.5",
     "@types/enzyme-adapter-react-16": "^1.0.6",

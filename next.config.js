@@ -4,8 +4,8 @@ const config = withMDX({
   poweredByHeader: true,
   reactStrictMode: true,
   experimental: {
-    optimizeFonts: true,
-    optimizeImages: true,
+    // optimizeFonts: true,
+    // optimizeImages: true,
   },
 });
 
