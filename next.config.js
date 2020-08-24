@@ -3,6 +3,10 @@ const withBundleAnalyzer = require('@next/bundle-analyzer');
 const config = withMDX({
   poweredByHeader: true,
   reactStrictMode: true,
+  experimental: {
+    optimizeFonts: true,
+    optimizeImages: true,
+  },
 });
 
 if (process.env.ANALYZE === 'true') {

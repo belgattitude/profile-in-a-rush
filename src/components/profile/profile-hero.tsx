@@ -4,7 +4,7 @@ import { Avatar } from '../avatar';
 import { breakpoints } from '../../../config';
 import { useViewportScroll, useTransform, useSpring, motion } from 'framer-motion';
 import { css } from '@emotion/react';
-import { circIn, circOut, backOut, easeInOut } from '@popmotion/easing';
+import { backOut } from 'popmotion';
 
 type ProfileHeroProps = {
   className?: string;
@@ -39,10 +39,7 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = (props) => {
     useTransform(scrollY, [0, height], [0, -Math.ceil(Math.max(width * 1.7, minWidth))]),
     springConfig
   );
-  const x2 = useSpring(
-    useTransform(scrollY, [0, height / 2], [0, Math.ceil(width > minWidth ? width / 4 : 0)]),
-    springConfig
-  );
+  const x2 = useSpring(useTransform(scrollY, [0, 100], [0, Math.ceil(width > minWidth ? width / 4 : 0)]), springConfig);
   const y = useTransform(scrollY, [0, height], [0, Math.ceil(height / 1.1)]);
   const y2 = useTransform(scrollY, [0, height / 2], [0, Math.ceil(height / 2.4)]);
 
@@ -57,7 +54,6 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = (props) => {
   //const img = '/images/unsplash-bigrock.jpg';
   //const img = '/images/wolfgang-hasselmann-cow.jpg';
   const img = '/images/crop-nicolas-i-unsplash.jpg';
-
   return (
     <div ref={measuredRef} className={className} css={{ overflow: 'hidden' }}>
       <div
@@ -118,8 +114,9 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = (props) => {
         <motion.h1 initial={{ x: 0, y: 0, opacity: 0 }} style={{ y, x, opacity, zoom }}>
           Sébastien Vanvelthem
         </motion.h1>
+
         <motion.p
-          initial={{ x: 0, y: 0, opacity: 0.7 }}
+          initial={{ x: 40, y: 0, opacity: 0.7 }}
           style={{ x: x2, y: y2 }}
           animate={{
             opacity: 1,
