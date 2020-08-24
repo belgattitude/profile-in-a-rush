@@ -8,7 +8,10 @@ const config = withMDX(
     poweredByHeader: true,
     reactStrictMode: true,
     mdPlugins: [mdxImagesPlugin, mdxEmjoiPlugin],
-
+    experimental: {
+      optimizeFonts: true,
+      optimizeImages: true,
+    },
     webpack(config, options) {
       config.module.rules.push({
         test: /\.(png|jpg|gif|svg)$/,
