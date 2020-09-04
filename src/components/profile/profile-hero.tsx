@@ -76,7 +76,7 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = (props) => {
             //background-clip: content-box;
           }
         `}
-      ></div>
+      />
       <motion.div
         className={'background-overlay'}
         css={css`
