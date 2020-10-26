@@ -1,3 +1,4 @@
+import React from 'react';
 import Document, { Html, Head, Main, NextScript, DocumentProps, DocumentContext } from 'next/document';
 import { extractCritical } from '@emotion/server';
 
