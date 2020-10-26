@@ -4,7 +4,7 @@
 
 module.exports = {
   plugins: {
-    tailwindcss: {},
+    //tailwindcss: {},
     'postcss-preset-env': {
       autoprefixer: {
         flexbox: 'no-2009',
