@@ -59,11 +59,12 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = (props) => {
       <div
         className={'background'}
         css={css`
-          background: white;
+          background: black;
           background-size: contain;
           background-image: url(${img});
           background-attachment: fixed;
           background-position: bottom left;
+          background-repeat: no-repeat;
           position: absolute;
           bottom: 0;
           top: 0;
@@ -73,7 +74,6 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = (props) => {
             background-size: cover;
             background-attachment: fixed;
             background-position: bottom left;
-            //background-clip: content-box;
           }
         `}
       />
@@ -87,11 +87,13 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = (props) => {
           right: 0;
           //background: #0f0c29;
           //background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-          background-image: url('/images/wolfgang-hasselmann-cow.jpg');
-          //background-image: url("/images/leafs-unsplash2.jpg");
+          //background-image: url('/images/wolfgang-hasselmann-cow.jpg');
+          //background-image: url("/images/cine.jpg");
+          background-image: url('/images/picos.jpg');
           //background-image: url('https://images.unsplash.com/photo-1563057828-434ef414eff6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=648&q=80');
           //background-image: url("https://images.unsplash.com/photo-1588359886706-cbbd20ff2b29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
           background-size: cover;
+          background-repeat: no-repeat;
           background-position: top;
         `}
         initial={{ opacity: 0 }}
@@ -134,6 +136,7 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = (props) => {
 export const ProfileHero = styled(UnstyledProfileHero)<ProfileHeroProps>`
   position: relative;
   height: 100vh;
+  // @link https://css-tricks.com/css-fix-for-100vh-in-mobile-webkit/
   min-height: -webkit-fill-available;
   @media (${breakpoints.large}) {
     height: 100vh;
