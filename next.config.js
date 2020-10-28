@@ -4,8 +4,21 @@ const config = withMDX({
   poweredByHeader: true,
   reactStrictMode: true,
   experimental: {
-    // optimizeFonts: true,
+    //optimizeFonts: true,
     // optimizeImages: true,
+  },
+
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    config.module.rules.push({
+      test: /\.(eot|ttf|woff|woff2)$/,
+      use: {
+        loader: 'url-loader',
+        options: {
+          limit: 100000,
+        },
+      },
+    });
+    return config;
   },
 });
 

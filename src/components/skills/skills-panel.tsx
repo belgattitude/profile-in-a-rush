@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { skillSections, skillType } from '@config/skills.config';
 import { SkillLabel } from './skill-label';
 import { getAnimationType, getItemVariants, getListVariants } from './skills-panel.anims';
+import Image from 'next/image';
 
 export type SkillSections = typeof skillSections[number];
 export type SkillType = typeof skillType[number];
@@ -80,7 +81,7 @@ const UnstyledSkillsPanel: React.FC<SkillsPanelProps> = (props) => {
                   <div className={'card-picture'}>
                     <a href={homepage} target="_blank" rel="noreferrer">
                       {logo ? (
-                        <img src={logo} alt={name} />
+                        <Image src={logo} alt={name} width={60} height={60} />
                       ) : (
                         <div style={{ fontSize: '2em', padding: '1em', fontWeight: 600 }}>{name}</div>
                       )}

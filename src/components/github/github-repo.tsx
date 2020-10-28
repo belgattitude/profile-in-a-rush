@@ -65,7 +65,7 @@ export const GithubRepo = styled(UnstyledGithubRepo)`
   a,
   &:link,
   &:visited {
-    color: ${(props) => props.theme.colors.link};
+    color: ${(props) => props.theme.colors.primary};
     text-decoration: none;
     padding: 0;
     font-size: 1em;
