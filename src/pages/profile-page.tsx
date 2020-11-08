@@ -28,6 +28,8 @@ const ProfilePage: React.FC = () => {
         <meta name="twitter:image" content={siteConfig.siteImg} />
         <link rel="apple-touch-icon" href="/favicon.ico" />
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="preload" href="/fonts/work-sans/work-sans-latin-400.woff2" as="font" crossOrigin="" />
+        <link rel="preload" href="/fonts/work-sans/work-sans-latin-300.woff2" as="font" crossOrigin="" />
       </Head>
 
       <ThemeProvider theme={defaultTheme}>
