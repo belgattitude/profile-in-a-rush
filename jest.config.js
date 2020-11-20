@@ -1,12 +1,29 @@
-const TEST_REGEX = '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|js?|tsx?|ts?)$';
+const { pathsToModuleNameMapper } = require('ts-jest/utils');
+const { defaults: tsjPreset } = require('ts-jest/presets');
+const { compilerOptions } = require('./tsconfig.json');
 
+/** @typedef {import('ts-jest')} */
+/** @type {import('@jest/types').Config.InitialOptions} */
 module.exports = {
-  setupFiles: ['<rootDir>/jest.setup.js'],
-  testRegex: TEST_REGEX,
+  name: 'unit',
+  displayName: 'unit',
+  testRunner: 'jest-circus/runner',
+  testEnvironment: 'jsdom',
   transform: {
-    '^.+\\.tsx?$': 'babel-jest',
+    ...tsjPreset.transform,
   },
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  collectCoverage: false,
+  transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|ts|jsx|tsx)$'],
+  rootDir: '.',
+  testMatch: ['<rootDir>/src/**/*.test.ts', '<rootDir>/src/**/*.test.tsx'],
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>/' }),
+  coverageDirectory: '<rootDir>/coverage',
+  collectCoverageFrom: ['<rootDir>/src/**/*.{ts,js,tsx,jsx}', '!**/*.test.ts'],
+  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
+  globals: {
+    window: {},
+    'ts-jest': {
+      diagnostics: true,
+      tsconfig: './tsconfig.jest.json',
+    },
+  },
 };

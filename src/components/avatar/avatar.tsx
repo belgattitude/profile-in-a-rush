@@ -4,10 +4,12 @@ import styled from '@emotion/styled';
 type AvatarProps = {
   src: string;
   size?: string | number;
+  testId?: string;
+  alt?: string;
 };
 export const UnstyledAvatar: React.FC<AvatarProps> = (props) => {
-  const { src, ...restProps } = props;
-  return <img alt="profile" src={props.src} {...restProps} />;
+  const { src, alt = '', ...restProps } = props;
+  return <img src={props.src} alt={alt} {...restProps} />;
 };
 
 export const Avatar = styled(UnstyledAvatar)((props: AvatarProps) => {
