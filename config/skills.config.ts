@@ -272,6 +272,22 @@ export const skillsRecords: SkillRecord[] = [
     type: 'database',
   },
   {
+    name: 'Redis',
+    logo: '/images/logos/technos/redis.png',
+    homepage: 'https://redis.io',
+    rating: 3,
+    sections: ['DB'],
+    type: 'database',
+  },
+  {
+    name: 'PostgreSQL',
+    logo: '/images/logos/technos/postgresql.png',
+    homepage: 'https://www.postgresql.org/',
+    rating: 3,
+    sections: ['DB'],
+    type: 'database',
+  },
+  {
     name: 'PHPStorm...',
     logo: '/images/logos/technos/phpstorm.png',
     homepage: 'https://jetbrains.com',
@@ -339,15 +355,6 @@ export const skillsRecords: SkillRecord[] = [
     sections: ['Dev'],
     type: 'tooling',
   },
-  {
-    name: 'Bind9',
-    logo: '/images/logos/technos/bind9.jpg',
-    homepage: 'https://www.isc.org/bind/',
-    rating: 4,
-    sections: ['Dev'],
-    type: 'tooling',
-  },
-
   {
     name: 'Zend v1',
     logo: '/images/logos/technos/zf.jpg',
