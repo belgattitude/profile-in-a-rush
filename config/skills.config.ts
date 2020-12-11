@@ -7,10 +7,10 @@ export const skillSections = ['Overview', 'Frontend', 'PHP', 'Node', 'DB', 'Dev'
 export const defaultSection: typeof skillSections[number] = 'Overview';
 
 export const sectionAnimations: SectionAnimationConfig = {
-  none: ['Overview', 'Frontend', 'PHP', 'Node', 'DB', 'Relics', 'Dev'],
-  adrenaline: ['Emerging'],
-  topdown: [],
-  soft: [],
+  none: ['Relics'],
+  adrenaline: ['Frontend', 'PHP', 'DB', 'Overview', 'Emerging'],
+  topdown: ['Node', 'Dev'],
+  soft: ['Relics'],
 };
 
 export const skillType = ['language', 'library', 'database', 'design', 'architecture', 'tooling'] as const;
