@@ -51,7 +51,7 @@ export const skillsRecords: SkillRecord[] = [
     homepage: 'https://nextjs.org',
     years: 0.6,
     rating: 4,
-    sections: ['Frontend'],
+    sections: ['Frontend', 'Overview'],
     type: 'library',
   },
   {
@@ -107,7 +107,7 @@ export const skillsRecords: SkillRecord[] = [
     logo: '/images/logos/technos/sass.png',
     homepage: 'https://sass-lang.com',
     rating: 4,
-    sections: ['Frontend', 'Overview'],
+    sections: ['Frontend'],
     type: 'design',
   },
   {
