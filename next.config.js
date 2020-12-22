@@ -5,6 +5,7 @@ const config = withMDX({
   reactStrictMode: true,
 
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    /**
     config.module.rules.push({
       test: /\.(eot|ttf|woff|woff2)$/,
       use: {
@@ -14,6 +15,7 @@ const config = withMDX({
         },
       },
     });
+     */
     return config;
   },
 });
