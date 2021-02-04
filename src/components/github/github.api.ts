@@ -1,5 +1,5 @@
 import { Result } from '@core/result';
-import ky from 'ky/umd';
+import ky from 'ky';
 import is from '@sindresorhus/is';
 
 export type RepoItemDTO = {
@@ -71,7 +71,7 @@ export default class GithubApi {
     );
   }
 
-  static createFromDefaults() {
+  static createFromDefaults(): GithubApi {
     return new GithubApi();
   }
 
