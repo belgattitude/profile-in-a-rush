@@ -1,9 +1,16 @@
 const withMDX = require('@next/mdx')();
 const withBundleAnalyzer = require('@next/bundle-analyzer');
 
-const withTM = require('next-transpile-modules')(['ky'], {
-  debug: false,
-});
+// Example to reproduce bug with ky esm
+// https://github.com/sindresorhus/ky/issues/322
+const withTM = require('next-transpile-modules')(
+  [
+    //'ky' // uncomment ky to fix the issue
+  ],
+  {
+    debug: false,
+  }
+);
 
 const config = withTM(
   withMDX({
