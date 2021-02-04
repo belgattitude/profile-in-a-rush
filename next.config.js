@@ -1,11 +1,19 @@
 const withMDX = require('@next/mdx')();
 const withBundleAnalyzer = require('@next/bundle-analyzer');
-const config = withMDX({
-  poweredByHeader: true,
-  reactStrictMode: true,
 
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    /**
+const withTM = require('next-transpile-modules')(['ky'], {
+  debug: false,
+});
+
+const config = withTM(
+  withMDX({
+    poweredByHeader: true,
+    reactStrictMode: true,
+
+    future: { webpack5: true },
+
+    webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+      /**
     config.module.rules.push({
       test: /\.(eot|ttf|woff|woff2)$/,
       use: {
@@ -16,9 +24,10 @@ const config = withMDX({
       },
     });
      */
-    return config;
-  },
-});
+      return config;
+    },
+  })
+);
 
 if (process.env.ANALYZE === 'true') {
   module.exports = withBundleAnalyzer(config);
