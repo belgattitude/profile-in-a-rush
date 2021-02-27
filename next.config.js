@@ -10,7 +10,7 @@ const config = withTM(
     poweredByHeader: true,
     reactStrictMode: true,
 
-    future: { webpack5: true },
+    future: { webpack5: false },
 
     webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
       /**

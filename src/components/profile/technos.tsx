@@ -4,7 +4,7 @@ import { defaultSection, skillsRecords } from '../../../config';
 import dynamic from 'next/dist/next-server/lib/dynamic';
 import { SkillsPanelProps } from '../skills';
 
-type TechnosProps = {
+export type TechnosProps = {
   className?: string;
   children?: never;
 };

@@ -4,10 +4,19 @@ import { appClassName, siteConfig, mdxConfig } from '@config/index';
 import { MDXProvider } from '@mdx-js/react';
 import { Footer } from '@components/layouts';
 import { defaultTheme } from '@themes/theme';
-import { AboutMe, Features, Opensource, ProfileHero, Technos } from '@components/profile';
 import Head from 'next/head';
 import { css } from '@emotion/react';
 import { Block } from '@components/profile/block';
+import dynamic from 'next/dist/next-server/lib/dynamic';
+import { AboutMe, Features, Opensource, ProfileHero, TechnosProps } from '@components/profile';
+
+const Technos = dynamic<TechnosProps>(
+  () => import('@components/profile/technos').then((mod) => mod.Technos),
+  {
+    ssr: false,
+  }
+);
+
 
 const ProfilePage: React.FC = () => {
   return (
