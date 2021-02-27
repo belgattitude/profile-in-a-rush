@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { skillSections, skillType } from '@config/skills.config';
 import { SkillLabel } from './skill-label';
 import { getAnimationType, getItemVariants, getListVariants } from './skills-panel.anims';
