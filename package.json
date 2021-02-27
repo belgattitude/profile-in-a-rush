@@ -51,7 +51,7 @@
     "abort-controller": "^3.0.0",
     "abortcontroller-polyfill": "^1.7.1",
     "date-fns": "^2.17.0",
-    "framer-motion": "3.0.1",
+    "framer-motion": "^3.7.0",
     "ky": "^0.27.0",
     "next": "10.0.7",
     "next-transpile-modules": "^6.3.0",
@@ -104,9 +104,6 @@
     "ts-jest": "^26.5.2",
     "typescript": "^4.2.2",
     "url-loader": "^4.1.1"
-  },
-  "resolutions": {
-    "webpack": "5.20.2"
   },
   "browserslist": [
     "> 1%",
