@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import styled from '@emotion/styled';
 import { Avatar } from '../avatar';
 import { breakpoints } from '../../../config';
-import { m as motion, useViewportScroll, useTransform, useSpring } from "framer-motion"
+import { motion, useViewportScroll, useTransform, useSpring } from "framer-motion"
 
 import { css } from '@emotion/react';
 import { backOut } from 'popmotion';
