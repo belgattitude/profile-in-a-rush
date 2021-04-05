@@ -7,7 +7,7 @@
     "name": "Vanvelthem Sébastien",
     "url": "https://github.com/belgattitude"
   },
-  "version": "2020.11.18",
+  "version": "2021.04.05",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -108,5 +108,11 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "engines": {
+    "node": ">=14",
+    "yarn": ">=1.21.0",
+    "npm": "please-use-yarn"
+  }
+
 }
