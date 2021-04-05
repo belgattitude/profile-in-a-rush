@@ -9,21 +9,8 @@ const config = withTM(
   withMDX({
     poweredByHeader: true,
     reactStrictMode: true,
-
-    future: { webpack5: false },
-
-    webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-      /**
-    config.module.rules.push({
-      test: /\.(eot|ttf|woff|woff2)$/,
-      use: {
-        loader: 'url-loader',
-        options: {
-          limit: 100000,
-        },
-      },
-    });
-     */
+    future: { webpack5: true },
+    webpack: (config) => {
       return config;
     },
   })
