@@ -4,6 +4,7 @@
     "target": "es6",
     "jsx": "react",
     "module": "commonjs",
+    "jsxImportSource": "@emotion/react",
     "noImplicitAny": false,
     "declaration": false,
     "noEmit": true,
