@@ -33,7 +33,8 @@
       "@config/*": [
         "config/*"
       ]
-    }
+    },
+    "incremental": true
   },
   "exclude": [
     "node_modules",
