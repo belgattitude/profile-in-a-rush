@@ -9,7 +9,7 @@ const config = withTM(
   withMDX({
     poweredByHeader: true,
     reactStrictMode: true,
-    future: { webpack5: true },
+    webpack5: true,
     webpack: (config) => {
       return config;
     },
