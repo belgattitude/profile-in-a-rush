@@ -13,7 +13,8 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:sonarjs/recommended",
     "plugin:jsx-a11y/recommended",
-    "plugin:jest/recommended"
+    "plugin:jest/recommended",
+    "plugin:@next/next/recommended"
   ],
   "rules": {
     "react-hooks/rules-of-hooks": "error",
