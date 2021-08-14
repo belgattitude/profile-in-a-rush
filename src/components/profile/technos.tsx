@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { defaultSection, skillsRecords } from '../../../config';
-import dynamic from 'next/dist/next-server/lib/dynamic';
+import dynamic from 'next/dynamic'
 import { SkillsPanelProps } from '../skills';
 
 export type TechnosProps = {

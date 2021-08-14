@@ -7,7 +7,7 @@ import { defaultTheme } from '@themes/theme';
 import Head from 'next/head';
 import { css } from '@emotion/react';
 import { Block } from '@components/profile/block';
-import dynamic from 'next/dist/next-server/lib/dynamic';
+import dynamic from 'next/dynamic'
 import { AboutMe, Features, Opensource, ProfileHero, TechnosProps } from '@components/profile';
 
 const Technos = dynamic<TechnosProps>(
