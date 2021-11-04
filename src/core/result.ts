@@ -4,11 +4,12 @@ type OkPayload<T> = {
   isError: false;
   value: T;
 };
-
+// Hello world
 type FailPayload<E extends ErrorType = Error> = {
   isError: true;
   error: E;
 };
+
 type ResultPayload<T, E extends ErrorType = Error> = OkPayload<T> | FailPayload<E>;
 
 export class Result<T, E extends ErrorType = Error> {
@@ -38,12 +39,16 @@ export class Result<T, E extends ErrorType = Error> {
     });
   }
 
+  isError(): boolean {
+    return this.payload.isError;
+  }
+
   /**
    * Creates a failed result
    * @param error - An Error object or string (Error object is recommended to keep trace)
    * @throws Error if runtime validation of the payload failed
    */
-  static fail<U extends unknown = unknown, E extends ErrorType = Error>(error: E | string): Result<U, E> {
+  static fail<U = unknown, E extends ErrorType = Error>(error: E | string): Result<U, Error> {
     return new Result({
       isError: true,
       error: typeof error === 'string' ? new Error(error) : error,
@@ -51,7 +56,7 @@ export class Result<T, E extends ErrorType = Error> {
   }
 
   /**
-   * Unwraps a valueOrError
+   * Unwraps a value or Error
    */
   unwrap(): T | E {
     return this.payload.isError ? this.payload.error : this.payload.value;
@@ -59,7 +64,7 @@ export class Result<T, E extends ErrorType = Error> {
 
   map<U>(mapFn: (value: T) => U): Result<U, E> {
     if (this.payload.isError) {
-      return (this as unknown) as Result<U, E>;
+      return this as unknown as Result<U, E>;
     }
     const newValue = mapFn(this.payload.value);
     if (newValue instanceof Error) {
@@ -68,9 +73,9 @@ export class Result<T, E extends ErrorType = Error> {
     return Result.ok(newValue);
   }
 
-  async asyncMap<U>(mapFn: (value: T) => Promise<U>): Promise<Result<U, E>> {
+  async asyncMap<U>(mapFn: (value: T) => Promise<U>): Promise<Result<U, Error>> {
     if (this.payload.isError) {
-      return Promise.resolve((this as unknown) as Result<U, E>);
+      return Promise.resolve(this as unknown as Result<U, E>);
     } else {
       try {
         const newInner = await mapFn(this.payload.value);
@@ -78,14 +83,14 @@ export class Result<T, E extends ErrorType = Error> {
           throw new Error('Cannot return an error from a asyncMap function');
         }
         return Result.ok(newInner);
-      } catch (e) {
-        return Result.fail(e);
+      } catch (e: unknown) {
+        return Result.fail(e instanceof Error ? e : new Error(`${e}`));
       }
     }
   }
 
-  mapErr<F extends ErrorType = Error>(mapFn: (error: E) => F): Result<T, F> {
-    return this.payload.isError ? Result.fail(mapFn(this.payload.error)) : ((this as unknown) as Result<T, F>);
+  mapErr<F extends ErrorType = Error>(mapFn: (error: E) => F): Result<T> {
+    return this.payload.isError ? Result.fail(mapFn(this.payload.error)) : (this as unknown as Result<T, F>);
   }
 
   /**
