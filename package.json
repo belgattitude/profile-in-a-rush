@@ -105,7 +105,6 @@
     "last 2 versions"
   ],
   "engines": {
-    "node": ">=14",
     "yarn": ">=1.21.0",
     "npm": "please-use-yarn"
   }
