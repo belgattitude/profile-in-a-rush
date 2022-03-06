@@ -10,7 +10,7 @@ import {
 } from 'framer-motion';
 import { backOut } from 'popmotion';
 import React, { useCallback, useState } from 'react';
-import { breakpoints } from '../../../config';
+import { breakpoints } from '@/config';
 import { Avatar } from '../avatar';
 
 type ProfileHeroProps = {

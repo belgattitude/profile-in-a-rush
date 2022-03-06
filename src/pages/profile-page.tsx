@@ -12,7 +12,7 @@ import {
   ProfileHero,
 } from '@/components/profile';
 import { Block } from '@/components/profile/block';
-import { appClassName, siteConfig, mdxConfig } from '@/config/index';
+import { appClassName, siteConfig, mdxConfig } from '@/config';
 import { defaultTheme } from '@/themes/theme';
 
 const Technos = dynamic<TechnosProps>(
