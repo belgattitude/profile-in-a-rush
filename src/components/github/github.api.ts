@@ -37,7 +37,7 @@ export default class GithubApi {
 
   async getMyRepos(props: {
     githubQuery: string;
-    signal?: AbortSignal;
+    signal?: AbortSignal | null;
     filterOnly?: Array<[string, string[]]>;
   }): Promise<Result<RepoItemDTO[]>> {
     const { filterOnly = [], githubQuery } = props;
@@ -45,6 +45,7 @@ export default class GithubApi {
       this.ky
         // Specific github syntax, using URLParams encoding won't work ;)
         .get(githubQuery, {
+          retry: 1,
           signal: props.signal,
         })
         .json()
