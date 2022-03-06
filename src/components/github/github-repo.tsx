@@ -1,8 +1,8 @@
-import React from 'react';
-import { RepoItemDTO } from './github.api';
 import styled from '@emotion/styled';
-import { truncateText } from '../../utils/utils';
+import React from 'react';
 import { CustomTag } from '@components/github/custom-tag';
+import { truncateText } from '../../utils/utils';
+import type { RepoItemDTO } from './github.api';
 
 const getRepoHomePage = (repo: RepoItemDTO): string => {
   const { homepage, html_url, custom_tags = [] } = repo;
@@ -21,7 +21,11 @@ const UnstyledGithubRepo: React.FC<{
       <div>
         <a href={getRepoHomePage(repo)} target="_blank" rel="noreferrer">
           {repo.name}
-          {repo.homepage ? <i className="fas fa-home" /> : <i className="fab fa-github" />}
+          {repo.homepage ? (
+            <i className="fas fa-home" />
+          ) : (
+            <i className="fab fa-github" />
+          )}
         </a>
         <p>{truncateText(repo.description, limitChars, false)}</p>
         {(repo.custom_tags || []).map((label) => (

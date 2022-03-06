@@ -1,9 +1,21 @@
-import { SectionAnimationConfig, SkillRecord } from 'src/components/skills';
+import type {
+  SectionAnimationConfig,
+  SkillRecord,
+} from 'src/components/skills';
 
 /**
  * Configure sections and skill types
  */
-export const skillSections = ['Overview', 'Frontend', 'PHP', 'Node', 'DB', 'Dev', 'Emerging', 'Relics'] as const;
+export const skillSections = [
+  'Overview',
+  'Frontend',
+  'PHP',
+  'Node',
+  'DB',
+  'Dev',
+  'Emerging',
+  'Relics',
+] as const;
 export const defaultSection: typeof skillSections[number] = 'Overview';
 
 export const sectionAnimations: SectionAnimationConfig = {
@@ -13,7 +25,14 @@ export const sectionAnimations: SectionAnimationConfig = {
   soft: ['Relics'],
 };
 
-export const skillType = ['language', 'library', 'database', 'design', 'architecture', 'tooling'] as const;
+export const skillType = [
+  'language',
+  'library',
+  'database',
+  'design',
+  'architecture',
+  'tooling',
+] as const;
 
 /**
  * Here add the skills

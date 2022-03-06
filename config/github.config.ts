@@ -1,9 +1,10 @@
 /**
  * @link GithubRepoList
  */
-import { GithubRepoListProps } from '@components/github/github-repo-list';
+import type { GithubRepoListProps } from '@components/github/github-repo-list';
 
-export const githubQuery = 'search/repositories?q=user:belgattitude+org:soluble-io+org:contredanse+repo:doctrine/dbal';
+export const githubQuery =
+  'search/repositories?q=user:belgattitude+org:soluble-io+org:contredanse+repo:doctrine/dbal';
 
 export const filteredRepos: GithubRepoListProps['filters'] = [
   ['soluble-japha', ['php7.1']],
@@ -13,6 +14,6 @@ export const filteredRepos: GithubRepoListProps['filters'] = [
   ['mfts', ['typescript', 'react', 'pwa', 'spare-time']],
   ['soluble-jasper', ['php7.1', 'reports', 'pdf']],
   ['desync', ['typescript', 'react', 'lerna']],
-  //['soluble-metadata', ['php7.1', 'db']],
-  //['php-java-bridge', ['java', 'fork!']],
+  // ['soluble-metadata', ['php7.1', 'db']],
+  // ['php-java-bridge', ['java', 'fork!']],
 ];

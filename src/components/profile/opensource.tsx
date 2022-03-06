@@ -1,5 +1,5 @@
-import React from 'react';
 import styled from '@emotion/styled';
+import React from 'react';
 import { githubQuery, filteredRepos } from '../../../config';
 
 import { GithubRepoList } from '../github';
@@ -14,7 +14,11 @@ const UnstyledOpensource: React.FC<OpensourceProps> = (props) => {
   return (
     <div className={className}>
       <h1>
-        <a href={'https://github.com/belgattitude'} target={'_blank'} rel={'noreferrer'}>
+        <a
+          href={'https://github.com/belgattitude'}
+          target={'_blank'}
+          rel={'noreferrer'}
+        >
           <i className="fab fa-github" />
         </a>
       </h1>
@@ -26,28 +30,27 @@ const UnstyledOpensource: React.FC<OpensourceProps> = (props) => {
 };
 
 export const Opensource = styled(UnstyledOpensource)<OpensourceProps>`
-    align-items: stretch;
-    > div {
-        max-width: 500px;
-        margin-top: 30px;
+  align-items: stretch;
+  > div {
+    max-width: 500px;
+    margin-top: 30px;
+  }
+  > h1 {
+    i {
+      font-size: 2em;
     }
-    > h1 {
-        i {
-            
-            font-size: 2em;
-        }
 
-        a,
-        a:visited {
-            transition: all 0.2s ease-in-out;
-            //color: ${(props) => props.theme.colors.primary};
-            color: #999;
-            text-decoration: none;
-        }
-        a:hover {
-            color: ${(props) => props.theme.colors.link};
-        }
+    a,
+    a:visited {
+      transition: all 0.2s ease-in-out;
+      //color: ${(props) => props.theme.colors.primary};
+      color: #999;
+      text-decoration: none;
     }
-    > p {
+    a:hover {
+      color: ${(props) => props.theme.colors.link};
     }
+  }
+  > p {
+  }
 `;

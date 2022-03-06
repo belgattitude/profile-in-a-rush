@@ -5,12 +5,13 @@
 import styled from '@emotion/styled';
 import { breakpoints } from '@config/styles.config';
 
-const GridContainer = styled.div`
+export const GridContainer = styled.div`
   display: grid;
   grid-gap: 1em;
 
   grid-template-areas:
         //'header'
+
     'sidebar'
     'roles'
     'skills'
@@ -30,6 +31,7 @@ const GridContainer = styled.div`
     grid-row-start: auto;
     grid-template-areas:
             //'header   header   header'
+
       'sidebar  roles    roles'
       'sidebar  skills  skills'
       'sidebar  summary  summary'
@@ -38,7 +40,7 @@ const GridContainer = styled.div`
   }
 `;
 
-const SidebarContainer = styled.div`
+export const SidebarContainer = styled.div`
   display: grid;
   grid-gap: 1em;
   grid-template-areas:
@@ -52,7 +54,7 @@ const SidebarContainer = styled.div`
   }
 `;
 
-const GridItem = styled.div<{
+export const GridItem = styled.div<{
   area: string;
 }>`
   grid-area: ${(props) => props.area};

@@ -11,7 +11,7 @@ export interface IMyTheme {
 export const defaultTheme: IMyTheme = {
   colors: {
     primary: '#111',
-    //link: '#3685D6',
+    // link: '#3685D6',
     link: '#433561',
   },
   page: {

@@ -19,6 +19,7 @@
     "typecheck": "tsc -p . --noEmit",
     "format": "prettier --write \"./**/*.{ts,tsx,css,scss,js,json}\"",
     "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "test": "jest --config jest.config.js --color $@",
     "deps:check": "npx npm-check-updates --dep prod,dev,optional",
     "deps:update": "npx npm-check-updates --dep prod,dev,optional -u",

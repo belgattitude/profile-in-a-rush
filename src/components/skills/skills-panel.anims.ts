@@ -1,9 +1,11 @@
-import { SkillSections } from './skills-panel';
-import { Variants } from 'framer-motion';
+import type { Variants } from 'framer-motion';
 import { sectionAnimations } from '../../../config';
+import type { SkillSections } from './skills-panel';
 
 export type AnimationType = 'none' | 'adrenaline' | 'soft' | 'topdown';
-export type SectionAnimationConfig = Partial<{ [k in AnimationType]: SkillSections[] }>;
+export type SectionAnimationConfig = Partial<{
+  [k in AnimationType]: SkillSections[];
+}>;
 
 // For animation
 export const getListVariants = (type: AnimationType = 'none'): Variants => {
@@ -57,7 +59,7 @@ export const getItemVariants = (type: AnimationType = 'none'): Variants => {
         initial: {
           opacity: 0.6,
           x: Math.ceil(Math.random() * 100) * (Math.random() > 0.5 ? -1 : 1),
-          //y: Math.ceil(Math.random() * 2) * (Math.random() > 0.5 ? -1 : 1),
+          // y: Math.ceil(Math.random() * 2) * (Math.random() > 0.5 ? -1 : 1),
           scale: 0.1,
         },
         enter: {
@@ -66,8 +68,8 @@ export const getItemVariants = (type: AnimationType = 'none'): Variants => {
           y: 0,
           scale: 1,
           transition: {
-            //staggerChildren: 1,
-            //beforeChildren: false,
+            // staggerChildren: 1,
+            // beforeChildren: false,
             duration: 1.4,
           },
         },
@@ -94,7 +96,7 @@ export const getItemVariants = (type: AnimationType = 'none'): Variants => {
           x: 0,
           y: 0,
           transition: {
-            //staggerChildren: 0.12,
+            // staggerChildren: 0.12,
             beforeChildren: false,
           },
         },

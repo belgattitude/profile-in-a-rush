@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import './page.scss';
 
 export const Page: React.FC = ({ children }) => (
   <div className="resume-page">

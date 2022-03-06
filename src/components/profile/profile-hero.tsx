@@ -1,11 +1,15 @@
-import React, { useCallback, useState } from 'react';
-import styled from '@emotion/styled';
-import { Avatar } from '../avatar';
-import { breakpoints } from '../../../config';
-import { motion, useViewportScroll, useTransform, useSpring } from "framer-motion"
-
 import { css } from '@emotion/react';
+import styled from '@emotion/styled';
+import {
+  motion,
+  useViewportScroll,
+  useTransform,
+  useSpring,
+} from 'framer-motion';
 import { backOut } from 'popmotion';
+import React, { useCallback, useState } from 'react';
+import { breakpoints } from '../../../config';
+import { Avatar } from '../avatar';
 
 type ProfileHeroProps = {
   className?: string;
@@ -37,23 +41,45 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = (props) => {
   const { width } = elementRect || { width: minWidth };
   const { height } = elementRect || { height: minHeight };
   const x = useSpring(
-    useTransform(scrollY, [0, height], [0, -Math.ceil(Math.max(width * 1.7, minWidth))]),
+    useTransform(
+      scrollY,
+      [0, height],
+      [0, -Math.ceil(Math.max(width * 1.7, minWidth))]
+    ),
     springConfig
   );
-  const x2 = useSpring(useTransform(scrollY, [0, 100], [0, Math.ceil(width > minWidth ? width / 4 : 0)]), springConfig);
+  const x2 = useSpring(
+    useTransform(
+      scrollY,
+      [0, 100],
+      [0, Math.ceil(width > minWidth ? width / 4 : 0)]
+    ),
+    springConfig
+  );
   const y = useTransform(scrollY, [0, height], [0, Math.ceil(height / 1.1)]);
-  const y2 = useTransform(scrollY, [0, height / 2], [0, Math.ceil(height / 2.4)]);
+  const y2 = useTransform(
+    scrollY,
+    [0, height / 2],
+    [0, Math.ceil(height / 2.4)]
+  );
 
   const opacity = useTransform(scrollY, [0, height], [1, 0.3], {
     ease: backOut,
   });
-  const opacity2 = useTransform(scrollY, [0, height / 2], width < 500 ? [1, 0.1] : [0.0, 0.5]);
+  const opacity2 = useTransform(
+    scrollY,
+    [0, height / 2],
+    width < 500 ? [1, 0.1] : [0.0, 0.5]
+  );
   const zoom = useTransform(scrollY, [0, height], [1, 0]);
-  const xAvatar = useSpring(useTransform(scrollY, [0, height], [0, Math.ceil(width / 2)]), springConfig);
+  const xAvatar = useSpring(
+    useTransform(scrollY, [0, height], [0, Math.ceil(width / 2)]),
+    springConfig
+  );
   const opacityAvatar = useTransform(scrollY, [0, height], [0, 1]);
 
-  //const img = '/images/unsplash-bigrock.jpg';
-  //const img = '/images/wolfgang-hasselmann-cow.jpg';
+  // const img = '/images/unsplash-bigrock.jpg';
+  // const img = '/images/wolfgang-hasselmann-cow.jpg';
   const img = '/images/crop-nicolas-i-unsplash.jpg';
   return (
     <div ref={measuredRef} className={className} css={{ overflow: 'hidden' }}>
@@ -114,7 +140,10 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = (props) => {
       )}
 
       <div className={'content'}>
-        <motion.h1 initial={{ x: 0, y: 0, opacity: 0 }} style={{ y, x, opacity, zoom }}>
+        <motion.h1
+          initial={{ x: 0, y: 0, opacity: 0 }}
+          style={{ y, x, opacity, zoom }}
+        >
           Sébastien Vanvelthem
         </motion.h1>
 

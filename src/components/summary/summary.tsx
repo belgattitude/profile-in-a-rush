@@ -6,10 +6,10 @@
  * @license   https://github.com/belgattitude/profile-in-a-rush/blob/master/LICENSE.md MIT
  */
 
+import styled from '@emotion/styled';
 import * as React from 'react';
 
 import MDXContent from './summary.mdx';
-import styled from '@emotion/styled';
 
 const StyledSummary = styled(MDXContent)``;
 

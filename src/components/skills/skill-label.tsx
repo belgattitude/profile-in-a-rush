@@ -1,6 +1,6 @@
-import React from 'react';
 import styled from '@emotion/styled';
-import { SkillRecord } from './skills-panel';
+import React from 'react';
+import type { SkillRecord } from './skills-panel';
 
 const UnstyledSkillLabel: React.FC<{
   skill: SkillRecord;
@@ -8,10 +8,11 @@ const UnstyledSkillLabel: React.FC<{
   chilren?: never;
 }> = (props) => {
   const { skill, className } = props;
-  const { name, years, type, rating, sections } = skill;
+  const { name, years } = skill;
   return (
     <div className={`${className}`}>
-      {name} {years && years >= 1 && <span className="years"> &gt;{years}y</span>}
+      {name}{' '}
+      {years && years >= 1 && <span className="years"> &gt;{years}y</span>}
     </div>
   );
 };
