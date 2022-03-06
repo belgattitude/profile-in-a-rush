@@ -1,5 +1,5 @@
-const { pathsToModuleNameMapper } = require('ts-jest/utils');
-const { defaults: tsjPreset } = require('ts-jest/presets');
+const { defaults: tsJestPreset } = require('ts-jest/presets');
+const { pathsToModuleNameMapper } = require('ts-jest');
 const { compilerOptions } = require('./tsconfig.json');
 
 /** @typedef {import('ts-jest')} */
@@ -10,7 +10,7 @@ module.exports = {
   testRunner: 'jest-circus/runner',
   testEnvironment: 'jsdom',
   transform: {
-    ...tsjPreset.transform,
+    ...tsJestPreset.transform,
   },
   transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|ts|jsx|tsx)$'],
   rootDir: '.',

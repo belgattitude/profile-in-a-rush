@@ -7,7 +7,7 @@ describe('Avatar tests', () => {
     render(<Avatar src={'/image/test.jpg'} alt={'cool'} />);
     expect(screen.getByAltText('cool')).toHaveAttribute(
       'src',
-      '/image/test.jpg'
+      'http://localhost/image/test.jpg'
     );
   });
 });
