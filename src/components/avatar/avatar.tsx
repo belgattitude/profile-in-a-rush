@@ -1,5 +1,5 @@
-import React from 'react';
 import styled from '@emotion/styled';
+import React from 'react';
 
 type AvatarProps = {
   src: string;
@@ -9,7 +9,7 @@ type AvatarProps = {
 };
 export const UnstyledAvatar: React.FC<AvatarProps> = (props) => {
   const { src, alt = '', ...restProps } = props;
-  return <img src={props.src} alt={alt} {...restProps} />;
+  return <img src={src} alt={alt} {...restProps} />;
 };
 
 export const Avatar = styled(UnstyledAvatar)((props: AvatarProps) => {

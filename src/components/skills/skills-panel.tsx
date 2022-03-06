@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { motion, AnimatePresence } from 'framer-motion';
-import { skillSections, skillType } from '@config/skills.config';
-import { SkillLabel } from './skill-label';
-import { getAnimationType, getItemVariants, getListVariants } from './skills-panel.anims';
 import Image from 'next/image';
+import React, { useState } from 'react';
+import type { skillType } from '@config/skills.config';
+import { skillSections } from '@config/skills.config';
+import { SkillLabel } from './skill-label';
+import {
+  getAnimationType,
+  getItemVariants,
+  getListVariants,
+} from './skills-panel.anims';
 
 export type SkillSections = typeof skillSections[number];
 export type SkillType = typeof skillType[number];
@@ -20,12 +25,14 @@ export type SkillRecord = {
 };
 
 // Utilitary
-const isSectionsActive = (activeSections: SkillSections[]) => (sections: SkillSections[]): boolean => {
-  if (activeSections === null || activeSections.length === 0) {
-    return false;
-  }
-  return sections.some((s) => activeSections.includes(s));
-};
+const isSectionsActive =
+  (activeSections: SkillSections[]) =>
+  (sections: SkillSections[]): boolean => {
+    if (activeSections === null || activeSections.length === 0) {
+      return false;
+    }
+    return sections.some((s) => activeSections.includes(s));
+  };
 
 export type SkillsPanelProps = {
   skills: SkillRecord[];
@@ -36,7 +43,9 @@ export type SkillsPanelProps = {
 
 const UnstyledSkillsPanel: React.FC<SkillsPanelProps> = (props) => {
   const { className, skills, defaultSection } = props;
-  const [activeSections, setActiveSections] = useState<SkillSections[]>([defaultSection]);
+  const [activeSections, setActiveSections] = useState<SkillSections[]>([
+    defaultSection,
+  ]);
   const sectionActive = isSectionsActive(activeSections);
   return (
     <div className={className}>
@@ -48,7 +57,7 @@ const UnstyledSkillsPanel: React.FC<SkillsPanelProps> = (props) => {
               role={'tab'}
               key={section}
               className={`tab ${cls}`}
-              onClick={(e) => {
+              onClick={(_e) => {
                 if (sectionActive([section])) {
                   setActiveSections([defaultSection]);
                 } else {
@@ -62,7 +71,7 @@ const UnstyledSkillsPanel: React.FC<SkillsPanelProps> = (props) => {
         })}
       </div>
       <div className="card-container">
-        <AnimatePresence initial={true} onExitComplete={() => {}}>
+        <AnimatePresence initial={true}>
           <motion.div
             className="animation-container"
             key={`${activeSections.join(',')}`}
@@ -71,26 +80,40 @@ const UnstyledSkillsPanel: React.FC<SkillsPanelProps> = (props) => {
             animate="enter"
             exit="exit"
           >
-            {skills.map((skill, idx) => {
+            {skills.map((skill, _idx) => {
               const { name, logo, homepage } = skill;
               if (activeSections.length > 0 && !sectionActive(skill.sections)) {
                 return false;
               }
               return (
-                <motion.article className="card" key={`${name}`} variants={getItemVariants('soft')}>
+                <motion.article
+                  className="card"
+                  key={`${name}`}
+                  variants={getItemVariants('soft')}
+                >
                   <div className={'card-picture'}>
                     <a href={homepage} target="_blank" rel="noreferrer">
                       {logo ? (
                         <Image src={logo} alt={name} width={60} height={60} />
                       ) : (
-                        <div style={{ fontSize: '2em', padding: '1em', fontWeight: 600 }}>{name}</div>
+                        <div
+                          style={{
+                            fontSize: '2em',
+                            padding: '1em',
+                            fontWeight: 600,
+                          }}
+                        >
+                          {name}
+                        </div>
                       )}
                     </a>
                   </div>
                   <motion.div
                     className="card-footer"
                     key={`${name}`}
-                    variants={getItemVariants(getAnimationType(activeSections[0]))}
+                    variants={getItemVariants(
+                      getAnimationType(activeSections[0])
+                    )}
                   >
                     <SkillLabel skill={skill} />
                   </motion.div>

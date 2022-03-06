@@ -1,5 +1,5 @@
-import React from 'react';
 import styled from '@emotion/styled';
+import React from 'react';
 
 type AboutMeProps = {
   className?: string;
@@ -13,10 +13,11 @@ const UnstyledAboutMe: React.FC<AboutMeProps> = (props) => {
     <div className={className}>
       <h1>About me</h1>
       <p>
-        I'm a passionate developer with more than 15 years experience in backend and frontend technologies. Over the
-        years I acquired some acquaintance with best practices, testing, q&a, architecture,... and really like to think
-        'how do we do this ?'. "this" being not exclusively related to tech. I live in Brussels, and believe that not
-        every{' '}
+        I'm a passionate developer with more than 15 years experience in backend
+        and frontend technologies. Over the years I acquired some acquaintance
+        with best practices, testing, q&a, architecture,... and really like to
+        think 'how do we do this ?'. "this" being not exclusively related to
+        tech. I live in Brussels, and believe that not every{' '}
         <a
           title="Credits #belgiansolutions"
           href={'https://www.instagram.com/p/2ZBIQwIW19/'}

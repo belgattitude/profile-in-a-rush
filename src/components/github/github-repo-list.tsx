@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import GithubApi, { RepoItems } from './github.api';
 import styled from '@emotion/styled';
+import React, { useEffect, useState } from 'react';
 import { GithubRepo } from './github-repo';
+import type { RepoItems } from './github.api';
+import GithubApi from './github.api';
 
 export type GithubRepoListProps = {
   githubQuery: string;

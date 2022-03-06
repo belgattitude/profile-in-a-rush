@@ -1,6 +1,6 @@
-import { Result } from '@core/result';
-import ky from 'ky';
 import is from '@sindresorhus/is';
+import ky from 'ky';
+import { Result } from '@core/result';
 
 export type RepoItemDTO = {
   id: number;
@@ -37,7 +37,7 @@ export default class GithubApi {
 
   async getMyRepos(props: {
     githubQuery: string;
-    signal?: AbortSignal;
+    signal?: AbortSignal | null;
     filterOnly?: Array<[string, string[]]>;
   }): Promise<Result<RepoItemDTO[]>> {
     const { filterOnly = [], githubQuery } = props;
@@ -45,6 +45,7 @@ export default class GithubApi {
       this.ky
         // Specific github syntax, using URLParams encoding won't work ;)
         .get(githubQuery, {
+          retry: 1,
           signal: props.signal,
         })
         .json()
@@ -65,7 +66,9 @@ export default class GithubApi {
             }
             return Result.ok<RepoItems>(items);
           }
-          return Result.fail<RepoItems>(`Returned response shape is not supported`);
+          return Result.fail<RepoItems>(
+            `Returned response shape is not supported`
+          );
         })
         .catch((e) => Result.fail<RepoItems>(e))
     );
@@ -78,7 +81,9 @@ export default class GithubApi {
   /**
    * Very basic typeguard
    */
-  private isValidRepoResponse(response: unknown): response is { items: RepoItemDTO[] } {
+  private isValidRepoResponse(
+    response: unknown
+  ): response is { items: RepoItemDTO[] } {
     return is.plainObject(response) && is.array(response.items);
   }
 }

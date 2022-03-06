@@ -1,14 +1,19 @@
-import React from 'react';
-import { ThemeProvider } from '@emotion/react';
-import { appClassName, siteConfig, mdxConfig } from '@config/index';
+import { ThemeProvider, css } from '@emotion/react';
 import { MDXProvider } from '@mdx-js/react';
-import { Footer } from '@components/layouts';
-import { defaultTheme } from '@themes/theme';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import { css } from '@emotion/react';
+import React from 'react';
+import { Footer } from '@components/layouts';
+import type { TechnosProps } from '@components/profile';
+import {
+  AboutMe,
+  Features,
+  Opensource,
+  ProfileHero,
+} from '@components/profile';
 import { Block } from '@components/profile/block';
-import dynamic from 'next/dynamic'
-import { AboutMe, Features, Opensource, ProfileHero, TechnosProps } from '@components/profile';
+import { appClassName, siteConfig, mdxConfig } from '@config/index';
+import { defaultTheme } from '@themes/theme';
 
 const Technos = dynamic<TechnosProps>(
   () => import('@components/profile/technos').then((mod) => mod.Technos),
@@ -16,7 +21,6 @@ const Technos = dynamic<TechnosProps>(
     ssr: false,
   }
 );
-
 
 const ProfilePage: React.FC = () => {
   return (
@@ -37,14 +41,24 @@ const ProfilePage: React.FC = () => {
         <meta name="twitter:image" content={siteConfig.siteImg} />
         <link rel="apple-touch-icon" href="/favicon.ico" />
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="preload" href="/fonts/work-sans/work-sans-latin-400.woff2" as="font" crossOrigin="" />
-        <link rel="preload" href="/fonts/work-sans/work-sans-latin-300.woff2" as="font" crossOrigin="" />
+        <link
+          rel="preload"
+          href="/fonts/work-sans/work-sans-latin-400.woff2"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/work-sans/work-sans-latin-300.woff2"
+          as="font"
+          crossOrigin=""
+        />
       </Head>
 
       <ThemeProvider theme={defaultTheme}>
         <MDXProvider components={mdxConfig}>
           <ProfileHero
-          /*avatarImg={siteConfig.profileImg}*/
+          /* avatarImg={siteConfig.profileImg} */
           />
           <Block
             css={css`
