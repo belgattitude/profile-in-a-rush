@@ -3,20 +3,20 @@ import { MDXProvider } from '@mdx-js/react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import React from 'react';
-import { Footer } from '@components/layouts';
-import type { TechnosProps } from '@components/profile';
+import { Footer } from '@/components/layouts';
+import type { TechnosProps } from '@/components/profile';
 import {
   AboutMe,
   Features,
   Opensource,
   ProfileHero,
-} from '@components/profile';
-import { Block } from '@components/profile/block';
-import { appClassName, siteConfig, mdxConfig } from '@config/index';
-import { defaultTheme } from '@themes/theme';
+} from '@/components/profile';
+import { Block } from '@/components/profile/block';
+import { appClassName, siteConfig, mdxConfig } from '@/config/index';
+import { defaultTheme } from '@/themes/theme';
 
 const Technos = dynamic<TechnosProps>(
-  () => import('@components/profile/technos').then((mod) => mod.Technos),
+  () => import('@/components/profile/technos').then((mod) => mod.Technos),
   {
     ssr: false,
   }

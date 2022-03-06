@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import { CustomTag } from '@components/github/custom-tag';
+import { CustomTag } from '@/components/github/custom-tag';
 import { truncateText } from '../../utils/utils';
 import type { RepoItemDTO } from './github.api';
 

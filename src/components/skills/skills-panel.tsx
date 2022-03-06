@@ -2,8 +2,8 @@ import styled from '@emotion/styled';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import React, { useState } from 'react';
-import type { skillType } from '@config/skills.config';
-import { skillSections } from '@config/skills.config';
+import type { skillType } from '@/config/skills.config';
+import { skillSections } from '@/config/skills.config';
 import { SkillLabel } from './skill-label';
 import {
   getAnimationType,

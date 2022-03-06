@@ -19,19 +19,19 @@
     "jsx": "preserve",
     "jsxImportSource": "@emotion/react",
     "paths": {
-      "@themes/*": [
+      "@/themes/*": [
         "src/themes/*"
       ],
-      "@public/*": [
+      "@/public/*": [
         "public/*"
       ],
-      "@core/*": [
+      "@/core/*": [
         "src/core/*"
       ],
-      "@components/*": [
+      "@/components/*": [
         "src/components/*"
       ],
-      "@config/*": [
+      "@/config/*": [
         "config/*"
       ]
     },
