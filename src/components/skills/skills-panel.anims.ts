@@ -1,5 +1,5 @@
 import type { Variants } from 'framer-motion';
-import { sectionAnimations } from '../../../config';
+import { sectionAnimations } from '@/config';
 import type { SkillSections } from './skills-panel';
 
 export type AnimationType = 'none' | 'adrenaline' | 'soft' | 'topdown';

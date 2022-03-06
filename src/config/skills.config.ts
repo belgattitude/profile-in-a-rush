@@ -1,7 +1,4 @@
-import type {
-  SectionAnimationConfig,
-  SkillRecord,
-} from 'src/components/skills';
+import type { SectionAnimationConfig, SkillRecord } from '@/components/skills';
 
 /**
  * Configure sections and skill types

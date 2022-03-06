@@ -7,6 +7,7 @@ export const githubQuery =
   'search/repositories?q=user:belgattitude+org:soluble-io+org:contredanse+repo:doctrine/dbal';
 
 export const filteredRepos: GithubRepoListProps['filters'] = [
+  ['nextjs-monorepo-example', ['typescript']],
   ['soluble-japha', ['php7.1']],
   ['soluble-mediatools', ['php7.1', 'ffmpeg']],
   ['bluewind', ['typescript', 'express', 'react', 'lerna']],

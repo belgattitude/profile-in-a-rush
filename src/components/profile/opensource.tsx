@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import { githubQuery, filteredRepos } from '../../../config';
+import { githubQuery, filteredRepos } from '@/config';
 
 import { GithubRepoList } from '../github';
 

@@ -22,6 +22,9 @@
       "@/themes/*": [
         "src/themes/*"
       ],
+      "@/backend/*": [
+        "src/backend/*"
+      ],
       "@/public/*": [
         "public/*"
       ],
@@ -32,17 +35,19 @@
         "src/components/*"
       ],
       "@/config/*": [
-        "config/*"
+        "src/config/*"
+      ],
+      "@/config": [
+        "src/config/index"
       ]
     },
     "incremental": true
   },
   "exclude": [
-    "node_modules",
+    "**/node_modules",
     "dist",
-    ".next",
-    "out",
-    "next.config.js"
+    "**/.next",
+    "out"
   ],
   "include": [
     "types/*.d.ts",

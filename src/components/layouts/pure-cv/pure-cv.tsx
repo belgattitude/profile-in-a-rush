@@ -3,7 +3,7 @@
  * @deprecated
  */
 import styled from '@emotion/styled';
-import { breakpoints } from '@/config/styles.config';
+import { breakpoints } from '@/config';
 
 export const GridContainer = styled.div`
   display: grid;
