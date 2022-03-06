@@ -47,7 +47,7 @@
     "**/node_modules",
     "dist",
     "**/.next",
-    "out",
+    "out"
   ],
   "include": [
     "types/*.d.ts",
