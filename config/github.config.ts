@@ -1,7 +1,7 @@
 /**
  * @link GithubRepoList
  */
-import type { GithubRepoListProps } from '@components/github/github-repo-list';
+import type { GithubRepoListProps } from '@/components/github/github-repo-list';
 
 export const githubQuery =
   'search/repositories?q=user:belgattitude+org:soluble-io+org:contredanse+repo:doctrine/dbal';

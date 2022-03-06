@@ -1,6 +1,6 @@
 import is from '@sindresorhus/is';
 import ky from 'ky';
-import { Result } from '@core/result';
+import { Result } from '@/core/result';
 
 export type RepoItemDTO = {
   id: number;
