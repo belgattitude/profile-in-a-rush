@@ -1039,23 +1039,23 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@soluble/cache-interop@^0.8.1":
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/@soluble/cache-interop/-/cache-interop-0.8.1.tgz#c46fb7ef6ecd7e890854da0a976f172d8b8b1209"
-  integrity sha512-CACrRRX7lzxUlDHLfxGRcYPogeWqiPNol0NyYZnlr8z0EloeR5MfJfjLxYuZ1XlWF+O82Enq7kLQ3sEoxrm+Ig==
+"@soluble/cache-interop@^0.8.4":
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/@soluble/cache-interop/-/cache-interop-0.8.4.tgz#4678fe182eaa64ae3434731b4d3a517a32236d0a"
+  integrity sha512-f1oGsjnAzerbRc9bfzt6DpDyvG5m6s1VaTljCLidIG7H+zOzNy34laL8aB3T8QVv4I7Kj6JxQzeER3odF1LmIA==
 
-"@soluble/cache-ioredis@^0.8.3":
-  version "0.8.3"
-  resolved "https://registry.yarnpkg.com/@soluble/cache-ioredis/-/cache-ioredis-0.8.3.tgz#1213e8cd393c9cb6ed6c892c1b17c7099d618902"
-  integrity sha512-iYZNZh4QYw33tb5JA445DY1XjOWqI2uALVgscW7yxZyPhtf6B3gz4aNZpe0xF4cRcMeQ7UvcKvEVBRd6/P0kzQ==
+"@soluble/cache-ioredis@^0.8.6":
+  version "0.8.6"
+  resolved "https://registry.yarnpkg.com/@soluble/cache-ioredis/-/cache-ioredis-0.8.6.tgz#c430268bb38f7a0362801e60cdbadd93dc269b9f"
+  integrity sha512-vpYdPmf5lGEB7oYxNHwfmgc1o0tnLEiX/Q5z62GWp20PAMM9UwjE+hwN9KeLi0gpGt1Fywe+yq7dj0NAAA3CPw==
   dependencies:
-    "@soluble/cache-interop" "^0.8.1"
-    "@soluble/dsn-parser" "^1.3.2"
+    "@soluble/cache-interop" "^0.8.4"
+    "@soluble/dsn-parser" "^1.3.5"
 
-"@soluble/dsn-parser@^1.3.2":
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/@soluble/dsn-parser/-/dsn-parser-1.3.2.tgz#2b938e1caf44e3f71db5a9ad053e5cd6adb8b4eb"
-  integrity sha512-o2dHBaMV5l7+kNYBfglkQxoigfwRMKeAVpbkUY4TocDQoyNJ3B0rYYHRVYOP3tBrcy6yw3mDFnEGbMcuu0XUQw==
+"@soluble/dsn-parser@^1.3.5":
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/@soluble/dsn-parser/-/dsn-parser-1.3.5.tgz#839abba667dcf5d7a46c9c116c4c5bc47fde5661"
+  integrity sha512-rAiDuahULDe5ACVXr9jw1Tp44vJ390a3/8cJlw9c/EUvj60X/WJIAW9ZQY8b48tfQdLKledzEJah3E+p8cdTwA==
 
 "@szmarczak/http-timer@^1.1.2":
   version "1.1.2"
