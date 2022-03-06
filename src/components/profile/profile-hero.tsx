@@ -80,7 +80,7 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = (props) => {
 
   // const img = '/images/unsplash-bigrock.jpg';
   // const img = '/images/wolfgang-hasselmann-cow.jpg';
-  const img = '/images/crop-nicolas-i-unsplash.jpg';
+  const img = '/images/crop-nicolas-i-unsplash.webp';
   return (
     <div ref={measuredRef} className={className} css={{ overflow: 'hidden' }}>
       <div
@@ -114,7 +114,7 @@ const UnstyledProfileHero: React.FC<ProfileHeroProps> = (props) => {
           right: 0;
           //background: #0f0c29;
           //background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-          background-image: url('/images/wolfgang-hasselmann-cow.jpg');
+          background-image: url('/images/wolfgang-hasselmann-cow.webp');
           //background-image: url("/images/cine.jpg");
           //background-image: url('/images/picos.jpg');
           //background-image: url('https://images.unsplash.com/photo-1563057828-434ef414eff6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=648&q=80');
