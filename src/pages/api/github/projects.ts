@@ -1,5 +1,3 @@
-import { graphql } from '@octokit/graphql';
-import type { Repository } from '@octokit/graphql-schema';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getGithubRepos } from '../../../backend/github/getGithubRepos';
 

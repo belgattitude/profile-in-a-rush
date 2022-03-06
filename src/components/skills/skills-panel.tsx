@@ -1,5 +1,10 @@
 import styled from '@emotion/styled';
-import { motion, AnimatePresence } from 'framer-motion';
+import {
+  m as motion,
+  AnimatePresence,
+  LazyMotion,
+  domAnimation,
+} from 'framer-motion';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import type { skillType } from '@/config/skills.config';
@@ -48,82 +53,87 @@ const UnstyledSkillsPanel: React.FC<SkillsPanelProps> = (props) => {
   ]);
   const sectionActive = isSectionsActive(activeSections);
   return (
-    <div className={className}>
-      <div className="section">
-        {skillSections.map((section) => {
-          const cls = sectionActive([section]) ? 'tab__active' : '';
-          return (
-            <div
-              role={'tab'}
-              key={section}
-              className={`tab ${cls}`}
-              onClick={(_e) => {
-                if (sectionActive([section])) {
-                  setActiveSections([defaultSection]);
-                } else {
-                  setActiveSections([section]);
-                }
-              }}
+    <LazyMotion strict features={domAnimation}>
+      <div className={className}>
+        <div className="section">
+          {skillSections.map((section) => {
+            const cls = sectionActive([section]) ? 'tab__active' : '';
+            return (
+              <div
+                role={'tab'}
+                key={section}
+                className={`tab ${cls}`}
+                onClick={(_e) => {
+                  if (sectionActive([section])) {
+                    setActiveSections([defaultSection]);
+                  } else {
+                    setActiveSections([section]);
+                  }
+                }}
+              >
+                {section}
+              </div>
+            );
+          })}
+        </div>
+        <div className="card-container">
+          <AnimatePresence initial={true}>
+            <motion.div
+              className="animation-container"
+              key={`${activeSections.join(',')}`}
+              variants={getListVariants(getAnimationType(activeSections[0]))}
+              initial="initial"
+              animate="enter"
+              exit="exit"
             >
-              {section}
-            </div>
-          );
-        })}
-      </div>
-      <div className="card-container">
-        <AnimatePresence initial={true}>
-          <motion.div
-            className="animation-container"
-            key={`${activeSections.join(',')}`}
-            variants={getListVariants(getAnimationType(activeSections[0]))}
-            initial="initial"
-            animate="enter"
-            exit="exit"
-          >
-            {skills.map((skill, _idx) => {
-              const { name, logo, homepage } = skill;
-              if (activeSections.length > 0 && !sectionActive(skill.sections)) {
-                return false;
-              }
-              return (
-                <motion.article
-                  className="card"
-                  key={`${name}`}
-                  variants={getItemVariants('soft')}
-                >
-                  <div className={'card-picture'}>
-                    <a href={homepage} target="_blank" rel="noreferrer">
-                      {logo ? (
-                        <Image src={logo} alt={name} width={60} height={60} />
-                      ) : (
-                        <div
-                          style={{
-                            fontSize: '2em',
-                            padding: '1em',
-                            fontWeight: 600,
-                          }}
-                        >
-                          {name}
-                        </div>
-                      )}
-                    </a>
-                  </div>
-                  <motion.div
-                    className="card-footer"
+              {skills.map((skill, _idx) => {
+                const { name, logo, homepage } = skill;
+                if (
+                  activeSections.length > 0 &&
+                  !sectionActive(skill.sections)
+                ) {
+                  return false;
+                }
+                return (
+                  <motion.article
+                    className="card"
                     key={`${name}`}
-                    variants={getItemVariants(
-                      getAnimationType(activeSections[0])
-                    )}
+                    variants={getItemVariants('soft')}
                   >
-                    <SkillLabel skill={skill} />
-                  </motion.div>
-                </motion.article>
-              );
-            })}
-          </motion.div>
-        </AnimatePresence>
+                    <div className={'card-picture'}>
+                      <a href={homepage} target="_blank" rel="noreferrer">
+                        {logo ? (
+                          <Image src={logo} alt={name} width={60} height={60} />
+                        ) : (
+                          <div
+                            style={{
+                              fontSize: '2em',
+                              padding: '1em',
+                              fontWeight: 600,
+                            }}
+                          >
+                            {name}
+                          </div>
+                        )}
+                      </a>
+                    </div>
+                    <motion.div
+                      className="card-footer"
+                      key={`${name}`}
+                      variants={getItemVariants(
+                        getAnimationType(activeSections[0])
+                      )}
+                    >
+                      <SkillLabel skill={skill} />
+                    </motion.div>
+                  </motion.article>
+                );
+              })}
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
-    </div>
+    </LazyMotion>
   );
 };
 

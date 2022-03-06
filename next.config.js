@@ -11,7 +11,7 @@ const config = withTM(
     reactStrictMode: true,
     optimizeFonts: true,
     // @link https://nextjs.org/docs/advanced-features/compiler#minification
-    swcMinify: true,
+    swcMinify: false,
     experimental: {
       // React 18
       // @link https://nextjs.org/docs/advanced-features/react-18
