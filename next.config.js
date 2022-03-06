@@ -15,7 +15,7 @@ const config = withTM(
     experimental: {
       // React 18
       // @link https://nextjs.org/docs/advanced-features/react-18
-      reactRoot: false,
+      reactRoot: true,
       // React 18 streaming
       // @link https://nextjs.org/docs/advanced-features/react-18/streaming
       runtime: undefined,
